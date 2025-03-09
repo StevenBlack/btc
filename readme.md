@@ -1,9 +1,15 @@
 # btc
 
+This repository contains Mathematica notebooks that examine Bitcoin/USD price movements, and other related BTC data.
+
+There are two notebooks currently stored here:
+
+* `BTC-USD-Movements.nb`
+* `BTC-USD-threshhold-crossings.nb`
 
 ## File `BTC-USD-Movements.nb`
 
-An examination of Bitcoin/USD price movements.
+An examination of Bitcoin/USD absolute and relative price movements.
 
 ### Absolute price movements
 ![BTC-USD absolute daily Movements](BTC-USD-Movements-Absolute-Daily.jpg)
