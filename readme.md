@@ -7,6 +7,7 @@ An examination of Bitcoin/USD price movements.
 
 ![BTC-USD absolute daily Movements](BTC-USD-Movements-Absolute-Daily.jpg)
 ![BTC-USD relative daily movements](BTC-USD-Movements-Relative-Daily.jpg)
+![BTC-USD best and worst relative daily movements](BTC-USD-Movements-Worst-And-Best-Daily.jpg)
 
 ## BTC-USD-threshhold-crossings.nb
 
