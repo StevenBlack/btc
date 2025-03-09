@@ -1,7 +1,7 @@
 # btc
 
 
-## BTC-USD-Movements.nb
+## File `BTC-USD-Movements.nb`
 
 An examination of Bitcoin/USD price movements.
 
@@ -14,7 +14,7 @@ An examination of Bitcoin/USD price movements.
 ![BTC-USD Movements Best Worst Relative Daily](BTC-USD-Movements-Best-Worst-Relative-Daily.jpg)
 
 
-## BTC-USD-threshhold-crossings.nb
+## File `BTC-USD-threshhold-crossings.nb`
 
 A more whimsical examination of Bitcoin/USD price movements in terms of threshholds crossed.
 
