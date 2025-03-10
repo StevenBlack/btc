@@ -1,6 +1,6 @@
 # btc
 
-This repository contains Mathematica notebooks that examine Bitcoin/USD price movements, and other related BTC data.
+This repository contains Mathematica notebooks that examine Bitcoin price movements, and other BTC-related data.
 
 There are two notebooks currently stored here:
 
