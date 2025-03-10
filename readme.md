@@ -23,6 +23,6 @@ An examination of Bitcoin/USD absolute and relative price movements.
 
 ## File `BTC-USD-threshhold-crossings.nb`
 
-A more whimsical examination of Bitcoin/USD price movements in terms of threshholds crossed.
+Examination of Bitcoin/USD price movements in terms of the number of times a given price threshhold is crossed.
 
 ![BTC-USD threshhold crossings](BTC-USD-threshold-crossings.jpg)
