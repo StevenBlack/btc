@@ -1,0 +1,1212 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     59419,       1204]
+NotebookOptionsPosition[     57935,       1166]
+NotebookOutlinePosition[     58333,       1182]
+CellTagsIndexPosition[     58290,       1179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["BTC-USD Moving Averages", "Title",
+ CellChangeTimes->{{3.910870641488784*^9, 3.910870672156954*^9}, {
+   3.926025545790792*^9, 3.926025552724882*^9}, {3.926025595726514*^9, 
+   3.926025757662788*^9}, {3.926025868590417*^9, 3.9260258908130703`*^9}, {
+   3.926025923714999*^9, 3.926025947740068*^9}, {3.926025983974702*^9, 
+   3.9260259969579153`*^9}, {3.926026132046829*^9, 3.9260261531265078`*^9}, {
+   3.926026187121852*^9, 3.926026203619293*^9}, {3.9260262759617853`*^9, 
+   3.926026368321966*^9}, {3.9260264467697067`*^9, 3.926026471440771*^9}, 
+   3.946833575036257*^9, {3.9468337285215893`*^9, 3.946833740968305*^9}, {
+   3.9510676135600767`*^9, 
+   3.951067618898324*^9}},ExpressionUUID->"f5fa712f-8f02-48db-ad7d-\
+991505d584c6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Buttons", " ", "to", " ", 
+     RowBox[{"hide", " ", "/", " ", "show"}], " ", "code"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"CloseAllInputsCells", "[", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"nb", ",", "cells"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"nb", "=", 
+         RowBox[{"EvaluationNotebook", "[", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"cells", "=", 
+         RowBox[{"Cells", "[", 
+          RowBox[{"nb", ",", 
+           RowBox[{"CellStyle", "->", "\"\<Input\>\""}]}], "]"}]}], ";", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"SetOptions", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"CellOpen", "->", "False"}]}], "]"}], "&"}], "/@", 
+         "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"OpenAllInputsCells", "[", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"nb", ",", "cells"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"nb", "=", 
+         RowBox[{"EvaluationNotebook", "[", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"cells", "=", 
+         RowBox[{"Cells", "[", 
+          RowBox[{"nb", ",", 
+           RowBox[{"CellStyle", "->", "\"\<Input\>\""}]}], "]"}]}], ";", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"SetOptions", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"CellOpen", "->", "True"}]}], "]"}], "&"}], "/@", 
+         "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Button", "[", 
+       RowBox[{"\"\<Hide Code\>\"", ",", 
+        RowBox[{"SelectionEvaluate", "[", 
+         RowBox[{"CloseAllInputsCells", "[", "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"Button", "[", 
+       RowBox[{"\"\<Show Code\>\"", ",", 
+        RowBox[{"SelectionEvaluate", "[", 
+         RowBox[{"OpenAllInputsCells", "[", "]"}], "]"}]}], "]"}]}], "}"}], 
+    "]"}]}]}]], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.9503706662894382`*^9, 3.950370670716475*^9}, {
+  3.950716569289399*^9, 3.9507165917716703`*^9}},
+ CellLabel->
+  "In[2394]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
+
+Cell[BoxData[
+ TemplateBox[{
+   ButtonBox["\"Hide Code\"", ButtonFunction :> SelectionEvaluate[
+      $CellContext`CloseAllInputsCells[]], Appearance -> Automatic, Evaluator -> 
+    Automatic, Method -> "Preemptive"], 
+   ButtonBox["\"Show Code\"", ButtonFunction :> SelectionEvaluate[
+      $CellContext`OpenAllInputsCells[]], Appearance -> Automatic, Evaluator -> 
+    Automatic, Method -> "Preemptive"]},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.95037067897987*^9, 3.950370932888196*^9, 3.950716378088337*^9, 
+   3.950716612159751*^9, 3.9507178342829447`*^9, 3.950717865690592*^9, 
+   3.950717919201939*^9, 3.950718163606518*^9, {3.95071824786064*^9, 
+   3.950718296289762*^9}, 3.9507186035652437`*^9, 3.950718838876289*^9, 
+   3.9507188961384573`*^9, 3.950719053666215*^9, 3.9507191236489573`*^9, 
+   3.950734955796301*^9, 3.950735382621984*^9, 3.95073563128335*^9, 
+   3.9510673274634323`*^9, 3.951067747710849*^9},
+ CellLabel->
+  "Out[2397]=",ExpressionUUID->"2d71fa52-5f3d-4c87-9262-7ade94c99254"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Default", " ", "properties", " ", "for", " ", "generated", " ", "plots"}],
+    " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"imagesize", "=", "1250"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"imagemargins", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"labelstyle", "=", 
+   RowBox[{"Directive", "[", "14", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"titlestyle", "=", 
+   RowBox[{"{", 
+    RowBox[{"20", ",", "Red"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"subtitlestyle", " ", "=", " ", 
+   RowBox[{"{", "15", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"imagemargins", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotbackground", "=", 
+   RowBox[{"Lighter", "[", 
+    RowBox[{"LightGray", ",", "0.75"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"updatedstr", "=", 
+    RowBox[{"Style", "[", 
+     RowBox[{
+      RowBox[{"StringForm", "[", 
+       RowBox[{"\"\<(updated: ``)\>\"", ",", 
+        RowBox[{"DateString", "[", "]"}]}], "]"}], ",", "subtitlestyle"}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"btcData", "=", 
+   RowBox[{"FinancialData", "[", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BTC/USD\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<Jan 1 2012\>\""}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo100", "=", " ", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", "100"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo100latest", " ", "=", " ", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo100", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo200", "=", " ", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", "200"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo200latest", " ", "=", " ", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo200", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo1yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", "365"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo1yrlatest", " ", "=", " ", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo1yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo2yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo2yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo2yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo3yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo3yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo3yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo4yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "4"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo4yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo4yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo5yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "5"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mo5yrlatest", "=", 
+    RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+     RowBox[{"ToString", "[", 
+      RowBox[{
+       RowBox[{"mo5yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+       "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plottypefunc", "=", "DateListPlot"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lines", "=", 
+   RowBox[{"Range", "[", "1", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"selectlines", "=", 
+   RowBox[{"CheckboxBar", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Dynamic", "[", "lines", "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"{", "16", "}"}]}], "]"}], "&"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"1", "->", "\"\<BTC\>\""}], ",", 
+            RowBox[{"2", "->", "\"\<100 day\>\""}], ",", 
+            RowBox[{"3", "->", "\"\<200 day\>\""}], ",", 
+            RowBox[{"4", "->", "\"\<1 year\>\""}], ",", 
+            RowBox[{"5", "->", "\"\<2 year\>\""}], ",", " ", 
+            RowBox[{"6", "->", " ", "\"\<3 year\>\""}], ",", " ", 
+            RowBox[{"7", "->", " ", "\"\<4 year\>\""}], ",", " ", 
+            RowBox[{"8", "->", " ", "\"\<5 year\>\""}]}], "}"}], "//", 
+          "Association"}], ")"}]}], "]"}], "//", "Normal"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"Method", "->", "\"\<Active\>\""}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plottype", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"selectplottype", "=", 
+   RowBox[{"RadioButtonBar", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Dynamic", "[", "plottype", "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{"#", ",", "16"}], "]"}], "&"}], ",", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"1", "\[Rule]", "\"\<Linear\>\""}], ",", 
+            RowBox[{"2", "\[Rule]", "\"\<Log\>\""}]}], "}"}], "//", 
+          "Association"}], ")"}]}], "]"}], "//", "Normal"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"Method", "->", "\"\<Active\>\""}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotlines", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+    "btcData", "\[IndentingNewLine]", ",", "mo100", "\[IndentingNewLine]", ",",
+      "mo200", "\[IndentingNewLine]", ",", " ", "mo1yr", 
+     "\[IndentingNewLine]", ",", " ", "mo2yr", "\[IndentingNewLine]", ",", 
+     " ", "mo3yr", "\[IndentingNewLine]", ",", " ", "mo4yr", 
+     "\[IndentingNewLine]", ",", " ", "mo5yr"}], "\[IndentingNewLine]", 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotlabels", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BTC\>\"", "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<100 day mo: \>\"", "<>", " ", "mo100latest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<200 day mo: \>\"", "<>", " ", "mo200latest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<1 yr mo: \>\"", "<>", " ", "mo1yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<2 yr mo: \>\"", " ", "<>", " ", "mo2yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<3 yr mo: \>\"", " ", "<>", " ", "mo3yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<4 yr mo: \>\"", " ", "<>", " ", "mo4yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<5 yr mo: \>\"", " ", "<>", " ", "mo5yrlatest"}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plotlegends", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BTC (USD)\>\"", "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<100 Day Moving Average \>\"", "<>", " ", "mo100latest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<200 Day Moving Average \>\"", "<>", " ", "mo200latest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<1 Year Moving Average \>\"", "<>", " ", "mo1yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<2 Year Moving Average \>\"", "<>", " ", "mo2yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<3 Year Moving Average \>\"", "<>", " ", "mo2yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<4 Year Moving Average \>\"", "<>", " ", "mo4yrlatest"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"\"\<5 Year Moving Average \>\"", "<>", " ", "mo5yrlatest"}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}]}], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.910870641488784*^9, 3.910870672156954*^9}, {
+   3.926025545790792*^9, 3.926025552724882*^9}, {3.926025595726514*^9, 
+   3.926025757662788*^9}, {3.926025868590417*^9, 3.9260258908130703`*^9}, {
+   3.926025923714999*^9, 3.926025947740068*^9}, {3.926025983974702*^9, 
+   3.9260259969579153`*^9}, {3.926026132046829*^9, 3.9260261531265078`*^9}, {
+   3.926026187121852*^9, 3.926026203619293*^9}, {3.9260262759617853`*^9, 
+   3.926026368321966*^9}, {3.9260264467697067`*^9, 3.926026461668386*^9}, {
+   3.93022746671277*^9, 3.93022749095067*^9}, {3.930227564643298*^9, 
+   3.930227598796813*^9}, {3.930227678094948*^9, 3.930227726034398*^9}, {
+   3.93092388654604*^9, 3.930923920049479*^9}, {3.930924038902313*^9, 
+   3.930924040490107*^9}, {3.930945977242186*^9, 3.930946095047868*^9}, {
+   3.9309462442547503`*^9, 3.930946306831041*^9}, {3.930946383173805*^9, 
+   3.930946461609544*^9}, 3.930946496030859*^9, {3.930946686835168*^9, 
+   3.930946797994755*^9}, {3.930946831017578*^9, 3.930946871755554*^9}, {
+   3.930946901831844*^9, 3.930946910250114*^9}, {3.930946995801789*^9, 
+   3.930947009547386*^9}, {3.930947405111923*^9, 3.930947437566589*^9}, {
+   3.930947475972148*^9, 3.930947506118739*^9}, {3.930947538350464*^9, 
+   3.930947564378302*^9}, {3.931375072970685*^9, 3.93137520955162*^9}, {
+   3.931458288206808*^9, 3.931458546007607*^9}, {3.931458626482923*^9, 
+   3.931458636827924*^9}, 3.931458689720317*^9, {3.931781894231324*^9, 
+   3.9317819000639133`*^9}, {3.932823233232479*^9, 3.932823235520179*^9}, {
+   3.932823306120234*^9, 3.9328233070781918`*^9}, {3.932825893259492*^9, 
+   3.93282590851719*^9}, 3.93282602769488*^9, {3.932826817535812*^9, 
+   3.9328268633811502`*^9}, {3.932826900997468*^9, 3.932826902880033*^9}, {
+   3.9328269555109043`*^9, 3.932826955897855*^9}, 3.932827077449484*^9, {
+   3.932827621386087*^9, 3.932827625832981*^9}, {3.932827693133355*^9, 
+   3.932827775084743*^9}, {3.932827847243692*^9, 3.932827847713254*^9}, {
+   3.932827941967702*^9, 3.932828013432345*^9}, {3.9328292283283997`*^9, 
+   3.932829272360949*^9}, 3.932829471340073*^9, {3.932838038769987*^9, 
+   3.9328380487022457`*^9}, {3.932838132616906*^9, 3.932838170001339*^9}, {
+   3.9328382397570744`*^9, 3.932838249388608*^9}, {3.932838285214756*^9, 
+   3.9328382977012587`*^9}, {3.932839227589013*^9, 3.932839231935809*^9}, {
+   3.932839519868491*^9, 3.932839528379842*^9}, {3.9328395680173407`*^9, 
+   3.9328396090268106`*^9}, {3.9328396597842913`*^9, 3.932839685790423*^9}, {
+   3.932841272579116*^9, 3.932841307769472*^9}, {3.9328413549992657`*^9, 
+   3.932841477692514*^9}, {3.932841640820034*^9, 3.932841681526181*^9}, 
+   3.932919141411237*^9, {3.93291987199671*^9, 3.932919928437492*^9}, {
+   3.946832813567532*^9, 3.9468328183847017`*^9}, {3.94840702769051*^9, 
+   3.948407184694631*^9}, {3.9484072388651657`*^9, 3.948407238993711*^9}, {
+   3.949060277623681*^9, 3.949060282733123*^9}, 3.949060326205386*^9, {
+   3.949060535523785*^9, 3.94906053870173*^9}, {3.9507186702882*^9, 
+   3.9507186869780684`*^9}, {3.950719115426339*^9, 3.950719118138866*^9}, {
+   3.950734441914851*^9, 3.950734449252839*^9}, {3.9507345162300386`*^9, 
+   3.950734550010179*^9}, {3.950734941416844*^9, 3.9507349459467382`*^9}, {
+   3.950735470278764*^9, 3.9507354956172857`*^9}},
+ CellLabel->
+  "In[2398]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Module", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"plotlabel", ",", " ", "plottypefunc"}], "}"}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{
+        RowBox[{"plotlabel", "=", 
+         RowBox[{"Column", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                
+                RowBox[{"\"\<Bitcoin Price (USD)\>\"", " ", ",", 
+                 "titlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"AccountingForm", "[", 
+                    RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], "]"}],
+                    "]"}]}], ",", "subtitlestyle"}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
+             RowBox[{"Part", "[", "\[IndentingNewLine]", 
+              RowBox[{"plotlabels", "\[IndentingNewLine]", ",", 
+               RowBox[{"Select", "[", 
+                RowBox[{"lines", ",", 
+                 RowBox[{
+                  RowBox[{"#", "!=", "1"}], "&"}]}], "]"}]}], 
+              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], 
+           "\[IndentingNewLine]", ",", "Center"}], "\[IndentingNewLine]", 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"plottypefunc", ":=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"plottype", "==", "1"}], ",", "DateListPlot", ",", 
+           "DateListLogPlot"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"plottypefunc", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Part", "[", "\[IndentingNewLine]", 
+           RowBox[{"plotlines", "\[IndentingNewLine]", ",", "lines"}], 
+           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+          RowBox[{"ImageSize", "->", "imagesize"}], "\[IndentingNewLine]", ",", 
+          RowBox[{"ImageMargins", "->", "imagemargins"}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotRange", "->", "Full"}], "\[IndentingNewLine]", ",", 
+          " ", 
+          RowBox[{"GridLines", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"DateRange", "[", 
+              RowBox[{
+               RowBox[{"{", "2012", "}"}], ",", 
+               RowBox[{"{", "2027", "}"}], ",", "\"\<Year\>\""}], "]"}], ",", 
+             "Automatic"}], "}"}]}], "\[IndentingNewLine]", ",", 
+          RowBox[{"FrameTicks", "->", "All"}], "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotLabel", "->", 
+           RowBox[{"Column", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{"plotlabel", "\[IndentingNewLine]", ",", "updatedstr"}],
+               "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
+             "Center"}], "]"}]}], "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"Part", "[", "\[IndentingNewLine]", 
+            RowBox[{"plotlegends", "\[IndentingNewLine]", ",", "lines"}], 
+            "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
+         "]"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+     
+     RowBox[{"Dynamic", "[", "selectlines", "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{"Dynamic", "[", "selectplottype", "]"}]}], "\[IndentingNewLine]",
+     "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.910870641488784*^9, 3.910870672156954*^9}, {
+   3.926025545790792*^9, 3.926025552724882*^9}, {3.926025595726514*^9, 
+   3.926025757662788*^9}, {3.926025868590417*^9, 3.9260258908130703`*^9}, {
+   3.926025923714999*^9, 3.926025947740068*^9}, {3.926025983974702*^9, 
+   3.9260259969579153`*^9}, {3.926026132046829*^9, 3.9260261531265078`*^9}, {
+   3.926026187121852*^9, 3.926026203619293*^9}, {3.9260262759617853`*^9, 
+   3.926026368321966*^9}, {3.9260264467697067`*^9, 3.926026461668386*^9}, {
+   3.93022746671277*^9, 3.93022749095067*^9}, {3.930227564643298*^9, 
+   3.930227598796813*^9}, {3.930227678094948*^9, 3.930227726034398*^9}, {
+   3.93092388654604*^9, 3.930923920049479*^9}, {3.930924038902313*^9, 
+   3.930924040490107*^9}, {3.930945977242186*^9, 3.930946095047868*^9}, {
+   3.9309462442547503`*^9, 3.930946306831041*^9}, {3.930946383173805*^9, 
+   3.930946461609544*^9}, 3.930946496030859*^9, {3.930946686835168*^9, 
+   3.930946797994755*^9}, {3.930946831017578*^9, 3.930946871755554*^9}, {
+   3.930946901831844*^9, 3.930946910250114*^9}, {3.930946995801789*^9, 
+   3.930947009547386*^9}, {3.930947405111923*^9, 3.930947437566589*^9}, {
+   3.930947475972148*^9, 3.930947506118739*^9}, {3.930947538350464*^9, 
+   3.930947564378302*^9}, {3.931375072970685*^9, 3.93137520955162*^9}, {
+   3.931458288206808*^9, 3.931458546007607*^9}, {3.931458626482923*^9, 
+   3.931458636827924*^9}, 3.931458689720317*^9, {3.931781894231324*^9, 
+   3.9317819000639133`*^9}, {3.932823233232479*^9, 3.932823235520179*^9}, {
+   3.932823306120234*^9, 3.9328233070781918`*^9}, {3.932825893259492*^9, 
+   3.932825996241819*^9}, {3.932826778668117*^9, 3.932826788209551*^9}, {
+   3.932826916319316*^9, 3.9328269314232264`*^9}, {3.9328270406207733`*^9, 
+   3.932827055832047*^9}, {3.932827785133774*^9, 3.932827809339817*^9}, {
+   3.9328280170095387`*^9, 3.932828018073957*^9}, 3.932828080264769*^9, {
+   3.9328283480718737`*^9, 3.932828378211445*^9}, {3.932828557080608*^9, 
+   3.9328285899230537`*^9}, {3.932828647662094*^9, 3.932828777909708*^9}, {
+   3.9328292855120583`*^9, 3.932829329207509*^9}, {3.9328294882267838`*^9, 
+   3.9328294888976*^9}, {3.932829655657403*^9, 3.932829656624363*^9}, {
+   3.932837963110736*^9, 3.93283798114072*^9}, {3.9328380848352118`*^9, 
+   3.932838089545402*^9}, {3.932838151461606*^9, 3.932838156770879*^9}, {
+   3.932838227439218*^9, 3.932838233633648*^9}, {3.932838272571656*^9, 
+   3.932838277445059*^9}, {3.932839702013933*^9, 3.9328397748223658`*^9}, {
+   3.9329196334765873`*^9, 3.93291963754069*^9}, {3.94579668069576*^9, 
+   3.945796704570714*^9}, {3.946832997553685*^9, 3.9468330737917147`*^9}, {
+   3.946833126955905*^9, 3.946833177198357*^9}, {3.946833223759438*^9, 
+   3.9468332458462343`*^9}, {3.948987898481009*^9, 3.9489878990336733`*^9}, {
+   3.949060368588005*^9, 3.949060369852696*^9}, {3.949060426180048*^9, 
+   3.949060444450863*^9}, {3.949060485412519*^9, 3.949060496128162*^9}, 
+   3.94906549826518*^9, {3.949065738472533*^9, 3.949065765081531*^9}, {
+   3.950718442056315*^9, 3.950718464462699*^9}, 3.950718497007555*^9, {
+   3.950734533072043*^9, 3.950734563771668*^9}, {3.9507346189697733`*^9, 
+   3.950734629719369*^9}, {3.950734834036971*^9, 3.950734892496415*^9}, {
+   3.950735612837654*^9, 3.950735618068153*^9}},
+ CellLabel->
+  "In[2430]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Dynamic[$CellContext`selectlines]], Manipulate`Dump`ThisIsNotAControl, 
+      ControlType -> None}, {
+      Hold[
+       Dynamic[$CellContext`selectplottype]], 
+      Manipulate`Dump`ThisIsNotAControl, ControlType -> None}}, 
+    Typeset`size$$ = {
+    1535.5232421875, {431.1263762382748, 436.85830983202493`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> 
+      Module[{$CellContext`plotlabel, $CellContext`plottypefunc}, \
+$CellContext`plotlabel = Column[
+           Join[{
+             Style["Bitcoin Price (USD)", $CellContext`titlestyle], 
+             Style["Latest: $" <> ToString[
+                AccountingForm[
+                 $CellContext`btcData[
+                 "LastValue"]]], $CellContext`subtitlestyle]}, 
+            Part[$CellContext`plotlabels, 
+             Select[$CellContext`lines, # != 1& ]]], 
+           Center]; $CellContext`plottypefunc := 
+         If[$CellContext`plottype == 1, DateListPlot, 
+           DateListLogPlot]; $CellContext`plottypefunc[
+          Part[$CellContext`plotlines, $CellContext`lines], 
+          ImageSize -> $CellContext`imagesize, 
+          ImageMargins -> $CellContext`imagemargins, PlotRange -> Full, 
+          GridLines -> {
+            DateRange[{2012}, {2027}, "Year"], Automatic}, FrameTicks -> All, 
+          PlotLabel -> 
+          Column[{$CellContext`plotlabel, $CellContext`updatedstr}, Center], 
+          PlotLegends -> Part[$CellContext`plotlegends, $CellContext`lines]]],
+       "Specifications" :> {
+        Dynamic[$CellContext`selectlines], 
+        Dynamic[$CellContext`selectplottype]}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{
+      1584.6232421875, {488.16418446581395`, 493.89611805956395`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.93145864009179*^9, 3.931458748738594*^9, 3.931468714466401*^9, 
+   3.9316205464356613`*^9, {3.931778809790082*^9, 3.931778821046303*^9}, 
+   3.931853151403488*^9, 3.931873880969738*^9, 3.9318982484634533`*^9, 
+   3.932032209059927*^9, 3.932054152619931*^9, 3.932304709118046*^9, 
+   3.9325877009879103`*^9, 3.932589011330917*^9, 3.932762058636734*^9, 
+   3.932822963094482*^9, 3.9328232396545877`*^9, {3.93282594869121*^9, 
+   3.932825997603939*^9}, 3.9328260331658363`*^9, 3.932826790292438*^9, {
+   3.932826964386243*^9, 3.932827029816619*^9}, {3.932827083324597*^9, 
+   3.93282715460569*^9}, {3.932827218305037*^9, 3.932827259510543*^9}, {
+   3.932827380036521*^9, 3.932827382590279*^9}, {3.932827435564506*^9, 
+   3.932827583220479*^9}, 3.932827631961547*^9, {3.932827834770163*^9, 
+   3.932827857472352*^9}, {3.932828033411929*^9, 3.932828046675592*^9}, {
+   3.932828082027088*^9, 3.932828129130768*^9}, 3.932828191681769*^9, {
+   3.932828818861885*^9, 3.932828834570944*^9}, {3.932828866626692*^9, 
+   3.932828941365946*^9}, {3.932829353716852*^9, 3.932829360697106*^9}, 
+   3.932829415745105*^9, {3.93282947628234*^9, 3.932829508943639*^9}, {
+   3.932829552376309*^9, 3.932829605860688*^9}, 3.932829658131303*^9, 
+   3.932829753449641*^9, 3.932829958166773*^9, {3.932837802456293*^9, 
+   3.932837809862906*^9}, 3.932837987550358*^9, 3.932838307849585*^9, {
+   3.932838385178323*^9, 3.932838447482471*^9}, 3.932839255334721*^9, 
+   3.932839300480591*^9, 3.93283979551446*^9, 3.932839825826766*^9, {
+   3.93283986781316*^9, 3.932839876229026*^9}, 3.932839910699499*^9, {
+   3.932840042888321*^9, 3.932840057172615*^9}, 3.9328401066511602`*^9, {
+   3.932841319515049*^9, 3.932841341460799*^9}, 3.932841486247459*^9, {
+   3.9328416879316187`*^9, 3.932841694031787*^9}, {3.9328418068885517`*^9, 
+   3.9328418315935*^9}, 3.932841968151359*^9, 3.9329181041732607`*^9, {
+   3.9329181586131783`*^9, 3.932918176474515*^9}, 3.932918214662022*^9, 
+   3.932919228241496*^9, {3.932919336279531*^9, 3.9329193406895037`*^9}, 
+   3.932919508681116*^9, 3.932919639132804*^9, {3.933613200736096*^9, 
+   3.933613266722905*^9}, {3.933690919600045*^9, 3.933690985946535*^9}, 
+   3.934472709128049*^9, {3.9344727985925493`*^9, 3.934472805643552*^9}, 
+   3.9346391783344812`*^9, 3.9346393016893663`*^9, {3.9346393545520372`*^9, 
+   3.934639368133869*^9}, {3.934639460582829*^9, 3.934639461834696*^9}, {
+   3.934639513162733*^9, 3.934639514322336*^9}, 3.9346631106602983`*^9, 
+   3.934663218236372*^9, 3.9347544331372967`*^9, 3.934754490352458*^9, {
+   3.93475472132437*^9, 3.9347547260530863`*^9}, {3.934754866940424*^9, 
+   3.934754868475033*^9}, {3.9347549765786953`*^9, 3.934754980750893*^9}, {
+   3.934755022656424*^9, 3.934755024033455*^9}, {3.934755059595796*^9, 
+   3.9347550614554033`*^9}, {3.934755206297523*^9, 3.934755229342915*^9}, 
+   3.934970825478777*^9, 3.9349709769925957`*^9, {3.934971036924993*^9, 
+   3.93497103859599*^9}, {3.935338380938819*^9, 3.9353384268614492`*^9}, 
+   3.9353385167765636`*^9, 3.935771365067072*^9, {3.936038493620618*^9, 
+   3.9360385013872128`*^9}, 3.936038538685897*^9, 3.936038572174608*^9, {
+   3.936038680511108*^9, 3.9360386828586206`*^9}, {3.936351616300989*^9, 
+   3.936351619528277*^9}, {3.9363518803523893`*^9, 3.936351901900378*^9}, 
+   3.9363817934212847`*^9, {3.937429134657652*^9, 3.9374291672676*^9}, {
+   3.938271154923856*^9, 3.938271212044002*^9}, 3.938271553488698*^9, 
+   3.938278080481715*^9, 3.9390565901396427`*^9, {3.940852649066328*^9, 
+   3.940852681733945*^9}, {3.940852714244981*^9, 3.9408527242294807`*^9}, {
+   3.940852771945904*^9, 3.9408527765178347`*^9}, {3.941750059928362*^9, 
+   3.941750103869087*^9}, {3.941750147365032*^9, 3.941750149216145*^9}, 
+   3.941750193069865*^9, {3.941980851541061*^9, 3.9419808722434683`*^9}, 
+   3.941981330610772*^9, 3.942008832516527*^9, {3.9420089699573936`*^9, 
+   3.942009014432378*^9}, 3.943567952291576*^9, {3.943568234496962*^9, 
+   3.943568237940077*^9}, {3.943568387465036*^9, 3.943568397287622*^9}, 
+   3.943568427757539*^9, {3.94356852431595*^9, 3.943568531840724*^9}, {
+   3.9438067773625174`*^9, 3.943806794488967*^9}, {3.9446683732164516`*^9, 
+   3.944668382861033*^9}, {3.9446684248543787`*^9, 3.944668431520756*^9}, {
+   3.9446685512736483`*^9, 3.944668592200818*^9}, {3.945075982210535*^9, 
+   3.945075995866736*^9}, {3.9450760650686007`*^9, 3.945076065922318*^9}, {
+   3.945211996325375*^9, 3.945212033285033*^9}, {3.9456844295451927`*^9, 
+   3.945684448364643*^9}, {3.94568448877817*^9, 3.945684513962266*^9}, 
+   3.945794903905397*^9, 3.94579518528414*^9, {3.945795254645666*^9, 
+   3.945795306999354*^9}, {3.945795370678713*^9, 3.945795392532819*^9}, {
+   3.945796020708503*^9, 3.945796046460693*^9}, 3.945796343472797*^9, {
+   3.9457963940752277`*^9, 3.945796409698635*^9}, {3.9457964515490303`*^9, 
+   3.9457964532294197`*^9}, {3.945796594994398*^9, 3.9457965962445517`*^9}, {
+   3.945796711446509*^9, 3.945796749626383*^9}, 3.945972094486107*^9, {
+   3.945972280547819*^9, 3.945972317861507*^9}, 3.945972436439035*^9, {
+   3.945972491203862*^9, 3.945972493271757*^9}, {3.94597253227219*^9, 
+   3.945972536312788*^9}, {3.9459725703101807`*^9, 3.945972571999526*^9}, {
+   3.946298827524332*^9, 3.946298846124083*^9}, 3.946304321231697*^9, {
+   3.9468248923954144`*^9, 3.946824933411358*^9}, {3.946826473786489*^9, 
+   3.946826484348206*^9}, {3.946826921147007*^9, 3.946826937062188*^9}, {
+   3.946833188141561*^9, 3.946833191625288*^9}, {3.946833246801242*^9, 
+   3.946833271245191*^9}, {3.946833464562572*^9, 3.946833470403681*^9}, 
+   3.946833541166271*^9, {3.94728244601884*^9, 3.947282508164846*^9}, {
+   3.947974760066424*^9, 3.947974777416088*^9}, {3.9484063920785217`*^9, 
+   3.948406400383296*^9}, {3.948406754197975*^9, 3.948406763488513*^9}, {
+   3.9484068149093037`*^9, 3.94840683506168*^9}, {3.9484071929797897`*^9, 
+   3.948407245050795*^9}, {3.948407327185018*^9, 3.948407331616625*^9}, {
+   3.9484073726623697`*^9, 3.9484073822461243`*^9}, {3.948407429256567*^9, 
+   3.948407437257996*^9}, {3.948407552560738*^9, 3.948407554458727*^9}, {
+   3.948533518928372*^9, 3.9485335629316196`*^9}, {3.9485337198998938`*^9, 
+   3.948533750206368*^9}, {3.948533800451037*^9, 3.948533802693633*^9}, {
+   3.948533899249346*^9, 3.948533900383587*^9}, {3.948533942995842*^9, 
+   3.9485339642416773`*^9}, {3.9485825419209013`*^9, 3.948582553979239*^9}, {
+   3.948582598147318*^9, 3.948582599477318*^9}, {3.948582632800606*^9, 
+   3.9485826343531313`*^9}, {3.9485826683531237`*^9, 3.948582672800861*^9}, 
+   3.9489878110649*^9, 3.94898790382679*^9, {3.948987990214679*^9, 
+   3.948988009040121*^9}, {3.949059392369565*^9, 3.949059406391363*^9}, {
+   3.949059886671576*^9, 3.9490599572940397`*^9}, {3.949060288407847*^9, 
+   3.949060299056628*^9}, {3.949060332401957*^9, 3.949060340994916*^9}, 
+   3.949060377893626*^9, {3.949060479303122*^9, 3.949060545108362*^9}, {
+   3.94906549904867*^9, 3.9490655350162973`*^9}, {3.9490655845546007`*^9, 
+   3.949065623348188*^9}, 3.949065766804988*^9, 3.949506967621015*^9, {
+   3.949507004287809*^9, 3.9495070134667664`*^9}, {3.949507156159127*^9, 
+   3.949507157109539*^9}, 3.9503706795077257`*^9, {3.950370715796761*^9, 
+   3.950370727858182*^9}, 3.9503709334373493`*^9, 3.9507163792648573`*^9, {
+   3.950716429848984*^9, 3.950716436773247*^9}, 3.9507166130600443`*^9, {
+   3.950717835723424*^9, 3.9507178739929667`*^9}, {3.950717920481803*^9, 
+   3.9507179264487143`*^9}, {3.95071816473665*^9, 3.95071817726586*^9}, {
+   3.9507182500200663`*^9, 3.950718316668871*^9}, {3.9507186047128477`*^9, 
+   3.95071862650683*^9}, {3.950718839892755*^9, 3.9507188500387993`*^9}, 
+   3.950718897206863*^9, {3.9507190550154037`*^9, 3.950719071601549*^9}, {
+   3.950719124630924*^9, 3.9507191306074467`*^9}, 3.9507343359772463`*^9, 
+   3.950734956974567*^9, 3.950735260409546*^9, {3.950735384339776*^9, 
+   3.950735410378112*^9}, 3.950735632498829*^9, {3.951067328643722*^9, 
+   3.95106740803263*^9}, {3.9510674464799*^9, 3.9510674479877367`*^9}, 
+   3.951067749180468*^9, {3.951067847291438*^9, 3.951067863569031*^9}},
+ CellLabel->
+  "Out[2430]=",ExpressionUUID->"9ecacd47-4d71-4f56-828d-f176866898c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Past n days moving average", "Section",
+ CellChangeTimes->{{3.931778847021064*^9, 3.9317789179146833`*^9}, {
+  3.931778955221694*^9, 3.931778965006196*^9}, {3.931780065852172*^9, 
+  3.931780074893587*^9}},ExpressionUUID->"4de07029-d8b0-40fb-ac97-\
+1a91d36f1eb6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"btcData", "=", 
+   RowBox[{"FinancialData", "[", "\[IndentingNewLine]", 
+    RowBox[{"\"\<BTC/USD\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<Jan 1 2012\>\""}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo100", "=", " ", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", "100"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo100latest", " ", "=", " ", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo100", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo200", "=", " ", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", "200"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo200latest", " ", "=", " ", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo200", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo1yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", "365"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo1yrlatest", " ", "=", " ", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo1yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo2yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo2yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo2yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo3yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo3yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo3yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo4yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "4"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo4yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo4yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo5yr", "=", 
+   RowBox[{"MovingAverage", "[", 
+    RowBox[{"btcData", ",", 
+     RowBox[{"365", " ", "*", " ", "5"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mo5yrlatest", "=", 
+   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
+    RowBox[{"ToString", "[", 
+     RowBox[{
+      RowBox[{"mo5yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
+      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lines", "=", 
+   RowBox[{"Range", "[", "1", "]"}]}], ";"}], "\[IndentingNewLine]"}], "Input",\
+
+ CellOpen->False,
+ CellChangeTimes->{{3.910870641488784*^9, 3.910870672156954*^9}, {
+   3.926025545790792*^9, 3.926025552724882*^9}, {3.926025595726514*^9, 
+   3.926025757662788*^9}, {3.926025868590417*^9, 3.9260258908130703`*^9}, {
+   3.926025923714999*^9, 3.926025947740068*^9}, {3.926025983974702*^9, 
+   3.9260259969579153`*^9}, {3.926026132046829*^9, 3.9260261531265078`*^9}, {
+   3.926026187121852*^9, 3.926026203619293*^9}, {3.9260262759617853`*^9, 
+   3.926026368321966*^9}, {3.9260264467697067`*^9, 3.926026461668386*^9}, {
+   3.93022746671277*^9, 3.93022749095067*^9}, {3.930227564643298*^9, 
+   3.930227598796813*^9}, {3.930227678094948*^9, 3.930227726034398*^9}, {
+   3.93092388654604*^9, 3.930923920049479*^9}, {3.930924038902313*^9, 
+   3.930924040490107*^9}, {3.930945977242186*^9, 3.930946095047868*^9}, {
+   3.9309462442547503`*^9, 3.930946306831041*^9}, {3.930946383173805*^9, 
+   3.930946461609544*^9}, 3.930946496030859*^9, {3.930946686835168*^9, 
+   3.930946797994755*^9}, {3.930946831017578*^9, 3.930946871755554*^9}, {
+   3.930946901831844*^9, 3.930946910250114*^9}, {3.930946995801789*^9, 
+   3.930947009547386*^9}, {3.930947405111923*^9, 3.930947437566589*^9}, {
+   3.930947475972148*^9, 3.930947506118739*^9}, {3.930947538350464*^9, 
+   3.930947564378302*^9}, {3.931375072970685*^9, 3.93137520955162*^9}, {
+   3.931458288206808*^9, 3.931458546007607*^9}, {3.931458626482923*^9, 
+   3.931458636827924*^9}, 3.931458689720317*^9, {3.931781894231324*^9, 
+   3.9317819000639133`*^9}, {3.932823233232479*^9, 3.932823235520179*^9}, {
+   3.932823306120234*^9, 3.9328233070781918`*^9}, {3.932825893259492*^9, 
+   3.93282590851719*^9}, 3.93282602769488*^9, {3.932826817535812*^9, 
+   3.9328268633811502`*^9}, {3.932826900997468*^9, 3.932826902880033*^9}, {
+   3.9328269555109043`*^9, 3.932826955897855*^9}, 3.932827077449484*^9, {
+   3.932827621386087*^9, 3.932827625832981*^9}, {3.932827693133355*^9, 
+   3.932827775084743*^9}, {3.932827847243692*^9, 3.932827847713254*^9}, {
+   3.932827941967702*^9, 3.932828013432345*^9}, {3.9328292283283997`*^9, 
+   3.932829272360949*^9}, 3.932829471340073*^9, 3.946833341876843*^9, {
+   3.9507178213463717`*^9, 3.950717827033215*^9}, {3.9507179090519133`*^9, 
+   3.9507179124307203`*^9}, {3.9507187571819553`*^9, 3.950718831082205*^9}, 
+   3.950718889639236*^9, 3.950719048323955*^9, 3.950719093520721*^9},
+ CellLabel->
+  "In[2431]:=",ExpressionUUID->"ed151bba-a9ff-4412-85bf-28daf72979be"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"btcn", ",", " ", "mon", ",", " ", "meann"}], "}"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"btcn", "=", 
+       RowBox[{"Take", "[", 
+        RowBox[{
+         RowBox[{"btcData", "//", "Normal"}], ",", 
+         RowBox[{"-", "n"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"mon", "=", " ", 
+       RowBox[{"Take", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"MovingAverage", "[", 
+           RowBox[{"btcData", ",", "n"}], "]"}], "//", "Normal"}], ",", 
+         RowBox[{"-", "n"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"meann", "=", 
+       RowBox[{"Mean", "[", 
+        RowBox[{"Last", " ", "/@", "btcn"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"plotlabel", " ", "=", " ", 
+       RowBox[{"Column", "[", 
+        RowBox[{
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<Bitcoin Price (USD)\>\"", " ", ",", "titlestyle"}], 
+            "]"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"AccountingForm", "[", 
+                RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], "]"}], 
+               "]"}]}], " ", ",", "subtitlestyle"}], "]"}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"\"\<Current \>\"", " ", "<>", " ", 
+              RowBox[{"ToString", "[", "n", "]"}], 
+              "<>", "\"\< Day Moving Average (in red)\>\""}], ",", 
+             "subtitlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"ToString", "[", "meann", "]"}]}], "\[IndentingNewLine]", 
+          "}"}], "\[IndentingNewLine]", ",", "Center"}], 
+        "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"DateListPlot", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"btcn", ",", " ", "mon"}], "}"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"PlotLabel", "->", "plotlabel"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"PlotLegends", "->", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{"\"\<Price\>\"", "\[IndentingNewLine]", ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "n", "]"}], " ", "<>", 
+               " ", "\"\< Day Moving Average\>\""}]}], "\[IndentingNewLine]", 
+             "}"}]}], "\[IndentingNewLine]", ",", 
+           RowBox[{"PlotRange", "->", "Full"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"ImageSize", "->", "1000"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"GridLines", "->", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{"Automatic", "\[IndentingNewLine]", ",", 
+              RowBox[{"Join", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"{", 
+                  RowBox[{"meann", ",", 
+                   RowBox[{"Directive", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "Thick", ",", " ", "Dashed"}], "}"}], 
+                    "]"}]}], "}"}], "}"}], ",", 
+                RowBox[{"Range", "[", 
+                 RowBox[{"0", ",", "200000", ",", "5000"}], "]"}]}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
+           RowBox[{"FrameTicks", "->", "All"}]}], "\[IndentingNewLine]", 
+          "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"DateListPlot", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"First", "[", "#", "]"}], "//", "First"}], ",", 
+               RowBox[{"N", "[", 
+                FractionBox[
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"First", "[", "#", "]"}], "//", "Last"}], ")"}], "-", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Last", "[", "#", "]"}], "//", "Last"}], ")"}]}], 
+                 
+                 RowBox[{
+                  RowBox[{"First", "[", "#", "]"}], "//", "Last"}]], "]"}]}], 
+              "}"}], "&"}], "/@", " ", 
+            RowBox[{"MapThread", "[", 
+             RowBox[{"List", ",", 
+              RowBox[{"{", 
+               RowBox[{"btcn", ",", "mon"}], "}"}]}], "]"}]}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{
+           "PlotLabel", 
+            "->", "\"\<Relative above/below the moving average\>\""}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"ImageSize", "->", "1000"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"GridLines", "->", 
+            RowBox[{"{", 
+             RowBox[{"Automatic", ",", " ", 
+              RowBox[{"Join", "[", 
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{
+                  RowBox[{"-", "10"}], ",", "10", ",", "0.05"}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "Thick"}], "}"}], "}"}]}], "]"}]}], 
+             "}"}]}], "\[IndentingNewLine]", ",", 
+           RowBox[{"FrameTicks", "->", "All"}]}], "\[IndentingNewLine]", 
+          "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", "200", ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Moving Average\>\"", ",", "16"}], "]"}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"Join", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"100", "->", " ", "\"\<100 days\>\""}], ",", 
+          RowBox[{"200", " ", "->", " ", "\"\<200 days\>\""}], ",", 
+          RowBox[{"500", "->", " ", "\"\<500 days\>\""}]}], "}"}], ",", 
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#1", " ", "->", " ", 
+            RowBox[{
+             RowBox[{"ToString", "[", 
+              RowBox[{"First", "[", "#2", "]"}], "]"}], " ", "<>", 
+             " ", "\"\< yr\>\""}]}], "&"}], ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"365", ",", 
+            RowBox[{"365", " ", "*", " ", "6"}], ",", "365"}], "]"}]}], 
+         "]"}]}], "]"}], "//", "Sort"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.931778847021064*^9, 3.9317789179146833`*^9}, {
+   3.931778955221694*^9, 3.931779031553317*^9}, {3.931779130967485*^9, 
+   3.931779231945709*^9}, {3.931779478412808*^9, 3.931779576580185*^9}, {
+   3.931780079753195*^9, 3.931780243832143*^9}, {3.931780298296356*^9, 
+   3.93178031995195*^9}, {3.931780409546237*^9, 3.93178056319989*^9}, {
+   3.931780596553117*^9, 3.931780597900181*^9}, {3.931780686670824*^9, 
+   3.931780716184067*^9}, {3.9317807562388268`*^9, 3.931780781912668*^9}, {
+   3.931781391361537*^9, 3.931781463136104*^9}, {3.931781592417137*^9, 
+   3.931781594518848*^9}, {3.9317816550741158`*^9, 3.93178165603586*^9}, {
+   3.9317816890030527`*^9, 3.931781690155242*^9}, {3.931781937332431*^9, 
+   3.931781996296576*^9}, {3.931782037757682*^9, 3.931782049214764*^9}, {
+   3.931898427440661*^9, 3.931898443801206*^9}, 3.931898620343934*^9, 
+   3.931898651840127*^9, {3.931898715058672*^9, 3.931898718296762*^9}, {
+   3.932587800958024*^9, 3.932587803154348*^9}, {3.93291840247709*^9, 
+   3.9329184284242897`*^9}, {3.932918484645184*^9, 3.932918488571426*^9}, {
+   3.932918545137916*^9, 3.932918550910448*^9}, 3.9329189637059183`*^9, 
+   3.932919092520793*^9, {3.932919697541628*^9, 3.932919755217108*^9}, {
+   3.932919823022087*^9, 3.932919843789604*^9}, {3.934480111117696*^9, 
+   3.934480183380362*^9}, {3.9344802268905582`*^9, 3.9344802457296352`*^9}, {
+   3.934480425588777*^9, 3.934480515297563*^9}, {3.93497111829*^9, 
+   3.9349712496212893`*^9}, {3.94683337298873*^9, 3.946833444954999*^9}, {
+   3.948987944705619*^9, 3.9489879530443707`*^9}, {3.950735328444635*^9, 
+   3.9507353350616913`*^9}, {3.9507355472942963`*^9, 3.950735564354507*^9}},
+ CellLabel->
+  "In[2447]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 200, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 200, 
+       Style["Moving Average", 16]}, {
+      100 -> "100 days", 200 -> "200 days", 365 -> "1 yr", 500 -> "500 days", 
+       730 -> "2 yr", 1095 -> "3 yr", 1460 -> "4 yr", 1825 -> "5 yr", 2190 -> 
+       "6 yr"}, ControlType -> PopupMenu}}, Typeset`size$$ = {
+    1187.68974609375, {651.8399810639355, 657.5719146576855}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 200}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> 
+      Module[{$CellContext`btcn$, $CellContext`mon$, $CellContext`meann$}, \
+$CellContext`btcn$ = Take[
+           
+           Normal[$CellContext`btcData], -$CellContext`n$$]; \
+$CellContext`mon$ = Take[
+           Normal[
+            
+            MovingAverage[$CellContext`btcData, $CellContext`n$$]], \
+-$CellContext`n$$]; $CellContext`meann$ = Mean[
+           Map[Last, $CellContext`btcn$]]; $CellContext`plotlabel = Column[{
+            Style["Bitcoin Price (USD)", $CellContext`titlestyle], 
+            Style["Latest: $" <> ToString[
+               AccountingForm[
+                $CellContext`btcData[
+                "LastValue"]]], $CellContext`subtitlestyle], 
+            Style[
+            "Current " <> ToString[$CellContext`n$$] <> 
+             " Day Moving Average (in red)", $CellContext`subtitlestyle], 
+            ToString[$CellContext`meann$]}, Center]; Column[{
+           
+           DateListPlot[{$CellContext`btcn$, $CellContext`mon$}, 
+            PlotLabel -> $CellContext`plotlabel, 
+            PlotLegends -> {
+             "Price", ToString[$CellContext`n$$] <> " Day Moving Average"}, 
+            PlotRange -> Full, ImageSize -> 1000, GridLines -> {Automatic, 
+              Join[{{$CellContext`meann$, 
+                 Directive[{Red, Thick, Dashed}]}}, 
+               Range[0, 200000, 5000]]}, FrameTicks -> All], 
+           DateListPlot[
+            Map[{
+              First[
+               First[#]], 
+              N[(Last[
+                  First[#]] - Last[
+                 Last[#]])/Last[
+                First[#]]]}& , 
+             MapThread[List, {$CellContext`btcn$, $CellContext`mon$}]], 
+            PlotLabel -> "Relative above/below the moving average", ImageSize -> 
+            1000, GridLines -> {Automatic, 
+              Join[
+               Range[-10, 10, 0.05], {{0, Thick}}]}, FrameTicks -> All]}]], 
+      "Specifications" :> {{{$CellContext`n$$, 200, 
+          Style["Moving Average", 16]}, {
+         100 -> "100 days", 200 -> "200 days", 365 -> "1 yr", 500 -> 
+          "500 days", 730 -> "2 yr", 1095 -> "3 yr", 1460 -> "4 yr", 1825 -> 
+          "5 yr", 2190 -> "6 yr"}}}, "Options" :> {}, "DefaultOptions" :> {}],
+     
+     ImageSizeCache->{
+      1236.78974609375, {699.5794982758496, 705.3114318695996}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9317788631931553`*^9, 3.931778885781557*^9}, 
+   3.931778919278822*^9, 3.931779033278701*^9, 3.931779233318129*^9, {
+   3.931779484888459*^9, 3.931779536438675*^9}, {3.931779566817243*^9, 
+   3.931779577727306*^9}, 3.931780246899756*^9, 3.931780321427747*^9, 
+   3.931780494552911*^9, {3.931780529982463*^9, 3.931780543459834*^9}, 
+   3.9317806102440434`*^9, 3.931780719670456*^9, 3.931780783423821*^9, 
+   3.9317814644731092`*^9, 3.931781597733602*^9, 3.93178165727142*^9, 
+   3.931781691548636*^9, 3.931781946277508*^9, 3.931782000974453*^9, {
+   3.931782041674452*^9, 3.931782050422098*^9}, 3.931853151823831*^9, 
+   3.9318738810859537`*^9, 3.931898248650035*^9, 3.93189845213019*^9, {
+   3.931898624642866*^9, 3.931898653982525*^9}, 3.931898720575314*^9, 
+   3.932032209129281*^9, 3.932054152784935*^9, 3.9323047092952642`*^9, 
+   3.932587701065214*^9, 3.932587823323606*^9, 3.9325890114111757`*^9, 
+   3.9327620589094143`*^9, 3.932822964094331*^9, 3.93282819220682*^9, 
+   3.93282960669837*^9, 3.93282995868369*^9, 3.932837803008381*^9, 
+   3.932838308393647*^9, 3.932838386560273*^9, 3.932839256560525*^9, 
+   3.932840107931941*^9, 3.9328419698626013`*^9, 3.932918104850646*^9, 
+   3.932918215340316*^9, 3.932918495146393*^9, 3.932918965732018*^9, 
+   3.932919094799244*^9, 3.932919228890853*^9, 3.932919700146521*^9, 
+   3.9329197558794823`*^9, {3.932919833513669*^9, 3.932919851839305*^9}, 
+   3.933613202001608*^9, 3.933690921281888*^9, 3.934472710603424*^9, 
+   3.934478547903799*^9, {3.934480155189883*^9, 3.934480184832818*^9}, 
+   3.934480247754532*^9, 3.9344804319022913`*^9, {3.934480502180312*^9, 
+   3.9344805166738577`*^9}, 3.934639179099512*^9, 3.934663111340139*^9, 
+   3.934754435250586*^9, 3.934970826264934*^9, {3.934971140650354*^9, 
+   3.9349712510897703`*^9}, 3.935338382030882*^9, 3.935771366437958*^9, 
+   3.936038494837344*^9, 3.936351617057568*^9, 3.936381795277688*^9, 
+   3.937429136074526*^9, 3.938271155882599*^9, 3.938271554226314*^9, 
+   3.938278081468993*^9, 3.939056591281988*^9, 3.940852650279469*^9, 
+   3.941750061131523*^9, {3.9419808528012238`*^9, 3.941980873311792*^9}, 
+   3.9419813318591957`*^9, 3.9420088332243156`*^9, 3.9435679548385897`*^9, 
+   3.943806778314457*^9, 3.944668374340047*^9, 3.9450759829200583`*^9, 
+   3.945211997811957*^9, 3.945684430621811*^9, 3.945794905196978*^9, 
+   3.9459720960873137`*^9, 3.946298828546937*^9, 3.9463043226556*^9, {
+   3.9468248932337437`*^9, 3.946824916557249*^9}, 3.946833418241694*^9, 
+   3.946833455466036*^9, 3.94683354188098*^9, 3.947282446695382*^9, 
+   3.947974760710359*^9, 3.948406392718967*^9, {3.948407193625224*^9, 
+   3.948407245615526*^9}, 3.948987811835898*^9, 3.948987961620865*^9, 
+   3.948988002823346*^9, {3.949060289208748*^9, 3.949060302308013*^9}, 
+   3.9490603330112047`*^9, 3.949060378552278*^9, 3.9490605114049883`*^9, 
+   3.94906054554495*^9, 3.9490655100689373`*^9, 3.949506968473233*^9, 
+   3.950370680175764*^9, 3.950370934096406*^9, 3.95071638029405*^9, 
+   3.950716614058754*^9, 3.950717836890164*^9, 3.950717867833746*^9, 
+   3.950717921535153*^9, 3.9507181656367702`*^9, {3.950718253684569*^9, 
+   3.950718298144099*^9}, 3.950718605888731*^9, 3.950718840997148*^9, 
+   3.950718898368678*^9, 3.9507190560290117`*^9, 3.950719125803336*^9, 
+   3.950734958067363*^9, 3.950735385438648*^9, 3.950735633603533*^9, 
+   3.951067330474037*^9, 3.9510677502628727`*^9},
+ CellLabel->
+  "Out[2447]=",ExpressionUUID->"c12c2820-ff9a-464a-9d29-f0a7399337cc"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1748, 1132},
+WindowMargins->{{84, Automatic}, {0, Automatic}},
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c4d59863-72bc-4e6e-9ba2-6774c3e58737"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 741, 11, 96, "Title",ExpressionUUID->"f5fa712f-8f02-48db-ad7d-991505d584c6"],
+Cell[CellGroupData[{
+Cell[1342, 37, 2471, 65, 19, "Input",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9",
+ CellOpen->False],
+Cell[3816, 104, 1015, 18, 56, "Output",ExpressionUUID->"2d71fa52-5f3d-4c87-9262-7ade94c99254"]
+}, Open  ]],
+Cell[4846, 125, 12582, 275, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
+ CellOpen->False],
+Cell[CellGroupData[{
+Cell[17453, 404, 7178, 126, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
+ CellOpen->False],
+Cell[24634, 532, 11097, 173, 1012, "Output",ExpressionUUID->"9ecacd47-4d71-4f56-828d-f176866898c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35768, 710, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
+Cell[36039, 716, 5828, 125, 19, "Input",ExpressionUUID->"ed151bba-a9ff-4412-85bf-28daf72979be",
+ CellOpen->False],
+Cell[CellGroupData[{
+Cell[41892, 845, 8567, 182, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
+ CellOpen->False],
+Cell[50462, 1029, 7433, 132, 1435, "Output",ExpressionUUID->"c12c2820-ff9a-464a-9d29-f0a7399337cc"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
