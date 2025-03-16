@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     59419,       1204]
-NotebookOptionsPosition[     57935,       1166]
-NotebookOutlinePosition[     58333,       1182]
-CellTagsIndexPosition[     58290,       1179]
+NotebookDataLength[     56830,       1144]
+NotebookOptionsPosition[     55221,       1103]
+NotebookOutlinePosition[     55618,       1119]
+CellTagsIndexPosition[     55575,       1116]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -100,7 +100,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.9503706662894382`*^9, 3.950370670716475*^9}, {
   3.950716569289399*^9, 3.9507165917716703`*^9}},
  CellLabel->
-  "In[2394]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
+  "In[3148]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -118,9 +118,14 @@ Cell[BoxData[
    3.950718296289762*^9}, 3.9507186035652437`*^9, 3.950718838876289*^9, 
    3.9507188961384573`*^9, 3.950719053666215*^9, 3.9507191236489573`*^9, 
    3.950734955796301*^9, 3.950735382621984*^9, 3.95073563128335*^9, 
-   3.9510673274634323`*^9, 3.951067747710849*^9},
+   3.9510673274634323`*^9, 3.951067747710849*^9, 3.9510819647063017`*^9, 
+   3.951082178825634*^9, 3.9510831005116653`*^9, 3.951083224294715*^9, 
+   3.951083413567844*^9, 3.951083537705576*^9, 3.95108364512353*^9, 
+   3.951083724724044*^9, 3.9510838697862988`*^9, 3.951084935307863*^9, 
+   3.951085052385006*^9, 3.9510858009244547`*^9, 3.9510859211174717`*^9, 
+   3.9510860536523857`*^9},
  CellLabel->
-  "Out[2397]=",ExpressionUUID->"2d71fa52-5f3d-4c87-9262-7ade94c99254"]
+  "Out[3151]=",ExpressionUUID->"fed61278-3971-41be-8ecc-c1469dbbc20a"]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -128,6 +133,20 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"SetDirectory", "[", 
     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Function", " ", "shortcuts"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"st", "=", "StringTemplate"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"dollar", "[", "a_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"st", "[", "\"\<$``\>\"", "]"}], "[", 
+     RowBox[{"NumberForm", "[", 
+      RowBox[{"a", ",", 
+       RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
@@ -158,7 +177,7 @@ Cell[BoxData[{
    RowBox[{"updatedstr", "=", 
     RowBox[{"Style", "[", 
      RowBox[{
-      RowBox[{"StringForm", "[", 
+      RowBox[{"st", "[", 
        RowBox[{"\"\<(updated: ``)\>\"", ",", 
         RowBox[{"DateString", "[", "]"}]}], "]"}], ",", "subtitlestyle"}], 
      "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
@@ -168,87 +187,67 @@ Cell[BoxData[{
     RowBox[{"\"\<BTC/USD\>\"", "\[IndentingNewLine]", 
      ",", "\"\<Jan 1 2012\>\""}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"mo100", "=", " ", 
+  RowBox[{"mo100", "=", 
    RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", "100"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"btcData", ",", "100"}], "]"}]}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"mo100latest", " ", "=", " ", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo100", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"mo100latest", "=", 
+   RowBox[{"dollar", "[", 
+    RowBox[{"mo100", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"mo200", "=", " ", 
+  RowBox[{"mo200", "=", 
    RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", "200"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"btcData", ",", "200"}], "]"}]}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"mo200latest", " ", "=", " ", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo200", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"mo200latest", "=", 
+   RowBox[{"dollar", "[", 
+    RowBox[{"mo200", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo1yr", "=", 
    RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", "365"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"btcData", ",", "365"}], "]"}]}], ";"}], "\n", 
  RowBox[{
-  RowBox[{"mo1yrlatest", " ", "=", " ", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo1yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"mo1yrlatest", "=", 
+   RowBox[{"dollar", "[", 
+    RowBox[{"mo1yr", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo2yr", "=", 
    RowBox[{"MovingAverage", "[", 
     RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"365", "*", "2"}]}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo2yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo2yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"dollar", "[", 
+    RowBox[{"mo2yr", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo3yr", "=", 
    RowBox[{"MovingAverage", "[", 
     RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"365", "*", "3"}]}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo3yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo3yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"dollar", "[", 
+    RowBox[{"mo3yr", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo4yr", "=", 
    RowBox[{"MovingAverage", "[", 
     RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "4"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"365", "*", "4"}]}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo4yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo4yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"dollar", "[", 
+    RowBox[{"mo4yr", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"mo5yr", "=", 
    RowBox[{"MovingAverage", "[", 
     RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "5"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"365", "*", "5"}]}], "]"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"mo5yrlatest", "=", 
-    RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-     RowBox[{"ToString", "[", 
-      RowBox[{
-       RowBox[{"mo5yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-       "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    RowBox[{"dollar", "[", 
+     RowBox[{"mo5yr", "[", "\"\<LastValue\>\"", "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"plottypefunc", "=", "DateListPlot"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -317,40 +316,41 @@ Cell[BoxData[{
     "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"plotlabels", "=", 
-   RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{"{", 
     RowBox[{"\"\<BTC\>\"", "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<100 day mo: \>\"", "<>", " ", "mo100latest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<200 day mo: \>\"", "<>", " ", "mo200latest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<1 yr mo: \>\"", "<>", " ", "mo1yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<2 yr mo: \>\"", " ", "<>", " ", "mo2yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<3 yr mo: \>\"", " ", "<>", " ", "mo3yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<4 yr mo: \>\"", " ", "<>", " ", "mo4yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<5 yr mo: \>\"", " ", "<>", " ", "mo5yrlatest"}]}], 
-    "\[IndentingNewLine]", "}"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<100 day mo: ``\>\"", "]"}], "[", "mo100latest", 
+      "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<200 day mo: ``\>\"", "]"}], "[", "mo200latest", 
+      "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<1 yr mo: ``\>\"", "]"}], "[", "mo1yrlatest", 
+      "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<2 yr mo: ``\>\"", "]"}], "[", "mo2yrlatest", 
+      "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<3 yr mo: ``\>\"", "]"}], "[", "mo3yrlatest", 
+      "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<4 yr mo: ``\>\"", "]"}], "[", "mo4yrlatest", 
+      "]"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"st", "[", "\"\<5 yr mo: ``\>\"", "]"}], "[", "mo5yrlatest", 
+      "]"}]}], "\[IndentingNewLine]", "}"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"plotlegends", "=", 
-   RowBox[{"{", "\[IndentingNewLine]", 
-    RowBox[{"\"\<BTC (USD)\>\"", "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<100 Day Moving Average \>\"", "<>", " ", "mo100latest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<200 Day Moving Average \>\"", "<>", " ", "mo200latest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<1 Year Moving Average \>\"", "<>", " ", "mo1yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<2 Year Moving Average \>\"", "<>", " ", "mo2yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<3 Year Moving Average \>\"", "<>", " ", "mo2yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<4 Year Moving Average \>\"", "<>", " ", "mo4yrlatest"}], 
-     "\[IndentingNewLine]", ",", 
-     RowBox[{"\"\<5 Year Moving Average \>\"", "<>", " ", "mo5yrlatest"}]}], 
-    "\[IndentingNewLine]", "}"}]}], ";"}]}], "Input",
+   RowBox[{"{", 
+    RowBox[{"\"\<BTC (USD)\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<100 Day Moving Average\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<200 Day Moving Average\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<1 Year Moving Average\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<2 Year Moving Average\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<3 Year Moving Average\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<4 Year Moving Average\>\"", "\[IndentingNewLine]", 
+     ",", "\"\<5 Year Moving Average\>\""}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]}], "Input",
  CellOpen->False,
  CellChangeTimes->{{3.910870641488784*^9, 3.910870672156954*^9}, {
    3.926025545790792*^9, 3.926025552724882*^9}, {3.926025595726514*^9, 
@@ -396,9 +396,16 @@ Cell[BoxData[{
    3.9507186869780684`*^9}, {3.950719115426339*^9, 3.950719118138866*^9}, {
    3.950734441914851*^9, 3.950734449252839*^9}, {3.9507345162300386`*^9, 
    3.950734550010179*^9}, {3.950734941416844*^9, 3.9507349459467382`*^9}, {
-   3.950735470278764*^9, 3.9507354956172857`*^9}},
+   3.950735470278764*^9, 3.9507354956172857`*^9}, {3.951083199176271*^9, 
+   3.951083214201564*^9}, {3.951083273335619*^9, 3.9510833022641563`*^9}, 
+   3.951083408472246*^9, {3.951084413161702*^9, 3.951084450243886*^9}, {
+   3.951084759990588*^9, 3.9510847751724987`*^9}, 3.9510848962807903`*^9, {
+   3.951085097663888*^9, 3.951085098262012*^9}, {3.9510852824772787`*^9, 
+   3.9510852933044767`*^9}, {3.951085734123775*^9, 3.951085786093936*^9}, {
+   3.951085867873287*^9, 3.951085906528122*^9}, {3.951085989938107*^9, 
+   3.9510860476451683`*^9}},
  CellLabel->
-  "In[2398]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
+  "In[3152]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
 
 Cell[CellGroupData[{
 
@@ -428,18 +435,24 @@ Cell[BoxData[
                 RowBox[{
                  RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
                   RowBox[{"ToString", "[", 
-                   RowBox[{"AccountingForm", "[", 
-                    RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], "]"}],
-                    "]"}]}], ",", "subtitlestyle"}], "]"}]}], 
-              "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
-             RowBox[{"Part", "[", "\[IndentingNewLine]", 
-              RowBox[{"plotlabels", "\[IndentingNewLine]", ",", 
-               RowBox[{"Select", "[", 
-                RowBox[{"lines", ",", 
-                 RowBox[{
-                  RowBox[{"#", "!=", "1"}], "&"}]}], "]"}]}], 
-              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], 
-           "\[IndentingNewLine]", ",", "Center"}], "\[IndentingNewLine]", 
+                   RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], ",", 
+                    RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], ",", 
+                 "subtitlestyle"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+             "\[IndentingNewLine]", ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"#", ",", "subtitlestyle"}], "]"}], "&"}], "/@", 
+              RowBox[{"Part", "[", "\[IndentingNewLine]", 
+               RowBox[{"plotlabels", "\[IndentingNewLine]", ",", 
+                RowBox[{"Select", "[", 
+                 RowBox[{"lines", ",", 
+                  RowBox[{
+                   RowBox[{"#", "!=", "1"}], "&"}]}], "]"}]}], 
+               "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", "]"}],
+            "\[IndentingNewLine]", ",", "Center"}], "\[IndentingNewLine]", 
           "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"plottypefunc", ":=", 
          RowBox[{"If", "[", 
@@ -526,9 +539,11 @@ Cell[BoxData[
    3.950718442056315*^9, 3.950718464462699*^9}, 3.950718497007555*^9, {
    3.950734533072043*^9, 3.950734563771668*^9}, {3.9507346189697733`*^9, 
    3.950734629719369*^9}, {3.950734834036971*^9, 3.950734892496415*^9}, {
-   3.950735612837654*^9, 3.950735618068153*^9}},
+   3.950735612837654*^9, 3.950735618068153*^9}, {3.951081946210751*^9, 
+   3.95108195450351*^9}, {3.951082144218356*^9, 3.951082169539357*^9}, {
+   3.9510830497682123`*^9, 3.951083069552888*^9}},
  CellLabel->
-  "In[2430]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
+  "In[3186]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
 
 Cell[BoxData[
  TagBox[
@@ -543,7 +558,7 @@ Cell[BoxData[
        Dynamic[$CellContext`selectplottype]], 
       Manipulate`Dump`ThisIsNotAControl, ControlType -> None}}, 
     Typeset`size$$ = {
-    1535.5232421875, {431.1263762382748, 436.85830983202493`}}, 
+    1467.74931640625, {449.56568287890127`, 455.2976164726514}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -559,11 +574,12 @@ $CellContext`plotlabel = Column[
            Join[{
              Style["Bitcoin Price (USD)", $CellContext`titlestyle], 
              Style["Latest: $" <> ToString[
-                AccountingForm[
-                 $CellContext`btcData[
-                 "LastValue"]]], $CellContext`subtitlestyle]}, 
-            Part[$CellContext`plotlabels, 
-             Select[$CellContext`lines, # != 1& ]]], 
+                NumberForm[
+                 $CellContext`btcData["LastValue"], DigitBlock -> 
+                 3]], $CellContext`subtitlestyle]}, 
+            Map[Style[#, $CellContext`subtitlestyle]& , 
+             Part[$CellContext`plotlabels, 
+              Select[$CellContext`lines, # != 1& ]]]], 
            Center]; $CellContext`plottypefunc := 
          If[$CellContext`plottype == 1, DateListPlot, 
            DateListLogPlot]; $CellContext`plottypefunc[
@@ -580,7 +596,7 @@ $CellContext`plotlabel = Column[
         Dynamic[$CellContext`selectplottype]}, "Options" :> {}, 
       "DefaultOptions" :> {}],
      ImageSizeCache->{
-      1584.6232421875, {488.16418446581395`, 493.89611805956395`}},
+      1516.84931640625, {506.6034911064404, 512.3354247001904}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -701,9 +717,18 @@ $CellContext`plotlabel = Column[
    3.950734956974567*^9, 3.950735260409546*^9, {3.950735384339776*^9, 
    3.950735410378112*^9}, 3.950735632498829*^9, {3.951067328643722*^9, 
    3.95106740803263*^9}, {3.9510674464799*^9, 3.9510674479877367`*^9}, 
-   3.951067749180468*^9, {3.951067847291438*^9, 3.951067863569031*^9}},
+   3.951067749180468*^9, {3.951067847291438*^9, 3.951067863569031*^9}, 
+   3.951081730505948*^9, 3.9510819657222137`*^9, {3.9510819988273687`*^9, 
+   3.951082001628056*^9}, {3.9510821798713923`*^9, 3.951082189361616*^9}, {
+   3.951083101679174*^9, 3.951083114914482*^9}, {3.951083225082059*^9, 
+   3.951083229917781*^9}, {3.951083414423356*^9, 3.9510834232023907`*^9}, 
+   3.951083538924995*^9, 3.9510836459321957`*^9, 3.951083725756895*^9, 
+   3.951083870656844*^9, {3.9510849362880096`*^9, 3.951084958725739*^9}, 
+   3.951085053602542*^9, {3.951085802093342*^9, 3.9510858142750387`*^9}, {
+   3.951085921990193*^9, 3.951085932400321*^9}, {3.951086054652673*^9, 
+   3.951086059869858*^9}},
  CellLabel->
-  "Out[2430]=",ExpressionUUID->"9ecacd47-4d71-4f56-828d-f176866898c8"]
+  "Out[3186]=",ExpressionUUID->"8906bc59-1463-4ed7-b4d5-96553638e753"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -714,133 +739,6 @@ Cell["Past n days moving average", "Section",
   3.931780074893587*^9}},ExpressionUUID->"4de07029-d8b0-40fb-ac97-\
 1a91d36f1eb6"],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"btcData", "=", 
-   RowBox[{"FinancialData", "[", "\[IndentingNewLine]", 
-    RowBox[{"\"\<BTC/USD\>\"", "\[IndentingNewLine]", 
-     ",", "\"\<Jan 1 2012\>\""}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo100", "=", " ", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", "100"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo100latest", " ", "=", " ", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo100", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo200", "=", " ", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", "200"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo200latest", " ", "=", " ", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo200", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo1yr", "=", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", "365"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo1yrlatest", " ", "=", " ", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo1yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo2yr", "=", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "2"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo2yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo2yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo3yr", "=", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo3yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo3yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo4yr", "=", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "4"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo4yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo4yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo5yr", "=", 
-   RowBox[{"MovingAverage", "[", 
-    RowBox[{"btcData", ",", 
-     RowBox[{"365", " ", "*", " ", "5"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"mo5yrlatest", "=", 
-   RowBox[{"\"\<$\>\"", " ", "<>", " ", 
-    RowBox[{"ToString", "[", 
-     RowBox[{
-      RowBox[{"mo5yr", "[", "\"\<LastValue\>\"", "]"}], "//", 
-      "AccountingForm"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"lines", "=", 
-   RowBox[{"Range", "[", "1", "]"}]}], ";"}], "\[IndentingNewLine]"}], "Input",\
-
- CellOpen->False,
- CellChangeTimes->{{3.910870641488784*^9, 3.910870672156954*^9}, {
-   3.926025545790792*^9, 3.926025552724882*^9}, {3.926025595726514*^9, 
-   3.926025757662788*^9}, {3.926025868590417*^9, 3.9260258908130703`*^9}, {
-   3.926025923714999*^9, 3.926025947740068*^9}, {3.926025983974702*^9, 
-   3.9260259969579153`*^9}, {3.926026132046829*^9, 3.9260261531265078`*^9}, {
-   3.926026187121852*^9, 3.926026203619293*^9}, {3.9260262759617853`*^9, 
-   3.926026368321966*^9}, {3.9260264467697067`*^9, 3.926026461668386*^9}, {
-   3.93022746671277*^9, 3.93022749095067*^9}, {3.930227564643298*^9, 
-   3.930227598796813*^9}, {3.930227678094948*^9, 3.930227726034398*^9}, {
-   3.93092388654604*^9, 3.930923920049479*^9}, {3.930924038902313*^9, 
-   3.930924040490107*^9}, {3.930945977242186*^9, 3.930946095047868*^9}, {
-   3.9309462442547503`*^9, 3.930946306831041*^9}, {3.930946383173805*^9, 
-   3.930946461609544*^9}, 3.930946496030859*^9, {3.930946686835168*^9, 
-   3.930946797994755*^9}, {3.930946831017578*^9, 3.930946871755554*^9}, {
-   3.930946901831844*^9, 3.930946910250114*^9}, {3.930946995801789*^9, 
-   3.930947009547386*^9}, {3.930947405111923*^9, 3.930947437566589*^9}, {
-   3.930947475972148*^9, 3.930947506118739*^9}, {3.930947538350464*^9, 
-   3.930947564378302*^9}, {3.931375072970685*^9, 3.93137520955162*^9}, {
-   3.931458288206808*^9, 3.931458546007607*^9}, {3.931458626482923*^9, 
-   3.931458636827924*^9}, 3.931458689720317*^9, {3.931781894231324*^9, 
-   3.9317819000639133`*^9}, {3.932823233232479*^9, 3.932823235520179*^9}, {
-   3.932823306120234*^9, 3.9328233070781918`*^9}, {3.932825893259492*^9, 
-   3.93282590851719*^9}, 3.93282602769488*^9, {3.932826817535812*^9, 
-   3.9328268633811502`*^9}, {3.932826900997468*^9, 3.932826902880033*^9}, {
-   3.9328269555109043`*^9, 3.932826955897855*^9}, 3.932827077449484*^9, {
-   3.932827621386087*^9, 3.932827625832981*^9}, {3.932827693133355*^9, 
-   3.932827775084743*^9}, {3.932827847243692*^9, 3.932827847713254*^9}, {
-   3.932827941967702*^9, 3.932828013432345*^9}, {3.9328292283283997`*^9, 
-   3.932829272360949*^9}, 3.932829471340073*^9, 3.946833341876843*^9, {
-   3.9507178213463717`*^9, 3.950717827033215*^9}, {3.9507179090519133`*^9, 
-   3.9507179124307203`*^9}, {3.9507187571819553`*^9, 3.950718831082205*^9}, 
-   3.950718889639236*^9, 3.950719048323955*^9, 3.950719093520721*^9},
- CellLabel->
-  "In[2431]:=",ExpressionUUID->"ed151bba-a9ff-4412-85bf-28daf72979be"],
-
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -849,8 +747,8 @@ Cell[BoxData[
    RowBox[{"Module", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"btcn", ",", " ", "mon", ",", " ", "meann"}], "}"}], 
-     "\[IndentingNewLine]", ",", 
+      RowBox[{"btcn", ",", " ", "mon", ",", " ", "meann", ",", "mean"}], 
+      "}"}], "\[IndentingNewLine]", ",", 
      RowBox[{
       RowBox[{"btcn", "=", 
        RowBox[{"Take", "[", 
@@ -864,9 +762,16 @@ Cell[BoxData[
           RowBox[{"MovingAverage", "[", 
            RowBox[{"btcData", ",", "n"}], "]"}], "//", "Normal"}], ",", 
          RowBox[{"-", "n"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"meann", "=", 
+      RowBox[{"mean", "=", 
        RowBox[{"Mean", "[", 
         RowBox[{"Last", " ", "/@", "btcn"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"meann", "=", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"Mean", "[", 
+          RowBox[{"Last", " ", "/@", "btcn"}], "]"}], ",", 
+         RowBox[{"DigitBlock", "->", "3"}]}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"plotlabel", " ", "=", " ", 
        RowBox[{"Column", "[", 
@@ -880,13 +785,14 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
               RowBox[{"ToString", "[", 
-               RowBox[{"AccountingForm", "[", 
-                RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], "]"}], 
-               "]"}]}], " ", ",", "subtitlestyle"}], "]"}], 
-           "\[IndentingNewLine]", ",", 
+               RowBox[{"NumberForm", "[", 
+                RowBox[{
+                 RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], ",", 
+                 RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], " ", ",",
+              "subtitlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
            RowBox[{"Style", "[", 
             RowBox[{
-             RowBox[{"\"\<Current \>\"", " ", "<>", " ", 
+             RowBox[{"\"\<Current $\>\"", " ", "<>", " ", 
               RowBox[{"ToString", "[", "n", "]"}], 
               "<>", "\"\< Day Moving Average (in red)\>\""}], ",", 
              "subtitlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
@@ -917,7 +823,7 @@ Cell[BoxData[
                RowBox[{
                 RowBox[{"{", 
                  RowBox[{"{", 
-                  RowBox[{"meann", ",", 
+                  RowBox[{"mean", ",", 
                    RowBox[{"Directive", "[", 
                     RowBox[{"{", 
                     RowBox[{"Red", ",", "Thick", ",", " ", "Dashed"}], "}"}], 
@@ -927,6 +833,7 @@ Cell[BoxData[
              "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
            RowBox[{"FrameTicks", "->", "All"}]}], "\[IndentingNewLine]", 
           "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"Spacer", "[", "20", "]"}], "\[IndentingNewLine]", ",", 
          RowBox[{"DateListPlot", "[", "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{
@@ -953,10 +860,11 @@ Cell[BoxData[
               RowBox[{"{", 
                RowBox[{"btcn", ",", "mon"}], "}"}]}], "]"}]}], 
            "\[IndentingNewLine]", ",", 
-           RowBox[{
-           "PlotLabel", 
-            "->", "\"\<Relative above/below the moving average\>\""}], 
-           "\[IndentingNewLine]", ",", 
+           RowBox[{"PlotLabel", "->", 
+            RowBox[{"Style", "[", 
+             
+             RowBox[{"\"\<Relative above/below the moving average\>\"", ",", 
+              "titlestyle"}], "]"}]}], "\[IndentingNewLine]", ",", 
            RowBox[{"ImageSize", "->", "1000"}], "\[IndentingNewLine]", ",", 
            RowBox[{"GridLines", "->", 
             RowBox[{"{", 
@@ -1023,9 +931,12 @@ Cell[BoxData[
    3.934480425588777*^9, 3.934480515297563*^9}, {3.93497111829*^9, 
    3.9349712496212893`*^9}, {3.94683337298873*^9, 3.946833444954999*^9}, {
    3.948987944705619*^9, 3.9489879530443707`*^9}, {3.950735328444635*^9, 
-   3.9507353350616913`*^9}, {3.9507355472942963`*^9, 3.950735564354507*^9}},
+   3.9507353350616913`*^9}, {3.9507355472942963`*^9, 3.950735564354507*^9}, {
+   3.951083580589435*^9, 3.951083636473559*^9}, {3.95108380116348*^9, 
+   3.951083864368375*^9}, {3.951083900179134*^9, 3.951083913018723*^9}, 
+   3.951083956315279*^9, {3.95108609786479*^9, 3.951086106844447*^9}},
  CellLabel->
-  "In[2447]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
+  "In[3189]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
 
 Cell[BoxData[
  TagBox[
@@ -1039,7 +950,7 @@ Cell[BoxData[
       100 -> "100 days", 200 -> "200 days", 365 -> "1 yr", 500 -> "500 days", 
        730 -> "2 yr", 1095 -> "3 yr", 1460 -> "4 yr", 1825 -> "5 yr", 2190 -> 
        "6 yr"}, ControlType -> PopupMenu}}, Typeset`size$$ = {
-    1187.68974609375, {651.8399810639355, 657.5719146576855}}, 
+    1187.68974609375, {665.2980630951856, 671.0299966889356}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1051,23 +962,26 @@ Cell[BoxData[
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
         Typeset`keyframeList$$}, "Body" :> 
-      Module[{$CellContext`btcn$, $CellContext`mon$, $CellContext`meann$}, \
-$CellContext`btcn$ = Take[
+      Module[{$CellContext`btcn$, $CellContext`mon$, $CellContext`meann$, \
+$CellContext`mean$}, $CellContext`btcn$ = Take[
            
            Normal[$CellContext`btcData], -$CellContext`n$$]; \
 $CellContext`mon$ = Take[
            Normal[
             
             MovingAverage[$CellContext`btcData, $CellContext`n$$]], \
--$CellContext`n$$]; $CellContext`meann$ = Mean[
-           Map[Last, $CellContext`btcn$]]; $CellContext`plotlabel = Column[{
+-$CellContext`n$$]; $CellContext`mean$ = Mean[
+           Map[Last, $CellContext`btcn$]]; $CellContext`meann$ = NumberForm[
+           Mean[
+            Map[Last, $CellContext`btcn$]], DigitBlock -> 
+           3]; $CellContext`plotlabel = Column[{
             Style["Bitcoin Price (USD)", $CellContext`titlestyle], 
             Style["Latest: $" <> ToString[
-               AccountingForm[
-                $CellContext`btcData[
-                "LastValue"]]], $CellContext`subtitlestyle], 
+               NumberForm[
+                $CellContext`btcData["LastValue"], DigitBlock -> 
+                3]], $CellContext`subtitlestyle], 
             Style[
-            "Current " <> ToString[$CellContext`n$$] <> 
+            "Current $" <> ToString[$CellContext`n$$] <> 
              " Day Moving Average (in red)", $CellContext`subtitlestyle], 
             ToString[$CellContext`meann$]}, Center]; Column[{
            
@@ -1076,9 +990,10 @@ $CellContext`mon$ = Take[
             PlotLegends -> {
              "Price", ToString[$CellContext`n$$] <> " Day Moving Average"}, 
             PlotRange -> Full, ImageSize -> 1000, GridLines -> {Automatic, 
-              Join[{{$CellContext`meann$, 
+              Join[{{$CellContext`mean$, 
                  Directive[{Red, Thick, Dashed}]}}, 
                Range[0, 200000, 5000]]}, FrameTicks -> All], 
+           Spacer[20], 
            DateListPlot[
             Map[{
               First[
@@ -1088,8 +1003,9 @@ $CellContext`mon$ = Take[
                  Last[#]])/Last[
                 First[#]]]}& , 
              MapThread[List, {$CellContext`btcn$, $CellContext`mon$}]], 
-            PlotLabel -> "Relative above/below the moving average", ImageSize -> 
-            1000, GridLines -> {Automatic, 
+            PlotLabel -> 
+            Style["Relative above/below the moving average", \
+$CellContext`titlestyle], ImageSize -> 1000, GridLines -> {Automatic, 
               Join[
                Range[-10, 10, 0.05], {{0, Thick}}]}, FrameTicks -> All]}]], 
       "Specifications" :> {{{$CellContext`n$$, 200, 
@@ -1099,7 +1015,7 @@ $CellContext`mon$ = Take[
           "5 yr", 2190 -> "6 yr"}}}, "Options" :> {}, "DefaultOptions" :> {}],
      
      ImageSizeCache->{
-      1236.78974609375, {699.5794982758496, 705.3114318695996}},
+      1236.78974609375, {713.0375803070997, 718.7695139008497}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1157,15 +1073,36 @@ $CellContext`mon$ = Take[
    3.950718298144099*^9}, 3.950718605888731*^9, 3.950718840997148*^9, 
    3.950718898368678*^9, 3.9507190560290117`*^9, 3.950719125803336*^9, 
    3.950734958067363*^9, 3.950735385438648*^9, 3.950735633603533*^9, 
-   3.951067330474037*^9, 3.9510677502628727`*^9},
+   3.951067330474037*^9, 3.9510677502628727`*^9, 3.9510819669011707`*^9, 
+   3.951082181024701*^9, 3.9510831028401947`*^9, 3.9510832262100267`*^9, 
+   3.951083415595501*^9, 3.951083540050123*^9, 3.951083647145731*^9, {
+   3.9510837195216007`*^9, 3.951083726926599*^9}, 3.95108387182382*^9, 
+   3.9510839155642757`*^9, 3.951084937551551*^9, 3.9510850541657667`*^9, 
+   3.951085802663864*^9, 3.9510859226656427`*^9, 3.951086055322185*^9, 
+   3.951086109779336*^9},
  CellLabel->
-  "Out[2447]=",ExpressionUUID->"c12c2820-ff9a-464a-9d29-f0a7399337cc"]
+  "Out[3189]=",ExpressionUUID->"3d57c99b-5eca-4e15-b4d1-c4afec3dcae5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\"\<100 day mo: \>\"", "<>", " ", "mo100latest"}]], "Input",
+ CellOpen->False,
+ CellLabel->
+  "In[3188]:=",ExpressionUUID->"c6eb39ec-2be1-4579-b39a-fdde7e9530d1"],
+
+Cell[BoxData["\<\"100 day mo: $96,374.9\"\>"], "Output",
+ CellChangeTimes->{3.951085266988607*^9, 3.9510858029684763`*^9, 
+  3.951085922958288*^9, 3.951086055653962*^9},
+ CellLabel->
+  "Out[3188]=",ExpressionUUID->"63c13175-cd20-431c-a59d-2152b7eb49ba"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1748, 1132},
-WindowMargins->{{84, Automatic}, {0, Automatic}},
+WindowSize->{1234, 1257},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"c4d59863-72bc-4e6e-9ba2-6774c3e58737"
@@ -1186,23 +1123,26 @@ Cell[576, 22, 741, 11, 96, "Title",ExpressionUUID->"f5fa712f-8f02-48db-ad7d-9915
 Cell[CellGroupData[{
 Cell[1342, 37, 2471, 65, 19, "Input",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9",
  CellOpen->False],
-Cell[3816, 104, 1015, 18, 56, "Output",ExpressionUUID->"2d71fa52-5f3d-4c87-9262-7ade94c99254"]
+Cell[3816, 104, 1354, 23, 56, "Output",ExpressionUUID->"fed61278-3971-41be-8ecc-c1469dbbc20a"]
 }, Open  ]],
-Cell[4846, 125, 12582, 275, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
+Cell[5185, 130, 12455, 277, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
  CellOpen->False],
 Cell[CellGroupData[{
-Cell[17453, 404, 7178, 126, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
+Cell[17665, 411, 7576, 134, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
  CellOpen->False],
-Cell[24634, 532, 11097, 173, 1012, "Output",ExpressionUUID->"9ecacd47-4d71-4f56-828d-f176866898c8"]
+Cell[25244, 547, 11786, 183, 1049, "Output",ExpressionUUID->"8906bc59-1463-4ed7-b4d5-96553638e753"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35768, 710, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
-Cell[36039, 716, 5828, 125, 19, "Input",ExpressionUUID->"ed151bba-a9ff-4412-85bf-28daf72979be",
- CellOpen->False],
+Cell[37067, 735, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
 Cell[CellGroupData[{
-Cell[41892, 845, 8567, 182, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
+Cell[37360, 743, 9278, 195, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
  CellOpen->False],
-Cell[50462, 1029, 7433, 132, 1435, "Output",ExpressionUUID->"c12c2820-ff9a-464a-9d29-f0a7399337cc"]
+Cell[46641, 940, 8061, 143, 1481, "Output",ExpressionUUID->"3d57c99b-5eca-4e15-b4d1-c4afec3dcae5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54739, 1088, 186, 4, 19, "Input",ExpressionUUID->"c6eb39ec-2be1-4579-b39a-fdde7e9530d1",
+ CellOpen->False],
+Cell[54928, 1094, 253, 4, 47, "Output",ExpressionUUID->"63c13175-cd20-431c-a59d-2152b7eb49ba"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
