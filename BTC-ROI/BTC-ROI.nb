@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    606706,      11579]
-NotebookOptionsPosition[    559439,      10706]
-NotebookOutlinePosition[    605722,      11559]
-CellTagsIndexPosition[    605679,      11556]
+NotebookDataLength[    665280,      13023]
+NotebookOptionsPosition[    618012,      12150]
+NotebookOutlinePosition[    664295,      13003]
+CellTagsIndexPosition[    664252,      13000]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -99,10 +99,10 @@ Cell[BoxData[
         RowBox[{"SelectionEvaluate", "[", 
          RowBox[{"OpenAllInputsCells", "[", "]"}], "]"}]}], "]"}]}], "}"}], 
     "]"}]}]}]], "Input",
- CellOpen->True,
+ CellOpen->False,
  CellChangeTimes->{{3.950377338542898*^9, 3.9503773428172417`*^9}},
  CellLabel->
-  "In[781]:=",ExpressionUUID->"5f80661a-cd8b-4293-acf4-83030feaedf6"],
+  "In[823]:=",ExpressionUUID->"5f80661a-cd8b-4293-acf4-83030feaedf6"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -114,9 +114,9 @@ Cell[BoxData[
     Automatic, Method -> "Preemptive"]},
   "RowDefault"]], "Output",
  CellChangeTimes->{3.950377352145693*^9, 3.9517299441589108`*^9, 
-  3.951731098477625*^9},
+  3.951731098477625*^9, 3.9517620068612967`*^9},
  CellLabel->
-  "Out[783]=",ExpressionUUID->"36b02214-c4aa-4a5a-a15e-dffe55f4b9dc"]
+  "Out[825]=",ExpressionUUID->"42a62851-a231-4999-a861-1a5e9f2f21a5"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -254,7 +254,7 @@ Cell[BoxData[{
    RowBox[{"FrameTicksStyle", "->", " ", 
     RowBox[{"settings", "[", "ticksstyle", "]"}]}]}], "\[IndentingNewLine]", 
   "]"}]}], "Input",
- CellOpen->True,
+ CellOpen->False,
  CellChangeTimes->{{3.93438465236578*^9, 3.934384675784363*^9}, {
    3.934384735742881*^9, 3.9343847602015333`*^9}, {3.934388250569322*^9, 
    3.934388294772936*^9}, 3.9343883249206533`*^9, {3.9344716123697233`*^9, 
@@ -270,7 +270,7 @@ Cell[BoxData[{
    3.951729936757153*^9}, {3.951730103314357*^9, 3.951730118578598*^9}, {
    3.951731085930715*^9, 3.951731088526613*^9}},
  CellLabel->
-  "In[784]:=",ExpressionUUID->"f96d83c5-c56e-457f-a564-3a7b7085a9c1"],
+  "In[826]:=",ExpressionUUID->"f96d83c5-c56e-457f-a564-3a7b7085a9c1"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -2953,7 +2953,7 @@ DjD5MK7vAdOtCX0XmDud0PeRGP0HYYUUAg==
           StringForm["Latest: ``", "84270.1"], Editable -> False], {15}, 
          StripOnInput -> False]}, {
         StyleBox[
-        "\"(updated: Sun 23 Mar 2025 10:04:59)\"", {15}, StripOnInput -> 
+        "\"(updated: Sun 23 Mar 2025 18:40:08)\"", {15}, StripOnInput -> 
          False]}}, GridBoxAlignment -> {"Columns" -> {{Center}}}, 
       DefaultBaseStyle -> "Column", 
       GridBoxItemSize -> {
@@ -2988,9 +2988,9 @@ DjD5MK7vAdOtCX0XmDud0PeRGP0HYYUUAg==
    3.94631594443468*^9}, 3.9463161487473707`*^9, {3.946418857557959*^9, 
    3.946418877109508*^9}, 3.94701041517411*^9, 3.94797487950176*^9, 
    3.9503771615172653`*^9, 3.950377353160287*^9, 3.951729950422347*^9, 
-   3.9517301219880877`*^9, 3.951731099868379*^9},
+   3.9517301219880877`*^9, 3.951731099868379*^9, 3.951762008413622*^9},
  CellLabel->
-  "Out[795]=",ExpressionUUID->"2b8e0371-4941-4010-a20e-75ecc7345a1e"]
+  "Out[837]=",ExpressionUUID->"f321dc7d-3672-4d10-89a6-605a9b67d82b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3021,9 +3021,12 @@ Cell[BoxData[
              RowBox[{"\"\<BTC annualized ROI since date until today\>\"", ",", 
               RowBox[{"settings", "[", "titlestyle", "]"}]}], "]"}], 
             "\[IndentingNewLine]", ",", 
-            RowBox[{"StringForm", "[", 
-             RowBox[{"\"\<Overall mean ROI: ``\>\"", ",", 
-              RowBox[{"PercentForm", "[", "overallmean", "]"}]}], "]"}], 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"StringForm", "[", 
+               RowBox[{"\"\<Overall mean ROI: ``\>\"", ",", 
+                RowBox[{"PercentForm", "[", "overallmean", "]"}]}], "]"}], ",", 
+              RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}], 
             "\[IndentingNewLine]", ",", "updatedstr"}], "\[IndentingNewLine]",
             "}"}], "\[IndentingNewLine]", ",", "Center"}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", ",", 
@@ -3048,8 +3051,21 @@ Cell[BoxData[
        RowBox[{"ImageMargins", "->", 
         RowBox[{"settings", "[", "imagemargins", "]"}]}], 
        "\[IndentingNewLine]", ",", " ", 
-       RowBox[{"PlotRange", "->", "Full"}], "\[IndentingNewLine]", ",", " ", 
-       RowBox[{"FrameTicks", "->", "All"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"PlotRange", "->", "Full"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"FrameTicks", "->", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"PercentForm", "[", "x", "]"}], ",", 
+                RowBox[{"{", "16", "}"}]}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "0", ",", "5", ",", "0.1"}], "}"}]}], "]"}]}], 
+         "}"}]}], "\[IndentingNewLine]", ",", 
        RowBox[{"FrameTicksStyle", "->", " ", 
         RowBox[{"settings", "[", "ticksstyle", "]"}]}]}], 
       "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -3060,21 +3076,33 @@ Cell[BoxData[
     RowBox[{"Export", "[", 
      RowBox[{"filename", ",", "btcroiperformance"}], "]"}], ";"}], "\[IndentingNewLine]",
     "btcroiperformance", "\[IndentingNewLine]"}]}]], "Input",
- CellOpen->True,
- CellChangeTimes->CompressedData["
-1:eJwdylsoQ3EAx/FFIlqJIpTaXBKNXEoUdsKDu2wKNc4Wciu38jChPLFSiiS3
-zYO5rcWUO7kNKSy0bJjxwJK/qSlD4fzOw7fPy5cnayyqcuFwOHwmmGR306cV
-Eqqy2O8Y/mz3nUHno+ESfvp0cIWMfb+TrJlJQl9YsjwUAN0U9EENIy1cOoQ9
-zzMGaA16NsKRpYs7eKtss8DFuKe7esbkI80TvNZ00w7GX4NJBi08ugaqxfF1
-kJ/RIIet0SGdcDKnS/QnIpQ565Y1f50eHy8llObNSwUjuxbmYQTXqYWVxstN
-GPoevgX7175To8oIlfBekAZbpNmj9xWEOszNVMLg2RiFB02ooa9uFbTpbFOw
-t12vhhztxxxM4Vq1cGd4RQfNTUZWz1P/dfj6KmVVedlDndWEMpC8MPgWqEj/
-YxweuGEtSXRVwitP+wxsqPBbgxPn7htQbHrZhqtywR4sL806gdmSalbJz/Q1
-dN2NMMFYjygbVD3IHeyv7VWLmglVqPeehXNjifuw02FjzZeM8cSMar2FD2tl
-/pFwMOxLAP8BmwMiig==
-  "],
+ CellOpen->False,
+ CellChangeTimes->{{3.934387752185452*^9, 3.9343877766979237`*^9}, {
+   3.934387828429563*^9, 3.934387870527706*^9}, {3.934388331908565*^9, 
+   3.934388333062323*^9}, {3.934388378006991*^9, 3.9343884287097588`*^9}, {
+   3.934471715016848*^9, 3.9344717336016083`*^9}, {3.934471813278263*^9, 
+   3.9344718632221527`*^9}, {3.934471918584424*^9, 3.934471923707014*^9}, {
+   3.934478063193688*^9, 3.9344781333993196`*^9}, {3.934755588083599*^9, 
+   3.9347556068067617`*^9}, {3.934755651004134*^9, 3.934755665604083*^9}, {
+   3.934755795383317*^9, 3.93475582509942*^9}, {3.936352923977982*^9, 
+   3.936352926884015*^9}, {3.9392985390227423`*^9, 3.9392985603728848`*^9}, {
+   3.939298653515523*^9, 3.939298679751606*^9}, {3.9392987906199207`*^9, 
+   3.939298793216814*^9}, {3.9395885998351517`*^9, 3.9395886024980717`*^9}, {
+   3.942579418324395*^9, 3.9425794501656218`*^9}, {3.942663249489394*^9, 
+   3.942663428092967*^9}, {3.942663471271839*^9, 3.94266347817133*^9}, {
+   3.94266351164624*^9, 3.942663543001616*^9}, {3.9426635737373962`*^9, 
+   3.942663574701276*^9}, {3.942663632743779*^9, 3.942663635060171*^9}, {
+   3.946299687470169*^9, 3.94629969043528*^9}, {3.9463142683157873`*^9, 
+   3.946314270861767*^9}, {3.946315000100506*^9, 3.946315079470072*^9}, {
+   3.946315208699148*^9, 3.946315224244094*^9}, {3.9463152553390293`*^9, 
+   3.9463152814212303`*^9}, {3.946315346292159*^9, 3.946315347198888*^9}, {
+   3.946315461249434*^9, 3.946315465273561*^9}, {3.94631558534475*^9, 
+   3.946315675840042*^9}, {3.951729972302535*^9, 3.951729992524086*^9}, {
+   3.951730201737874*^9, 3.951730207279723*^9}, {3.9517309568863897`*^9, 
+   3.951730966961627*^9}, {3.951731024730763*^9, 3.951731055785837*^9}, 
+   3.951761974792315*^9, {3.951762072422937*^9, 3.951762096407218*^9}},
  CellLabel->
-  "In[796]:=",ExpressionUUID->"e502aed4-b579-4540-ba7f-de883c36cbdb"],
+  "In[850]:=",ExpressionUUID->"e502aed4-b579-4540-ba7f-de883c36cbdb"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -6439,10 +6467,1439 @@ ZQeLV8sD7Yvn3K+/afxdwId1Y53Wjouk+U3BsOIQ662JNN8r+zBssXSWVj6f
   DisplayFunction->Identity,
   Frame->{{True, True}, {True, True}},
   FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->FrontEndValueCache[{{All, All}, {
-      Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}], 
-      Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}]}}, {{
-     All, All}, {{{3.4712928*^9, 
+  FrameTicks->FrontEndValueCache[{{{{0., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
+            True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.30000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"30%\"", ShowStringCharacters -> False], 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.6000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"60%\"", ShowStringCharacters -> False], 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"70%\"", ShowStringCharacters -> False], 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.2000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"120%\"", ShowStringCharacters -> False], 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"140%\"", ShowStringCharacters -> False], 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.7000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"170%\"", ShowStringCharacters -> False], 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.9000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"190%\"", ShowStringCharacters -> False], 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"230%\"", ShowStringCharacters -> False], 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"240%\"", ShowStringCharacters -> False], 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"280%\"", ShowStringCharacters -> False], 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"290%\"", ShowStringCharacters -> False], 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"330%\"", ShowStringCharacters -> False], 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"340%\"", ShowStringCharacters -> False], 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"380%\"", ShowStringCharacters -> False], 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"390%\"", ShowStringCharacters -> False], 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.1000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"410%\"", ShowStringCharacters -> False], 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.6000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"460%\"", ShowStringCharacters -> False], 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"480%\"", ShowStringCharacters -> False], 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}}, {{0., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
+            True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.30000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"30%\"", ShowStringCharacters -> False], 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.6000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"60%\"", ShowStringCharacters -> False], 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"70%\"", ShowStringCharacters -> False], 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.2000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"120%\"", ShowStringCharacters -> False], 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"140%\"", ShowStringCharacters -> False], 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.7000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"170%\"", ShowStringCharacters -> False], 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.9000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"190%\"", ShowStringCharacters -> False], 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"230%\"", ShowStringCharacters -> False], 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"240%\"", ShowStringCharacters -> False], 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"280%\"", ShowStringCharacters -> False], 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"290%\"", ShowStringCharacters -> False], 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"330%\"", ShowStringCharacters -> False], 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"340%\"", ShowStringCharacters -> False], 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"380%\"", ShowStringCharacters -> False], 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"390%\"", ShowStringCharacters -> False], 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.1000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"410%\"", ShowStringCharacters -> False], 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.6000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"460%\"", ShowStringCharacters -> False], 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"480%\"", ShowStringCharacters -> False], 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}}}, {
+      Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}], 
+      Charting`DateTicksFunction[
+      Automatic, DateTicksFormat -> {Automatic}, "TickLabels" -> None]}}, {{{{
+       0., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
+            True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.30000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"30%\"", ShowStringCharacters -> False], 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.6000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"60%\"", ShowStringCharacters -> False], 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"70%\"", ShowStringCharacters -> False], 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.2000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"120%\"", ShowStringCharacters -> False], 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"140%\"", ShowStringCharacters -> False], 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.7000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"170%\"", ShowStringCharacters -> False], 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.9000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"190%\"", ShowStringCharacters -> False], 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"230%\"", ShowStringCharacters -> False], 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"240%\"", ShowStringCharacters -> False], 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"280%\"", ShowStringCharacters -> False], 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"290%\"", ShowStringCharacters -> False], 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"330%\"", ShowStringCharacters -> False], 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"340%\"", ShowStringCharacters -> False], 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"380%\"", ShowStringCharacters -> False], 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"390%\"", ShowStringCharacters -> False], 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.1000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"410%\"", ShowStringCharacters -> False], 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.6000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"460%\"", ShowStringCharacters -> False], 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"480%\"", ShowStringCharacters -> False], 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}}, {{0., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
+            True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.30000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"30%\"", ShowStringCharacters -> False], 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.6000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"60%\"", ShowStringCharacters -> False], 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"70%\"", ShowStringCharacters -> False], 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {0.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {0.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.2000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"120%\"", ShowStringCharacters -> False], 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"140%\"", ShowStringCharacters -> False], 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.7000000000000002`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"170%\"", ShowStringCharacters -> False], 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {1.8, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {1.9000000000000001`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"190%\"", ShowStringCharacters -> False], 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"230%\"", ShowStringCharacters -> False], 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"240%\"", ShowStringCharacters -> False], 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {2.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"280%\"", ShowStringCharacters -> False], 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"290%\"", ShowStringCharacters -> False], 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.1, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.3000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"330%\"", ShowStringCharacters -> False], 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"340%\"", ShowStringCharacters -> False], 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {3.8000000000000003`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"380%\"", ShowStringCharacters -> False], 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"390%\"", ShowStringCharacters -> False], 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.1000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"410%\"", ShowStringCharacters -> False], 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.2, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.3, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.4, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.5, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.6000000000000005`, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"460%\"", ShowStringCharacters -> False], 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.7, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"480%\"", ShowStringCharacters -> False], 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
+          StripOnInput -> False], TraditionalForm]}, {4.9, 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         StyleBox[
+          TagBox[
+           InterpretationBox[
+            StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
+         TraditionalForm]}}}, {{{3.4712928*^9, 
         FormBox[
          StyleBox["\"2010\"", 
           Directive[], {}, StripOnInput -> False], TraditionalForm], 
@@ -6561,49 +8018,31 @@ ZQeLV8sD7Yvn3K+/afxdwId1Y53Wjouk+U3BsOIQ662JNN8r+zBssXSWVj6f
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}}, {{3.4712928*^9, 
         FormBox[
-         StyleBox["\"2010\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.5343648*^9, 
         FormBox[
-         StyleBox["\"2012\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.5975232*^9, 
         FormBox[
-         StyleBox["\"2014\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.6605952*^9, 
         FormBox[
-         StyleBox["\"2016\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.7237536*^9, 
         FormBox[
-         StyleBox["\"2018\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.7868256*^9, 
         FormBox[
-         StyleBox["\"2020\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.849984*^9, 
         FormBox[
-         StyleBox["\"2022\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.913056*^9, 
         FormBox[
-         StyleBox["\"2024\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.9762144*^9, 
         FormBox[
-         StyleBox["\"2026\"", 
-          Directive[], {}, StripOnInput -> False], TraditionalForm], 
-        Automatic, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
         Directive[]}, {3.4712928*^9, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
@@ -6681,7 +8120,8 @@ ZQeLV8sD7Yvn3K+/afxdwId1Y53Wjouk+U3BsOIQ662JNN8r+zBssXSWVj6f
   GridLines->FrontEndValueCache[{Charting`ScaledTickValues[
       (Part[
        Select[
-        Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}][
+        Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}][
+        
          SlotSequence[1]], And[
          FreeQ[#, 
           Alternatives["", 
@@ -7209,13 +8649,15 @@ ZQeLV8sD7Yvn3K+/afxdwId1Y53Wjouk+U3BsOIQ662JNN8r+zBssXSWVj6f
      GridBox[{{
         StyleBox["\"BTC annualized ROI since date until today\"", {20, 
           RGBColor[1, 0, 0]}, StripOnInput -> False]}, {
-        InterpretationBox[
-        "\"Overall mean ROI: \\!\\(\\*FormBox[\\\"\\\\\\\"64.54%\\\\\\\"\\\", \
-TraditionalForm]\\)\"", 
-         StringForm["Overall mean ROI: ``", 
-          PercentForm[0.6453622252087712]], Editable -> False]}, {
         StyleBox[
-        "\"(updated: Sun 23 Mar 2025 10:04:59)\"", {15}, StripOnInput -> 
+         InterpretationBox[
+         "\"Overall mean ROI: \
+\\!\\(\\*FormBox[\\\"\\\\\\\"64.54%\\\\\\\"\\\", TraditionalForm]\\)\"", 
+          StringForm["Overall mean ROI: ``", 
+           PercentForm[0.6453622252087712]], Editable -> False], {15}, 
+         StripOnInput -> False]}, {
+        StyleBox[
+        "\"(updated: Sun 23 Mar 2025 18:40:08)\"", {15}, StripOnInput -> 
          False]}}, GridBoxAlignment -> {"Columns" -> {{Center}}}, 
       DefaultBaseStyle -> "Column", 
       GridBoxItemSize -> {
@@ -7258,9 +8700,10 @@ TraditionalForm]\\)\"",
    3.9463161489730997`*^9, {3.946418858169684*^9, 3.9464188776969423`*^9}, 
    3.947010429916564*^9, 3.9479748899571657`*^9, 3.950377168596424*^9, 
    3.95037735338586*^9, 3.951729950667322*^9, 3.9517300054572353`*^9, 
-   3.95173026399794*^9, 3.951731058178812*^9, 3.9517311002369328`*^9},
+   3.95173026399794*^9, 3.951731058178812*^9, 3.9517311002369328`*^9, 
+   3.951761976907125*^9, 3.951762008850069*^9, 3.9517620987412024`*^9},
  CellLabel->
-  "Out[801]=",ExpressionUUID->"4db6b5bd-44a7-4e54-b412-3a9fa2d0ad8d"]
+  "Out[855]=",ExpressionUUID->"58c2e7e7-22ef-471e-ab18-4b44e31d5dc1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -7369,7 +8812,7 @@ Cell[BoxData[{
             RowBox[{"Style", "[", 
              RowBox[{
               RowBox[{"PercentForm", "[", "x", "]"}], ",", 
-              RowBox[{"{", "11", "}"}]}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", "16", "}"}]}], "]"}]}], "}"}], ",", 
           RowBox[{"{", 
            RowBox[{"x", ",", "0", ",", "5", ",", "0.1"}], "}"}]}], "]"}]}], 
        "}"}]}], "\[IndentingNewLine]", ",", 
@@ -7385,7 +8828,7 @@ Cell[BoxData[{
    RowBox[{"filename", ",", "btcyearlyroiperformance"}], "]"}], 
   ";"}], "\[IndentingNewLine]", "btcyearlyroiperformance", \
 "\[IndentingNewLine]"}], "Input",
- CellOpen->True,
+ CellOpen->False,
  CellChangeTimes->{{3.94631141182504*^9, 3.946311528931031*^9}, {
    3.946311616545682*^9, 3.9463116733750896`*^9}, {3.946311743881616*^9, 
    3.946311746168252*^9}, {3.946311827348371*^9, 3.946311869875164*^9}, {
@@ -7402,9 +8845,10 @@ Cell[BoxData[{
    3.951730016917287*^9, 3.951730042511003*^9}, {3.951730230933744*^9, 
    3.951730242298779*^9}, {3.951730550074374*^9, 3.9517305867842627`*^9}, {
    3.951730626466022*^9, 3.9517306683966217`*^9}, {3.951730787957452*^9, 
-   3.951730834023868*^9}, {3.9517311735349703`*^9, 3.951731211755851*^9}},
+   3.951730834023868*^9}, {3.9517311735349703`*^9, 3.951731211755851*^9}, {
+   3.95176184677365*^9, 3.951761850159604*^9}},
  CellLabel->
-  "In[805]:=",ExpressionUUID->"a81dae0e-52a1-41ad-8eb4-09661b97ca59"],
+  "In[844]:=",ExpressionUUID->"a81dae0e-52a1-41ad-8eb4-09661b97ca59"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {
@@ -8305,714 +9749,714 @@ Cell[BoxData[
           TagBox[
            InterpretationBox[
             StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
-            True], PercentForm], {11}, StripOnInput -> False], 
+            True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.30000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"30%\"", ShowStringCharacters -> False], 
-            0.30000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.6000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"60%\"", ShowStringCharacters -> False], 
-            0.6000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"70%\"", ShowStringCharacters -> False], 
-            0.7000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.2000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"120%\"", ShowStringCharacters -> False], 
-            1.2000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.4000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"140%\"", ShowStringCharacters -> False], 
-            1.4000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.7000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"170%\"", ShowStringCharacters -> False], 
-            1.7000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.9000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"190%\"", ShowStringCharacters -> False], 
-            1.9000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"230%\"", ShowStringCharacters -> False], 
-            2.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"240%\"", ShowStringCharacters -> False], 
-            2.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"280%\"", ShowStringCharacters -> False], 
-            2.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"290%\"", ShowStringCharacters -> False], 
-            2.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"330%\"", ShowStringCharacters -> False], 
-            3.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"340%\"", ShowStringCharacters -> False], 
-            3.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"380%\"", ShowStringCharacters -> False], 
-            3.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"390%\"", ShowStringCharacters -> False], 
-            3.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.1000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"410%\"", ShowStringCharacters -> False], 
-            4.1000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.6000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"460%\"", ShowStringCharacters -> False], 
-            4.6000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.800000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"480%\"", ShowStringCharacters -> False], 
-            4.800000000000001, AutoDelete -> True], PercentForm], {11}, 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {5., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}}, {{0., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
-            True], PercentForm], {11}, StripOnInput -> False], 
+            True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.30000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"30%\"", ShowStringCharacters -> False], 
-            0.30000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.6000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"60%\"", ShowStringCharacters -> False], 
-            0.6000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"70%\"", ShowStringCharacters -> False], 
-            0.7000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.2000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"120%\"", ShowStringCharacters -> False], 
-            1.2000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.4000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"140%\"", ShowStringCharacters -> False], 
-            1.4000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.7000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"170%\"", ShowStringCharacters -> False], 
-            1.7000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.9000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"190%\"", ShowStringCharacters -> False], 
-            1.9000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"230%\"", ShowStringCharacters -> False], 
-            2.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"240%\"", ShowStringCharacters -> False], 
-            2.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"280%\"", ShowStringCharacters -> False], 
-            2.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"290%\"", ShowStringCharacters -> False], 
-            2.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"330%\"", ShowStringCharacters -> False], 
-            3.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"340%\"", ShowStringCharacters -> False], 
-            3.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"380%\"", ShowStringCharacters -> False], 
-            3.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"390%\"", ShowStringCharacters -> False], 
-            3.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.1000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"410%\"", ShowStringCharacters -> False], 
-            4.1000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.6000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"460%\"", ShowStringCharacters -> False], 
-            4.6000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.800000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"480%\"", ShowStringCharacters -> False], 
-            4.800000000000001, AutoDelete -> True], PercentForm], {11}, 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {5., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}}}, {
       Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}], 
       Charting`DateTicksFunction[
@@ -9023,714 +10467,714 @@ Cell[BoxData[
           TagBox[
            InterpretationBox[
             StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
-            True], PercentForm], {11}, StripOnInput -> False], 
+            True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.30000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"30%\"", ShowStringCharacters -> False], 
-            0.30000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.6000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"60%\"", ShowStringCharacters -> False], 
-            0.6000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"70%\"", ShowStringCharacters -> False], 
-            0.7000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.2000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"120%\"", ShowStringCharacters -> False], 
-            1.2000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.4000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"140%\"", ShowStringCharacters -> False], 
-            1.4000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.7000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"170%\"", ShowStringCharacters -> False], 
-            1.7000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.9000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"190%\"", ShowStringCharacters -> False], 
-            1.9000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"230%\"", ShowStringCharacters -> False], 
-            2.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"240%\"", ShowStringCharacters -> False], 
-            2.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"280%\"", ShowStringCharacters -> False], 
-            2.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"290%\"", ShowStringCharacters -> False], 
-            2.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"330%\"", ShowStringCharacters -> False], 
-            3.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"340%\"", ShowStringCharacters -> False], 
-            3.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"380%\"", ShowStringCharacters -> False], 
-            3.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"390%\"", ShowStringCharacters -> False], 
-            3.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.1000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"410%\"", ShowStringCharacters -> False], 
-            4.1000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.6000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"460%\"", ShowStringCharacters -> False], 
-            4.6000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.800000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"480%\"", ShowStringCharacters -> False], 
-            4.800000000000001, AutoDelete -> True], PercentForm], {11}, 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {5., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}}, {{0., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"0%\"", ShowStringCharacters -> False], 0., AutoDelete -> 
-            True], PercentForm], {11}, StripOnInput -> False], 
+            True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"10%\"", ShowStringCharacters -> False], 0.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.30000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"30%\"", ShowStringCharacters -> False], 
-            0.30000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            0.30000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"50%\"", ShowStringCharacters -> False], 0.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.6000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"60%\"", ShowStringCharacters -> False], 
-            0.6000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.6000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.7000000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"70%\"", ShowStringCharacters -> False], 
-            0.7000000000000001, AutoDelete -> True], PercentForm], {11}, 
+            0.7000000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {0.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {0.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"90%\"", ShowStringCharacters -> False], 0.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"110%\"", ShowStringCharacters -> False], 1.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.2000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"120%\"", ShowStringCharacters -> False], 
-            1.2000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.2000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"130%\"", ShowStringCharacters -> False], 1.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.4000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"140%\"", ShowStringCharacters -> False], 
-            1.4000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.4000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"150%\"", ShowStringCharacters -> False], 1.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.7000000000000002`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"170%\"", ShowStringCharacters -> False], 
-            1.7000000000000002`, AutoDelete -> True], PercentForm], {11}, 
+            1.7000000000000002`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {1.8, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {1.9000000000000001`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"190%\"", ShowStringCharacters -> False], 
-            1.9000000000000001`, AutoDelete -> True], PercentForm], {11}, 
+            1.9000000000000001`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"210%\"", ShowStringCharacters -> False], 2.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"230%\"", ShowStringCharacters -> False], 
-            2.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"240%\"", ShowStringCharacters -> False], 
-            2.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"250%\"", ShowStringCharacters -> False], 2.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"270%\"", ShowStringCharacters -> False], 2.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {2.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"280%\"", ShowStringCharacters -> False], 
-            2.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            2.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {2.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"290%\"", ShowStringCharacters -> False], 
-            2.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            2.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.1, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"310%\"", ShowStringCharacters -> False], 3.1, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.3000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"330%\"", ShowStringCharacters -> False], 
-            3.3000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.3000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.4000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"340%\"", ShowStringCharacters -> False], 
-            3.4000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.4000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"350%\"", ShowStringCharacters -> False], 3.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.6, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"370%\"", ShowStringCharacters -> False], 3.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {3.8000000000000003`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"380%\"", ShowStringCharacters -> False], 
-            3.8000000000000003`, AutoDelete -> True], PercentForm], {11}, 
+            3.8000000000000003`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {3.9000000000000004`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"390%\"", ShowStringCharacters -> False], 
-            3.9000000000000004`, AutoDelete -> True], PercentForm], {11}, 
+            3.9000000000000004`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.1000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"410%\"", ShowStringCharacters -> False], 
-            4.1000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.1000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.2, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.3, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"430%\"", ShowStringCharacters -> False], 4.3, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.4, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.5, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"450%\"", ShowStringCharacters -> False], 4.5, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.6000000000000005`, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"460%\"", ShowStringCharacters -> False], 
-            4.6000000000000005`, AutoDelete -> True], PercentForm], {11}, 
+            4.6000000000000005`, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.7, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"470%\"", ShowStringCharacters -> False], 4.7, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {4.800000000000001, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"480%\"", ShowStringCharacters -> False], 
-            4.800000000000001, AutoDelete -> True], PercentForm], {11}, 
+            4.800000000000001, AutoDelete -> True], PercentForm], {16}, 
           StripOnInput -> False], TraditionalForm]}, {4.9, 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"490%\"", ShowStringCharacters -> False], 4.9, 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}, {5., 
         FormBox[
          StyleBox[
           TagBox[
            InterpretationBox[
             StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
-            AutoDelete -> True], PercentForm], {11}, StripOnInput -> False], 
+            AutoDelete -> True], PercentForm], {16}, StripOnInput -> False], 
          TraditionalForm]}}}, {{{3.4712928*^9, 
         FormBox[
          StyleBox["\"2010\"", 
@@ -10663,7 +12107,7 @@ Cell[BoxData[
            PercentForm[0.6453622252087712]], Editable -> False], {15}, 
          StripOnInput -> False]}, {
         StyleBox[
-        "\"(updated: Sun 23 Mar 2025 10:04:59)\"", {15}, StripOnInput -> 
+        "\"(updated: Sun 23 Mar 2025 18:40:08)\"", {15}, StripOnInput -> 
          False]}}, GridBoxAlignment -> {"Columns" -> {{Center}}}, 
       DefaultBaseStyle -> "Column", 
       GridBoxItemSize -> {
@@ -10698,9 +12142,9 @@ Cell[BoxData[
    3.9517300574009447`*^9, 3.951730245477989*^9, {3.951730553494874*^9, 
    3.951730591680168*^9}, {3.951730628496957*^9, 3.951730670818571*^9}, 
    3.951730792134409*^9, 3.951730834934157*^9, 3.951731100502431*^9, 
-   3.951731217612885*^9},
+   3.951731217612885*^9, 3.95176188175139*^9, 3.951762009297061*^9},
  CellLabel->
-  "Out[810]=",ExpressionUUID->"673711a9-0bf4-4c89-a152-a03627c9d674"]
+  "Out[849]=",ExpressionUUID->"04bf7f02-ba39-4b46-aa11-091ee43ee39b"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -11561,24 +13005,24 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 928, 13, 96, "Title",ExpressionUUID->"deb1a217-b104-4580-882f-939ace20911a"],
 Cell[CellGroupData[{
-Cell[1529, 39, 2337, 65, 192, "Input",ExpressionUUID->"5f80661a-cd8b-4293-acf4-83030feaedf6",
- CellOpen->True],
-Cell[3869, 106, 609, 12, 42, "Output",ExpressionUUID->"36b02214-c4aa-4a5a-a15e-dffe55f4b9dc"]
+Cell[1529, 39, 2338, 65, 19, "Input",ExpressionUUID->"5f80661a-cd8b-4293-acf4-83030feaedf6",
+ CellOpen->False],
+Cell[3870, 106, 633, 12, 42, "Output",ExpressionUUID->"42a62851-a231-4999-a861-1a5e9f2f21a5"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4515, 123, 6143, 149, 724, "Input",ExpressionUUID->"f96d83c5-c56e-457f-a564-3a7b7085a9c1",
- CellOpen->True],
-Cell[10661, 274, 156018, 2718, 660, "Output",ExpressionUUID->"2b8e0371-4941-4010-a20e-75ecc7345a1e"]
+Cell[4540, 123, 6144, 149, 19, "Input",ExpressionUUID->"f96d83c5-c56e-457f-a564-3a7b7085a9c1",
+ CellOpen->False],
+Cell[10687, 274, 156040, 2718, 660, "Output",ExpressionUUID->"f321dc7d-3672-4d10-89a6-605a9b67d82b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[166716, 2997, 3522, 79, 458, "Input",ExpressionUUID->"e502aed4-b579-4540-ba7f-de883c36cbdb",
- CellOpen->True],
-Cell[170241, 3078, 241759, 4184, 739, "Output",ExpressionUUID->"4db6b5bd-44a7-4e54-b412-3a9fa2d0ad8d"]
+Cell[166764, 2997, 5292, 107, 19, "Input",ExpressionUUID->"e502aed4-b579-4540-ba7f-de883c36cbdb",
+ CellOpen->False],
+Cell[172059, 3106, 298421, 5599, 700, "Output",ExpressionUUID->"58c2e7e7-22ef-471e-ab18-4b44e31d5dc1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[412037, 7267, 5998, 139, 560, "Input",ExpressionUUID->"a81dae0e-52a1-41ad-8eb4-09661b97ca59",
- CellOpen->True],
-Cell[418038, 7408, 141373, 3294, 760, "Output",ExpressionUUID->"673711a9-0bf4-4c89-a152-a03627c9d674"]
+Cell[470517, 8710, 6048, 140, 19, "Input",ExpressionUUID->"a81dae0e-52a1-41ad-8eb4-09661b97ca59",
+ CellOpen->False],
+Cell[476568, 8852, 141416, 3294, 700, "Output",ExpressionUUID->"04bf7f02-ba39-4b46-aa11-091ee43ee39b"]
 }, Open  ]]
 }, Open  ]]
 }
