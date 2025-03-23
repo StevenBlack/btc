@@ -7,6 +7,7 @@ are still in development and not yet listed in this README.
 
 * `BTC-USD-Movements.nb`
 * `BTC-USD-threshhold-crossings.nb`
+* `BTC-ROI.nb`
 * `BTC-DCA.nb`
 
 ## `BTC-USD-Movements.nb`
@@ -43,6 +44,11 @@ Examination of Bitcoin/USD price movements in terms of the number of times a giv
 
 ![BTC-USD threshhold crossings](BTC-USD-threshhold-crossings/BTC-USD-threshold-crossings.jpg)
 
+## `BTC-ROI.nb`
+
+Looking at the return on investment for Bitcoin, given a start date, to today.
+
+![BTC-ROI](BTC-ROI/BTC-ROI-Performance.jpg)
 
 ## `BTC-DCA.nb`
 
