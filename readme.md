@@ -49,7 +49,8 @@ Examination of Bitcoin/USD price movements in terms of the number of times a giv
 
 ## `BTC-ROI.nb`
 
-Looking at the return on investment for Bitcoin, given a start date, to today.
+Return on investment for Bitcoin, given a purchase date, presumed 
+held until today.
 
 ![BTC-ROI](./BTC-ROI/BTC-ROI-Performance.jpg)
 <details>
@@ -62,7 +63,7 @@ Looking at the return on investment for Bitcoin, given a start date, to today.
 
 ## `BTC-DCA.nb`
 
-Examination of the performance of daily dollar cost averaging from any given start
-date to today.
+Examination of the performance of daily dollar cost averaging from any 
+given start date to today.
 
 ![BTC-DCA dollar cost averaging](BTC-DCA/BTC-DCA-Performance.jpg)
