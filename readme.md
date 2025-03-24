@@ -51,11 +51,12 @@ Examination of Bitcoin/USD price movements in terms of the number of times a giv
 
 Looking at the return on investment for Bitcoin, given a start date, to today.
 
-![BTC-ROI](BTC-ROI/BTC-ROI-Performance.jpg)
+![BTC-ROI](./BTC-ROI/BTC-ROI-Performance.jpg)
 <details>
 
 <summary>See more</summary>
-![BTC Yearly ROI Performance](BTC-ROI/BTC-Yearly-ROI-Performance.jpg)
+
+![BTC Yearly ROI Performance](./BTC-ROI/BTC-Yearly-ROI-Performance.jpg)
 
 </details>
 
