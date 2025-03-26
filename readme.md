@@ -15,8 +15,8 @@ are still in development and not yet listed in this README.
 An examination of Bitcoin/USD absolute and relative price movements.
 
 ### Absolute price movements
-![BTC-USD absolute daily Movements](BTC-USD-Movements/BTC-USD-Movements-Absolute-Daily.jpg)
 
+![BTC-USD absolute daily Movements](BTC-USD-Movements/BTC-USD-Movements-Absolute-Daily.jpg)
 
 <details>
 
@@ -40,6 +40,44 @@ Looking at the relative daily movements of Bitcoin/USD.
 ![BTC-USD-Movements-Histogram-Relative-Daily](BTC-USD-Movements/BTC-USD-Movements-Histogram-Relative-Daily.jpg)
 
 </details>
+
+## `BTC-USD-Moving-Averages.nb`
+
+This notebook plots several moving averages of the BTC-USD price.
+
+### 100 Day Moving Average
+
+![BTC-USD-100-Day-MA](./BTC-USD-Moving-Averages/BTC-USD-100-Day-MA.jpg)
+
+<details>
+
+<summary>See more</summary>
+
+### 200 Day Moving Average
+
+![BTC-USD-200-Day-MA](./BTC-USD-Moving-Averages/BTC-USD-200-Day-MA.jpg)
+
+### 1 Year Moving Average
+
+![BTC-USD-1-Year-MA](./BTC-USD-Moving-Averages/BTC-USD-1-Year-MA.jpg)
+
+### 2 Year Moving Average
+
+![BTC-USD-2-Year-MA](./BTC-USD-Moving-Averages/BTC-USD-2-Year-MA.jpg)
+
+### 3 Year Moving Average
+
+![BTC-USD-3-Year-MA](./BTC-USD-Moving-Averages/BTC-USD-3-Year-MA.jpg)
+
+### 4 Year Moving Average
+
+![BTC-USD-4-Year-MA](./BTC-USD-Moving-Averages/BTC-USD-4-Year-MA.jpg)
+
+### 5 Year Moving Average
+
+![BTC-USD-5-Year-MA](./BTC-USD-Moving-Averages/BTC-USD-5-Year-MA.jpg)
+
+<details>
 
 ## `BTC-USD-threshhold-crossings.nb`
 
