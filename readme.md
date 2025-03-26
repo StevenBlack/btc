@@ -6,6 +6,7 @@ There are three notebooks currently stored here, along with a few others that
 are still in development and not yet listed in this README.
 
 * `BTC-USD-Movements.nb`
+* `BTC-USD-Moving-Averages.nb`
 * `BTC-USD-threshhold-crossings.nb`
 * `BTC-ROI.nb`
 * `BTC-DCA.nb`
@@ -77,7 +78,7 @@ This notebook plots several moving averages of the BTC-USD price.
 
 ![BTC-USD-5-Year-MA](./BTC-USD-Moving-Averages/BTC-USD-5-Year-MA.jpg)
 
-<details>
+</details>
 
 ## `BTC-USD-threshhold-crossings.nb`
 
