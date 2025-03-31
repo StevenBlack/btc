@@ -2,12 +2,13 @@
 
 This repository contains Mathematica notebooks that examine Bitcoin price movements, and other BTC-related data.
 
-There are three notebooks currently stored here, along with a few others that 
+There are three notebooks currently stored here, along with a few others that
 are still in development and not yet listed in this README.
 
 * `BTC-USD-Movements.nb`
 * `BTC-USD-Moving-Averages.nb`
 * `BTC-USD-threshhold-crossings.nb`
+* `BTC-USD-Drawdowns.nb`
 * `BTC-ROI.nb`
 * `BTC-DCA.nb`
 
@@ -86,9 +87,16 @@ Examination of Bitcoin/USD price movements in terms of the number of times a giv
 
 ![BTC-USD threshhold crossings](BTC-USD-threshhold-crossings/BTC-USD-threshold-crossings.jpg)
 
+
+## BTC USD Drawdowns
+
+An examination of the largest drawdowns in Bitcoin history.
+
+![](./BTC-USD-Drawdowns/BTC-USD-Drawdowns_Since_2015.jpg)
+
 ## `BTC-ROI.nb`
 
-Return on investment for Bitcoin, given a purchase date, presumed 
+Return on investment for Bitcoin, given a purchase date, presumed
 held until today.
 
 ![BTC-ROI](./BTC-ROI/BTC-ROI-Performance.jpg)
@@ -102,7 +110,7 @@ held until today.
 
 ## `BTC-DCA.nb`
 
-Examination of the performance of daily dollar cost averaging from any 
+Examination of the performance of daily dollar cost averaging from any
 given start date to today.
 
 ![BTC-DCA dollar cost averaging](BTC-DCA/BTC-DCA-Performance.jpg)
