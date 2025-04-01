@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    372498,       6259]
-NotebookOptionsPosition[    371623,       6233]
-NotebookOutlinePosition[    372020,       6249]
-CellTagsIndexPosition[    371977,       6246]
+NotebookDataLength[    374420,       6316]
+NotebookOptionsPosition[    373545,       6290]
+NotebookOutlinePosition[    373942,       6306]
+CellTagsIndexPosition[    373899,       6303]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -99,7 +99,7 @@ Cell[BoxData[{
       RowBox[{"SelectionEvaluate", "[", 
        RowBox[{"OpenAllInputsCells", "[", "]"}], "]"}]}], "]"}]}], "}"}], 
   "]"}]}], "Input",
- CellOpen->True,
+ CellOpen->False,
  CellChangeTimes->{{3.926104252000985*^9, 3.926104281231701*^9}, {
    3.926104311812336*^9, 3.9261044510384693`*^9}, {3.926104553946717*^9, 
    3.926104561030199*^9}, {3.926104601427572*^9, 3.926104610490177*^9}, 
@@ -125,7 +125,7 @@ Cell[BoxData[{
    3.926888343654386*^9, 3.9268883638594227`*^9}, {3.952446728614685*^9, 
    3.9524467347124243`*^9}, {3.952446844018119*^9, 3.952446861600758*^9}},
  CellLabel->
-  "In[380]:=",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712"],
+  "In[546]:=",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -137,9 +137,10 @@ Cell[BoxData[
     Automatic, Method -> "Preemptive"]},
   "RowDefault"]], "Output",
  CellChangeTimes->{3.952446867614901*^9, 3.9524564800847397`*^9, 
-  3.9524568362247353`*^9, 3.952457555538231*^9, 3.952458109022983*^9},
+  3.9524568362247353`*^9, 3.952457555538231*^9, 3.952458109022983*^9, 
+  3.9524603246406393`*^9},
  CellLabel->
-  "Out[384]=",ExpressionUUID->"5ceef188-77fa-49af-b0e2-a4dda34c10e4"]
+  "Out[550]=",ExpressionUUID->"c70080f1-4ff5-4b4a-b6ea-e5c23d2ea64f"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -303,16 +304,76 @@ Cell[BoxData[{
    RowBox[{"FinancialData", "[", 
     RowBox[{"\"\<BTC/XAU\>\"", ",", "origindate"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"xauplot", "=", 
-   RowBox[{"display", "[", 
-    RowBox[{"btcxau", ",", "\"\<BTC price / Gold Price\>\""}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"xauplot", "=", 
+    RowBox[{"display", "[", 
+     RowBox[{"btcxau", ",", "\"\<BTC price / Gold Price\>\""}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"intermediate", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ",", 
+         RowBox[{"UnitConvert", "[", 
+          RowBox[{
+           RowBox[{"Today", "-", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", "\"\<Years\>\""}], "]"}], 
+         ",", 
+         RowBox[{"1", "+", 
+          FractionBox[
+           RowBox[{"price", " ", "-", " ", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]]}]}], "}"}], "&"}], "/@", 
+      RowBox[{"Normal", "[", "btcxau", "]"}]}]}], ";", "\n", 
+    RowBox[{"roi", "=", 
+     RowBox[{"Dataset", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "4", "]"}], "]"}], "^", 
+             RowBox[{"(", 
+              RowBox[{"1", "/", 
+               RowBox[{"QuantityMagnitude", "[", 
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "3", "]"}], "]"}], "]"}]}], ")"}]}], ")"}], "-",
+            "1"}]}], "}"}], "&"}], "/@", " ", 
+       RowBox[{"Drop", "[", 
+        RowBox[{"intermediate", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"btcxauroi", " ", "=", " ", 
+     RowBox[{"Drop", "[", 
+      RowBox[{"roi", ",", 
+       RowBox[{"-", "180"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"btcxauroiplot", "=", 
+     RowBox[{"display", "[", 
+      RowBox[{"btcxauroi", ",", "\"\<BTC-XAU ROI\>\""}], "]"}]}], ";"}], 
+   "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"Column", "[", "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"{", 
-    RowBox[{"btcplot", ",", " ", "xauplot"}], "}"}], "\[IndentingNewLine]", ",",
-    "Center"}], "\[IndentingNewLine]", "]"}]}], "Input",
- CellOpen->True,
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"btcplot", "\[IndentingNewLine]", ",", " ", "xauplot"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{",", " ", "btcxauroiplot"}], "*)"}], "\[IndentingNewLine]", 
+    "}"}], "\[IndentingNewLine]", ",", "Center"}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellOpen->False,
  CellChangeTimes->{{3.926104252000985*^9, 3.926104281231701*^9}, {
    3.926104311812336*^9, 3.9261044510384693`*^9}, {3.926104553946717*^9, 
    3.926104561030199*^9}, {3.926104601427572*^9, 3.926104610490177*^9}, 
@@ -351,9 +412,12 @@ Cell[BoxData[{
    3.952457165791066*^9, 3.952457266623212*^9}, {3.952457327003092*^9, 
    3.952457428186534*^9}, {3.952457473615986*^9, 3.95245752103961*^9}, {
    3.9524580849650717`*^9, 3.952458091486883*^9}, {3.952458146840315*^9, 
-   3.952458164217518*^9}, {3.9524584969435673`*^9, 3.952458502156067*^9}},
+   3.952458164217518*^9}, {3.9524584969435673`*^9, 3.952458502156067*^9}, {
+   3.952459757675508*^9, 3.95245988543277*^9}, {3.95246015727767*^9, 
+   3.952460163712906*^9}, {3.952460210946205*^9, 3.952460222265772*^9}, 
+   3.952460275090103*^9},
  CellLabel->
-  "In[405]:=",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053"],
+  "In[551]:=",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -6217,17 +6281,10 @@ $CellContext`updatedstr$}, Center], FrameTicksStyle -> 16, FrameTicks ->
    GridBoxAlignment->{"Columns" -> {{Center}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Output",
- CellChangeTimes->{
-  3.9268826623995028`*^9, 3.926882821765079*^9, 3.927977859678016*^9, 
-   3.92818130132235*^9, 3.952446569857232*^9, 3.9524467368154593`*^9, 
-   3.9524468470181427`*^9, 3.952446880540753*^9, 3.952447071787836*^9, 
-   3.95244711787816*^9, 3.952447262006999*^9, {3.952447348194159*^9, 
-   3.952447359468857*^9}, 3.952447613296475*^9, {3.952448033196287*^9, 
-   3.952448064425466*^9}, 3.952456482070073*^9, 3.952456837601067*^9, 
-   3.952457557312458*^9, 3.952458110481407*^9, 3.952458179740816*^9, 
-   3.952458504492735*^9},
+ CellChangeTimes->{3.952460172492668*^9, 3.9524602259114017`*^9, 
+  3.952460326028411*^9},
  CellLabel->
-  "Out[414]=",ExpressionUUID->"7a6ebfa7-ab30-42d7-9830-d7e12f40d49e"]
+  "Out[560]=",ExpressionUUID->"12a3f181-3d37-422d-86c0-32f94d48554a"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -6251,14 +6308,14 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 560, 8, 96, "Title",ExpressionUUID->"e80cee27-40fb-4de8-aadd-ab763ef324d7"],
 Cell[CellGroupData[{
-Cell[1161, 34, 4163, 93, 233, "Input",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712",
- CellOpen->True],
-Cell[5327, 129, 655, 12, 42, "Output",ExpressionUUID->"5ceef188-77fa-49af-b0e2-a4dda34c10e4"]
+Cell[1161, 34, 4164, 93, 19, "Input",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712",
+ CellOpen->False],
+Cell[5328, 129, 682, 13, 42, "Output",ExpressionUUID->"c70080f1-4ff5-4b4a-b6ea-e5c23d2ea64f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6019, 146, 10015, 209, 989, "Input",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053",
- CellOpen->True],
-Cell[16037, 357, 355558, 5872, 1304, "Output",ExpressionUUID->"7a6ebfa7-ab30-42d7-9830-d7e12f40d49e"]
+Cell[6047, 147, 12361, 272, 19, "Input",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053",
+ CellOpen->False],
+Cell[18411, 421, 355106, 5865, 1285, "Output",ExpressionUUID->"12a3f181-3d37-422d-86c0-32f94d48554a"]
 }, Open  ]]
 }, Open  ]]
 }
