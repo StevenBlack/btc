@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    298460,       5327]
-NotebookOptionsPosition[    296603,       5281]
-NotebookOutlinePosition[    297000,       5297]
-CellTagsIndexPosition[    296957,       5294]
+NotebookDataLength[    389424,       7999]
+NotebookOptionsPosition[    387316,       7948]
+NotebookOutlinePosition[    387713,       7964]
+CellTagsIndexPosition[    387670,       7961]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -100,7 +100,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.9503706662894382`*^9, 3.950370670716475*^9}, {
   3.950716569289399*^9, 3.9507165917716703`*^9}},
  CellLabel->
-  "In[2418]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
+  "In[191]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -130,16 +130,33 @@ Cell[BoxData[
    3.95193915282456*^9, 3.9519409674150867`*^9, 3.951941559537191*^9, 
    3.951941736513205*^9, 3.9519430458676367`*^9, 3.952086314599133*^9, 
    3.9522662812359056`*^9, 3.952421508406142*^9, 3.952949992255979*^9, 
-   3.953035377184572*^9},
+   3.953035377184572*^9, 3.953058685121133*^9, 3.9530590430626583`*^9, 
+   3.9530593907427263`*^9, 3.953059478945119*^9, 3.9530623568571987`*^9, 
+   3.953062393552493*^9},
  CellLabel->
-  "Out[2421]=",ExpressionUUID->"a277d7e4-8023-4837-bc9c-2ba0863d3307"]
+  "Out[194]=",ExpressionUUID->"d9d40ba9-0119-45d5-9fa7-5d4f3ad29d10"]
 }, Open  ]],
 
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
-   RowBox[{"SetDirectory", "[", 
-    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+   RowBox[{"settings", "=", 
+    RowBox[{"<|", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"imagesize", "->", "1000"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"ticksstyle", "->", 
+       RowBox[{"{", "16", "}"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"imagemargins", "->", "20"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"labelstyle", "->", 
+       RowBox[{"Directive", "[", "14", "]"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"titlestyle", "->", 
+       RowBox[{"{", 
+        RowBox[{"20", ",", "Red"}], "}"}]}], "\[IndentingNewLine]", ",", 
+      RowBox[{"subtitlestyle", " ", "->", " ", 
+       RowBox[{"{", "15", "}"}]}]}], "\[IndentingNewLine]", "|>"}]}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{"Function", " ", "shortcuts"}], " ", "*)"}]}], "\[IndentingNewLine]", 
@@ -160,22 +177,6 @@ Cell[BoxData[{
    "Default", " ", "properties", " ", "for", " ", "generated", " ", "plots"}],
     " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"imagesize", "=", "1000"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"imagemargins", "=", "20"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"labelstyle", "=", 
-   RowBox[{"Directive", "[", "14", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"titlestyle", "=", 
-   RowBox[{"{", 
-    RowBox[{"20", ",", "Red"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"subtitlestyle", " ", "=", " ", 
-   RowBox[{"{", "15", "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"imagemargins", "=", "20"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
   RowBox[{"plotbackground", "=", 
    RowBox[{"Lighter", "[", 
     RowBox[{"LightGray", ",", "0.75"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -186,8 +187,9 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{
        RowBox[{"st", "[", "\"\<(updated: ``)\>\"", "]"}], "[", 
-       RowBox[{"DateString", "[", "]"}], "]"}], ",", "subtitlestyle"}], 
-     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+       RowBox[{"DateString", "[", "]"}], "]"}], ",", 
+      RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"btcData", "=", 
    RowBox[{"FinancialData", "[", "\[IndentingNewLine]", 
@@ -412,9 +414,15 @@ Cell[BoxData[{
    3.9510860476451683`*^9}, 3.951396193668157*^9, {3.951396337201198*^9, 
    3.951396339809115*^9}, {3.9514024320573387`*^9, 3.951402436087594*^9}, {
    3.951937347277423*^9, 3.951937355552862*^9}, {3.951937401930159*^9, 
-   3.9519374155683117`*^9}, {3.951937661459876*^9, 3.95193766337397*^9}},
+   3.9519374155683117`*^9}, {3.951937661459876*^9, 3.95193766337397*^9}, {
+   3.953058486065937*^9, 3.953058499658944*^9}, {3.953058546868307*^9, 
+   3.953058547344516*^9}, {3.9530586366020203`*^9, 3.953058640457756*^9}, {
+   3.9530588101409473`*^9, 3.9530588105818367`*^9}, {3.953058974424564*^9, 
+   3.953058974795278*^9}, {3.953059370600265*^9, 3.953059371017674*^9}, {
+   3.953062335760062*^9, 3.953062346882559*^9}, {3.953062381956051*^9, 
+   3.953062386779356*^9}},
  CellLabel->
-  "In[2422]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
+  "In[195]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
 
 Cell[CellGroupData[{
 
@@ -438,9 +446,9 @@ Cell[BoxData[
              RowBox[{"{", "\[IndentingNewLine]", 
               RowBox[{
                RowBox[{"Style", "[", 
-                
                 RowBox[{"\"\<Bitcoin Price (USD)\>\"", " ", ",", 
-                 "titlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
+                 RowBox[{"settings", "[", "titlestyle", "]"}]}], "]"}], 
+               "\[IndentingNewLine]", ",", 
                RowBox[{"Style", "[", 
                 RowBox[{
                  RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
@@ -449,12 +457,15 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], ",", 
                     RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], ",", 
-                 "subtitlestyle"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
-             "\[IndentingNewLine]", ",", 
+                 
+                 RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
              RowBox[{
               RowBox[{
                RowBox[{"Style", "[", 
-                RowBox[{"#", ",", "subtitlestyle"}], "]"}], "&"}], "/@", 
+                RowBox[{"#", ",", 
+                 RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}], 
+               "&"}], "/@", 
               RowBox[{"Part", "[", "\[IndentingNewLine]", 
                RowBox[{"plotlabels", "\[IndentingNewLine]", ",", 
                 RowBox[{"Select", "[", 
@@ -475,8 +486,14 @@ Cell[BoxData[
            RowBox[{"Part", "[", "\[IndentingNewLine]", 
             RowBox[{"plotlines", "\[IndentingNewLine]", ",", "lines"}], 
             "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
-           RowBox[{"ImageSize", "->", "imagesize"}], "\[IndentingNewLine]", ",", 
-           RowBox[{"ImageMargins", "->", "imagemargins"}], 
+           RowBox[{"ImageSize", "->", 
+            RowBox[{"settings", "[", "imagesize", "]"}]}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"ImageMargins", "->", 
+            RowBox[{"settings", "[", "imagemargins", "]"}]}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"LabelStyle", "->", 
+            RowBox[{"settings", "[", "labelstyle", "]"}]}], 
            "\[IndentingNewLine]", ",", 
            RowBox[{"PlotRange", "->", "Full"}], "\[IndentingNewLine]", ",", 
            RowBox[{"GridLines", "->", 
@@ -490,6 +507,9 @@ Cell[BoxData[
                RowBox[{"0", ",", "200000", ",", "10000"}], "]"}]}], "}"}]}], 
            "\[IndentingNewLine]", ",", 
            RowBox[{"FrameTicks", "->", "All"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"TicksStyle", "->", 
+            RowBox[{"settings", "[", "ticksstyle", "]"}]}], 
+           "\[IndentingNewLine]", ",", 
            RowBox[{"PlotLabel", "->", 
             RowBox[{"Column", "[", "\[IndentingNewLine]", 
              RowBox[{
@@ -596,9 +616,11 @@ Cell[BoxData[
    3.951940812761529*^9}, {3.951940858343627*^9, 3.951940891828772*^9}, {
    3.951941508775174*^9, 3.951941551184389*^9}, {3.9519417276507196`*^9, 
    3.951941728923072*^9}, 3.9519430378846188`*^9, {3.952086395367135*^9, 
-   3.952086403257742*^9}},
+   3.952086403257742*^9}, {3.953058563504233*^9, 3.9530585671900473`*^9}, {
+   3.953058651508236*^9, 3.953058656271008*^9}, {3.953058716852913*^9, 
+   3.953058736364398*^9}, {3.953059228637064*^9, 3.953059244533924*^9}},
  CellLabel->
-  "In[2456]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
+  "In[224]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
 
 Cell[BoxData[
  TagBox[
@@ -613,7 +635,7 @@ Cell[BoxData[
        Dynamic[$CellContext`selectplottype]], 
       Manipulate`Dump`ThisIsNotAControl, ControlType -> None}}, 
     Typeset`size$$ = {
-    1147.41728515625, {345.51900264454383`, 351.2509362382937}}, 
+    1152.9724609375, {344.7159129116263, 350.4478465053764}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -628,23 +650,28 @@ Cell[BoxData[
 $CellContext`maplot, $CellContext`plotlabel, $CellContext`plottypefunc}, \
 $CellContext`plotlabel = Column[
            Join[{
-             Style["Bitcoin Price (USD)", $CellContext`titlestyle], 
+             Style["Bitcoin Price (USD)", 
+              $CellContext`settings[$CellContext`titlestyle]], 
              Style["Latest: $" <> ToString[
                 NumberForm[
-                 $CellContext`btcData["LastValue"], DigitBlock -> 
-                 3]], $CellContext`subtitlestyle]}, 
-            Map[Style[#, $CellContext`subtitlestyle]& , 
+                 $CellContext`btcData["LastValue"], DigitBlock -> 3]], 
+              $CellContext`settings[$CellContext`subtitlestyle]]}, 
+            Map[Style[#, 
+              $CellContext`settings[$CellContext`subtitlestyle]]& , 
              Part[$CellContext`plotlabels, 
               Select[$CellContext`lines, # != 1& ]]]], 
            Center]; $CellContext`plottypefunc := 
          If[$CellContext`plottype == 1, DateListPlot, 
            DateListLogPlot]; $CellContext`maplot = $CellContext`plottypefunc[
            Part[$CellContext`plotlines, $CellContext`lines], 
-           ImageSize -> $CellContext`imagesize, 
-           ImageMargins -> $CellContext`imagemargins, PlotRange -> Full, 
-           GridLines -> {
+           ImageSize -> $CellContext`settings[$CellContext`imagesize], 
+           ImageMargins -> $CellContext`settings[$CellContext`imagemargins], 
+           LabelStyle -> $CellContext`settings[$CellContext`labelstyle], 
+           PlotRange -> Full, GridLines -> {
              DateRange[{2012}, {2027}, "Year"], 
-             Range[0, 200000, 10000]}, FrameTicks -> All, PlotLabel -> 
+             Range[0, 200000, 10000]}, FrameTicks -> All, 
+           TicksStyle -> $CellContext`settings[$CellContext`ticksstyle], 
+           PlotLabel -> 
            Column[{$CellContext`plotlabel, $CellContext`updatedstr}, Center], 
            PlotLegends -> Part[$CellContext`plotlegends, $CellContext`lines]]; 
         If[
@@ -661,8 +688,7 @@ $CellContext`plotlabel = Column[
         Dynamic[$CellContext`selectlines], 
         Dynamic[$CellContext`selectplottype]}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{
-      1196.51728515625, {402.55681087208285`, 408.28874446583285`}},
+     ImageSizeCache->{1202.0724609375, {401.7537211391654, 407.4856547329154}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -679,9 +705,13 @@ $CellContext`plotlabel = Column[
    3.9520864060563803`*^9, {3.952086463789748*^9, 3.95208649427523*^9}, 
    3.952266282395298*^9, {3.952266323191311*^9, 3.9522663869328527`*^9}, {
    3.952421509311516*^9, 3.952421556968573*^9}, {3.9529499931582203`*^9, 
-   3.952950077658749*^9}, {3.953035378117606*^9, 3.953035462313197*^9}},
+   3.952950077658749*^9}, {3.953035378117606*^9, 3.953035462313197*^9}, 
+   3.953058685932206*^9, 3.953059043776985*^9, 3.953059391496812*^9, 
+   3.953059479569278*^9, {3.953059557737595*^9, 3.9530595647720003`*^9}, 
+   3.953062357420339*^9, 3.95306239409618*^9, {3.953063159934901*^9, 
+   3.953063179926758*^9}},
  CellLabel->
-  "Out[2456]=",ExpressionUUID->"cc9d048a-5f9b-4afd-9e0d-c2ca6c95cb0f"]
+  "Out[224]=",ExpressionUUID->"a4b7316d-f012-472e-818f-2f83f385597c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -690,7 +720,7 @@ Cell[BoxData["\[AliasDelimiter]"], "Input",
  CellOpen->False,
  CellChangeTimes->{3.951403174003639*^9},
  CellLabel->
-  "In[2457]:=",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679"],
+  "In[225]:=",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679"],
 
 Cell[BoxData["\[AliasDelimiter]"], "Output",
  CellChangeTimes->{3.951466278766543*^9, 3.9514672726595163`*^9, 
@@ -698,9 +728,11 @@ Cell[BoxData["\[AliasDelimiter]"], "Output",
   3.95193893087281*^9, 3.951939153718953*^9, 3.95194096824056*^9, 
   3.951941560455864*^9, 3.951941737412183*^9, 3.951943046822981*^9, 
   3.9520863161657352`*^9, 3.9522662826557417`*^9, 3.952421509666957*^9, 
-  3.952949993533983*^9, 3.953035378684453*^9},
+  3.952949993533983*^9, 3.953035378684453*^9, 3.953058686365864*^9, 
+  3.953059044227944*^9, 3.9530593919494047`*^9, 3.953059479926166*^9, 
+  3.9530623576624603`*^9, 3.953062394307611*^9},
  CellLabel->
-  "Out[2457]=",ExpressionUUID->"0d1f44ca-f898-4206-91a9-1ab0fae5ca97"]
+  "Out[225]=",ExpressionUUID->"f5973302-7ec3-4ba6-bb75-5b933ff1fb3a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -758,8 +790,9 @@ Cell[BoxData[
          RowBox[{"{", "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{"Style", "[", 
-            RowBox[{"\"\<Bitcoin Price (USD)\>\"", " ", ",", "titlestyle"}], 
-            "]"}], "\[IndentingNewLine]", ",", 
+            RowBox[{"\"\<Bitcoin Price (USD)\>\"", " ", ",", 
+             RowBox[{"settings", "[", "titlestyle", "]"}]}], "]"}], 
+           "\[IndentingNewLine]", ",", 
            RowBox[{"Style", "[", 
             RowBox[{
              RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
@@ -767,18 +800,19 @@ Cell[BoxData[
                RowBox[{"NumberForm", "[", 
                 RowBox[{
                  RowBox[{"btcData", "[", "\"\<LastValue\>\"", "]"}], ",", 
-                 RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], " ", ",",
-              "subtitlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
+                 RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], " ", ",", 
+             RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}], 
+           "\[IndentingNewLine]", ",", 
            RowBox[{"Style", "[", 
             RowBox[{
              RowBox[{"\"\<Current \>\"", " ", "<>", " ", 
               RowBox[{"ToString", "[", "n", "]"}], 
               "<>", "\"\< Day Moving Average: \>\"", "<>", 
-              RowBox[{"dollar", "[", "meann", "]"}]}], ",", "subtitlestyle"}],
-             "]"}], "\[IndentingNewLine]", ",", "updatedstr"}], 
-          "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
-         "Center"}], "\[IndentingNewLine]", "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+              RowBox[{"dollar", "[", "meann", "]"}]}], ",", 
+             RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}], 
+           "\[IndentingNewLine]", ",", "updatedstr"}], "\[IndentingNewLine]", 
+          "}"}], "\[IndentingNewLine]", ",", "Center"}], 
+        "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"Column", "[", 
        RowBox[{"{", "\[IndentingNewLine]", 
         RowBox[{
@@ -787,6 +821,9 @@ Cell[BoxData[
            RowBox[{"{", 
             RowBox[{"btcn", ",", " ", "mon"}], "}"}], "\[IndentingNewLine]", ",", 
            RowBox[{"PlotLabel", "->", "plotlabel"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"LabelStyle", "->", 
+            RowBox[{"settings", "[", "labelstyle", "]"}]}], 
+           "\[IndentingNewLine]", ",", 
            RowBox[{"PlotLegends", "->", 
             RowBox[{"{", "\[IndentingNewLine]", 
              RowBox[{"\"\<Price\>\"", "\[IndentingNewLine]", ",", 
@@ -811,8 +848,10 @@ Cell[BoxData[
                 RowBox[{"Range", "[", 
                  RowBox[{"0", ",", "200000", ",", "5000"}], "]"}]}], "]"}]}], 
              "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", ",", 
-           RowBox[{"FrameTicks", "->", "All"}]}], "\[IndentingNewLine]", 
-          "]"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"FrameTicks", "->", "All"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"TicksStyle", "->", 
+            RowBox[{"settings", "[", "ticksstyle", "]"}]}]}], 
+          "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
          RowBox[{"Spacer", "[", "20", "]"}], "\[IndentingNewLine]", ",", 
          RowBox[{"DateListPlot", "[", "\[IndentingNewLine]", 
           RowBox[{
@@ -846,12 +885,15 @@ Cell[BoxData[
               RowBox[{"{", "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{"Style", "[", 
-                 
-                 RowBox[{"\"\<Relative above/below the moving average\>\"", ",",
-                   "titlestyle"}], "]"}], "\[IndentingNewLine]", ",", 
-                "updatedstr"}], "\[IndentingNewLine]", "}"}], 
-              "\[IndentingNewLine]", ",", "Center"}], "\[IndentingNewLine]", 
-             "]"}]}], "\[IndentingNewLine]", ",", 
+                 RowBox[{"\"\<Relative above/below the moving average\>\"", ",", 
+                  RowBox[{"settings", "[", "titlestyle", "]"}]}], "]"}], 
+                "\[IndentingNewLine]", ",", "updatedstr"}], 
+               "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", 
+              "Center"}], "\[IndentingNewLine]", "]"}]}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"LabelStyle", "->", 
+            RowBox[{"settings", "[", "labelstyle", "]"}]}], 
+           "\[IndentingNewLine]", ",", 
            RowBox[{"ImageSize", "->", "1000"}], "\[IndentingNewLine]", ",", 
            RowBox[{"GridLines", "->", 
             RowBox[{"{", 
@@ -865,9 +907,28 @@ Cell[BoxData[
                  RowBox[{"{", 
                   RowBox[{"0", ",", "Thick"}], "}"}], "}"}]}], "]"}]}], 
              "}"}]}], "\[IndentingNewLine]", ",", 
-           RowBox[{"FrameTicks", "->", "All"}]}], "\[IndentingNewLine]", 
-          "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]}]}], 
-    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"FrameTicks", "->", 
+            RowBox[{"{", 
+             RowBox[{"All", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"PercentForm", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{"Range", "[", 
+                  RowBox[{
+                   RowBox[{"-", "5"}], ",", 
+                   RowBox[{"-", "0.1"}], ",", "0.1"}], "]"}], ",", 
+                 RowBox[{"{", "0", "}"}], ",", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{"0.1", ",", "5", ",", "0.1"}], "]"}]}], "]"}]}]}], 
+             "}"}]}], "\[IndentingNewLine]", ",", 
+           RowBox[{"TicksStyle", "->", 
+            RowBox[{"settings", "[", "ticksstyle", "]"}]}]}], 
+          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -925,9 +986,13 @@ Cell[BoxData[
    3.9513958307067966`*^9, {3.95139591316286*^9, 3.951395915176148*^9}, {
    3.951395952249949*^9, 3.951395980958734*^9}, {3.951396022029833*^9, 
    3.9513960356542263`*^9}, {3.951403395481434*^9, 3.951403435117565*^9}, 
-   3.951467119367474*^9, {3.951467151166666*^9, 3.9514671517351093`*^9}},
+   3.951467119367474*^9, {3.951467151166666*^9, 3.9514671517351093`*^9}, {
+   3.953059261268828*^9, 3.953059270162171*^9}, {3.9530594465400677`*^9, 
+   3.953059468943033*^9}, {3.953062671160239*^9, 3.953062738737741*^9}, {
+   3.953062830010601*^9, 3.953062830516263*^9}, {3.953063092380926*^9, 
+   3.9530631109020443`*^9}},
  CellLabel->
-  "In[2458]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
+  "In[243]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
 
 Cell[BoxData[
  TagBox[
@@ -941,7 +1006,7 @@ Cell[BoxData[
       100 -> "100 days", 200 -> "200 days", 365 -> "1 yr", 500 -> "500 days", 
        730 -> "2 yr", 1095 -> "3 yr", 1460 -> "4 yr", 1825 -> "5 yr", 2190 -> 
        "6 yr"}, ControlType -> PopupMenu}}, Typeset`size$$ = {
-    1187.68974609375, {674.2835123139357, 680.0154459076857}}, 
+    1199.4197265625, {671.0703998562074, 676.8023334499574}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -966,25 +1031,29 @@ $CellContext`mon$ = Take[
            Mean[
             Map[Last, $CellContext`btcn$]], DigitBlock -> 
            3]; $CellContext`plotlabel = Column[{
-            Style["Bitcoin Price (USD)", $CellContext`titlestyle], 
+            Style["Bitcoin Price (USD)", 
+             $CellContext`settings[$CellContext`titlestyle]], 
             Style["Latest: $" <> ToString[
                NumberForm[
-                $CellContext`btcData["LastValue"], DigitBlock -> 
-                3]], $CellContext`subtitlestyle], 
+                $CellContext`btcData["LastValue"], DigitBlock -> 3]], 
+             $CellContext`settings[$CellContext`subtitlestyle]], 
             Style[
             "Current " <> ToString[$CellContext`n$$] <> 
              " Day Moving Average: " <> \
-$CellContext`dollar[$CellContext`meann$], $CellContext`subtitlestyle], \
+$CellContext`dollar[$CellContext`meann$], 
+             $CellContext`settings[$CellContext`subtitlestyle]], \
 $CellContext`updatedstr}, Center]; Column[{
            
            DateListPlot[{$CellContext`btcn$, $CellContext`mon$}, 
             PlotLabel -> $CellContext`plotlabel, 
+            LabelStyle -> $CellContext`settings[$CellContext`labelstyle], 
             PlotLegends -> {
              "Price", ToString[$CellContext`n$$] <> " Day Moving Average"}, 
             PlotRange -> Full, ImageSize -> 1000, GridLines -> {Automatic, 
               Join[{{$CellContext`mean$, 
                  Directive[{Red, Thick, Dashed}]}}, 
-               Range[0, 200000, 5000]]}, FrameTicks -> All], 
+               Range[0, 200000, 5000]]}, FrameTicks -> All, 
+            TicksStyle -> $CellContext`settings[$CellContext`ticksstyle]], 
            Spacer[20], 
            DateListPlot[
             Map[{
@@ -996,20 +1065,26 @@ $CellContext`updatedstr}, Center]; Column[{
                 First[#]]]}& , 
              MapThread[List, {$CellContext`btcn$, $CellContext`mon$}]], 
             PlotLabel -> Column[{
-               Style[
-               "Relative above/below the moving average", \
-$CellContext`titlestyle], $CellContext`updatedstr}, Center], ImageSize -> 
-            1000, GridLines -> {Automatic, 
+               Style["Relative above/below the moving average", 
+                $CellContext`settings[$CellContext`titlestyle]], \
+$CellContext`updatedstr}, Center], 
+            LabelStyle -> $CellContext`settings[$CellContext`labelstyle], 
+            ImageSize -> 1000, GridLines -> {Automatic, 
               Join[
-               Range[-10, 10, 0.05], {{0, Thick}}]}, FrameTicks -> All]}]], 
+               Range[-10, 10, 0.05], {{0, Thick}}]}, FrameTicks -> {All, 
+              Map[{#, 
+                PercentForm[#]}& , 
+               Join[
+                Range[-5, -0.1, 0.1], {0}, 
+                Range[0.1, 5, 0.1]]]}, 
+            TicksStyle -> $CellContext`settings[$CellContext`ticksstyle]]}]], 
       "Specifications" :> {{{$CellContext`n$$, 200, 
           Style["Moving Average", 16]}, {
          100 -> "100 days", 200 -> "200 days", 365 -> "1 yr", 500 -> 
           "500 days", 730 -> "2 yr", 1095 -> "3 yr", 1460 -> "4 yr", 1825 -> 
           "5 yr", 2190 -> "6 yr"}}}, "Options" :> {}, "DefaultOptions" :> {}],
      
-     ImageSizeCache->{
-      1236.78974609375, {722.0230295258498, 727.7549631195998}},
+     ImageSizeCache->{1248.5197265625, {718.8099170681214, 724.5418506618714}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1082,9 +1157,13 @@ $CellContext`titlestyle], $CellContext`updatedstr}, Center], ImageSize ->
    3.95193743969764*^9, 3.95193893089948*^9, 3.951939153742745*^9, 
    3.9519409682583637`*^9, 3.951941560480853*^9, 3.9519417374371243`*^9, 
    3.9519430468471127`*^9, 3.952086316182177*^9, 3.952266282680538*^9, 
-   3.952421509691059*^9, 3.9529499935600033`*^9, 3.953035378704297*^9},
+   3.952421509691059*^9, 3.9529499935600033`*^9, 3.953035378704297*^9, 
+   3.953058686394232*^9, 3.953059044256686*^9, 3.953059391978716*^9, 
+   3.953059479960251*^9, 3.9530623576784067`*^9, 3.95306239432485*^9, 
+   3.9530627455137777`*^9, 3.953062831590274*^9, {3.953063093258091*^9, 
+   3.953063112466131*^9}},
  CellLabel->
-  "Out[2458]=",ExpressionUUID->"62322088-bf1a-4c5b-9f73-d0aa65e0261a"]
+  "Out[243]=",ExpressionUUID->"3281c54b-e4f3-4fec-a6f2-12762e0bc14a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1123,9 +1202,10 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{"\"\<Relative above/below the moving average\>\"", ",", 
-          "titlestyle"}], "]"}], "\[IndentingNewLine]", ",", "updatedstr"}], 
-       "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", ",", "Center"}], 
-     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", ",", 
+          RowBox[{"settings", "[", "titlestyle", "]"}]}], "]"}], 
+        "\[IndentingNewLine]", ",", "updatedstr"}], "\[IndentingNewLine]", 
+       "}"}], "\[IndentingNewLine]", ",", "Center"}], "\[IndentingNewLine]", 
+     "]"}]}], "\[IndentingNewLine]", ",", 
    RowBox[{"GridLines", "->", 
     RowBox[{"{", 
      RowBox[{
@@ -1146,23 +1226,44 @@ Cell[BoxData[{
           RowBox[{
            RowBox[{"-", "10"}], ",", "10"}], "]"}]}]}], "]"}]}], "}"}]}], 
    "\[IndentingNewLine]", ",", 
-   RowBox[{"FrameTicks", "->", "All"}], "\[IndentingNewLine]", ",", 
-   RowBox[{"ImageSize", "->", "imagesize"}]}], "\[IndentingNewLine]", 
+   RowBox[{"FrameTicks", "->", 
+    RowBox[{"{", 
+     RowBox[{"All", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"#", ",", 
+          RowBox[{"PercentForm", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{
+           RowBox[{"-", "5"}], ",", 
+           RowBox[{"-", "0.2"}], ",", "0.2"}], "]"}], ",", 
+         RowBox[{"{", "0", "}"}], ",", 
+         RowBox[{"Range", "[", 
+          RowBox[{"0.2", ",", "5", ",", "0.2"}], "]"}]}], "]"}]}]}], "}"}]}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"TicksStyle", "->", 
+    RowBox[{"settings", "[", "ticksstyle", "]"}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"ImageSize", "->", 
+    RowBox[{"settings", "[", "imagesize", "]"}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"ImageMargins", "->", 
+    RowBox[{"settings", "[", "imagemargins", "]"}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"LabelStyle", "->", 
+    RowBox[{"settings", "[", "labelstyle", "]"}]}]}], "\[IndentingNewLine]", 
   "]"}]}], "Input",
  CellOpen->False,
- CellChangeTimes->{{3.951404880019876*^9, 3.951404919555628*^9}, {
-  3.951404963999906*^9, 3.951405023500474*^9}, {3.951405081555189*^9, 
-  3.951405103188609*^9}, {3.951405230489818*^9, 3.951405230637177*^9}, {
-  3.951405281551053*^9, 3.951405318292386*^9}, {3.951466337929638*^9, 
-  3.951466385554847*^9}, {3.951466418031378*^9, 3.951466499256568*^9}, {
-  3.951466535528242*^9, 3.951466544185305*^9}, {3.951466595586817*^9, 
-  3.951466603737267*^9}, {3.951466713380958*^9, 3.951466745754532*^9}, {
-  3.951466825936895*^9, 3.951466826549584*^9}, {3.9514670038595867`*^9, 
-  3.951467053121558*^9}, {3.951467197340932*^9, 3.9514672106791687`*^9}, {
-  3.9516455596956367`*^9, 3.951645560103518*^9}, {3.951645777444168*^9, 
-  3.951645806246991*^9}},
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQfXkRw6stBW8dtxz/+A5EW/+v/wKiHzF/+A2iZY4Y
+Mm8F0mKcz1hB9PQ150VB9MHkK2DaapGhDJiOPqkAomfst31zCUj7HTT8BKJ5
+GB2/gehzphkMl4F0zPMPLCCa9R0rG4g2OV7EA6I3Ti/nBdHnDXSkQbSCqoU8
+iOb+basJog2nBYLpPY3V9iD63OPFriD61YtV4SD6wO7QSBC9wulbnlYh0PwA
+5nwQvcBMrwtERz0/3guid6kwJd8pfut4SbYhFUR/kJCpANGrjN+D6cUKP3eC
+aIY/rLtA9I2aadX3gLTUL8taEL1oNkMniGa6+XMSiAYAfTeq9g==
+  "],
  CellLabel->
-  "In[2459]:=",ExpressionUUID->"21b8e167-72c2-4543-bdae-f1a8e344051e"],
+  "In[240]:=",ExpressionUUID->"21b8e167-72c2-4543-bdae-f1a8e344051e"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -3592,7 +3693,8 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
             "Frame" -> {{True, True}, {True, True}}, 
             "AxesOrigin" -> {3.5343648*^9, 0}, 
             "ImageSize" -> {1000, 1000/GoldenRatio}, "Axes" -> {False, False},
-             "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+             "LabelStyle" -> {
+              Directive[14]}, "AspectRatio" -> GoldenRatio^(-1), 
             "DefaultStyle" -> {
               Directive[
                PointSize[0.003666666666666667], 
@@ -3619,7 +3721,8 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
            "Frame" -> {{True, True}, {True, True}}, 
            "AxesOrigin" -> {3.5343648*^9, 0}, 
            "ImageSize" -> {1000, 1000/GoldenRatio}, "Axes" -> {False, False}, 
-           "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+           "LabelStyle" -> {
+             Directive[14]}, "AspectRatio" -> GoldenRatio^(-1), 
            "DefaultStyle" -> {
              Directive[
               PointSize[0.003666666666666667], 
@@ -4854,7 +4957,8 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
          0.8095615713460997}}, "Frame" -> {{True, True}, {True, True}}, 
         "AxesOrigin" -> {3.5343648*^9, 0}, 
         "ImageSize" -> {1000, 1000/GoldenRatio}, "Axes" -> {False, False}, 
-        "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), "DefaultStyle" -> {
+        "LabelStyle" -> {
+          Directive[14]}, "AspectRatio" -> GoldenRatio^(-1), "DefaultStyle" -> {
           Directive[
            PointSize[0.003666666666666667], 
            RGBColor[0.24, 0.6, 0.8], 
@@ -4878,10 +4982,1183 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
   DisplayFunction->Identity,
   Frame->{{True, True}, {True, True}},
   FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->FrontEndValueCache[{{All, All}, {
+  FrameTicks->FrontEndValueCache[{{{{-5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-500%\"", ShowStringCharacters -> False], -5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-480%\"", ShowStringCharacters -> False], -4.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-460%\"", ShowStringCharacters -> False], -4.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-440%\"", ShowStringCharacters -> False], -4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-420%\"", ShowStringCharacters -> False], -4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-400%\"", ShowStringCharacters -> False], -4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-380%\"", ShowStringCharacters -> False], -3.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-360%\"", ShowStringCharacters -> False], -3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-340%\"", ShowStringCharacters -> False], -3.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-3.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-320%\"", ShowStringCharacters -> False], -3.1999999999999997`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-300%\"", ShowStringCharacters -> False], -3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-280%\"", ShowStringCharacters -> False], -2.8, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.5999999999999996`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-260%\"", ShowStringCharacters -> False], -2.5999999999999996`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-240%\"", ShowStringCharacters -> False], -2.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-220%\"", ShowStringCharacters -> False], -2.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.9999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-200%\"", ShowStringCharacters -> False], -1.9999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.7999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-180%\"", ShowStringCharacters -> False], -1.7999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.5999999999999999`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-160%\"", ShowStringCharacters -> False], -1.5999999999999999`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-1.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-140%\"", ShowStringCharacters -> False], -1.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-120%\"", ShowStringCharacters -> False], -1.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.9999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-100%\"", ShowStringCharacters -> False], -0.9999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.7999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-80%\"", ShowStringCharacters -> False], -0.7999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.5999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-60%\"", ShowStringCharacters -> False], -0.5999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.39999999999999974`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-40%\"", ShowStringCharacters -> False], -0.39999999999999974`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-20%\"", ShowStringCharacters -> False], -0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"0%\"", ShowStringCharacters -> False], 0, Editable -> 
+           False], PercentForm], TraditionalForm]}, {0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       0.6000000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"60%\"", ShowStringCharacters -> False], 
+           0.6000000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {0.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       1.2000000000000002`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"120%\"", ShowStringCharacters -> False], 
+           1.2000000000000002`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"140%\"", ShowStringCharacters -> False], 
+           1.4000000000000001`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"240%\"", ShowStringCharacters -> False], 
+           2.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"280%\"", ShowStringCharacters -> False], 
+           2.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {3.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"340%\"", ShowStringCharacters -> False], 
+           3.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"380%\"", ShowStringCharacters -> False], 
+           3.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       4.6000000000000005`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"460%\"", ShowStringCharacters -> False], 
+           4.6000000000000005`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"480%\"", ShowStringCharacters -> False], 
+           4.800000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}}, {{-5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-500%\"", ShowStringCharacters -> False], -5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-480%\"", ShowStringCharacters -> False], -4.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-460%\"", ShowStringCharacters -> False], -4.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-440%\"", ShowStringCharacters -> False], -4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-420%\"", ShowStringCharacters -> False], -4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-400%\"", ShowStringCharacters -> False], -4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-380%\"", ShowStringCharacters -> False], -3.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-360%\"", ShowStringCharacters -> False], -3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-340%\"", ShowStringCharacters -> False], -3.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-3.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-320%\"", ShowStringCharacters -> False], -3.1999999999999997`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-300%\"", ShowStringCharacters -> False], -3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-280%\"", ShowStringCharacters -> False], -2.8, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.5999999999999996`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-260%\"", ShowStringCharacters -> False], -2.5999999999999996`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-240%\"", ShowStringCharacters -> False], -2.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-220%\"", ShowStringCharacters -> False], -2.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.9999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-200%\"", ShowStringCharacters -> False], -1.9999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.7999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-180%\"", ShowStringCharacters -> False], -1.7999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.5999999999999999`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-160%\"", ShowStringCharacters -> False], -1.5999999999999999`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-1.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-140%\"", ShowStringCharacters -> False], -1.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-120%\"", ShowStringCharacters -> False], -1.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.9999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-100%\"", ShowStringCharacters -> False], -0.9999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.7999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-80%\"", ShowStringCharacters -> False], -0.7999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.5999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-60%\"", ShowStringCharacters -> False], -0.5999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.39999999999999974`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-40%\"", ShowStringCharacters -> False], -0.39999999999999974`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-20%\"", ShowStringCharacters -> False], -0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"0%\"", ShowStringCharacters -> False], 0, Editable -> 
+           False], PercentForm], TraditionalForm]}, {0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       0.6000000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"60%\"", ShowStringCharacters -> False], 
+           0.6000000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {0.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       1.2000000000000002`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"120%\"", ShowStringCharacters -> False], 
+           1.2000000000000002`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"140%\"", ShowStringCharacters -> False], 
+           1.4000000000000001`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"240%\"", ShowStringCharacters -> False], 
+           2.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"280%\"", ShowStringCharacters -> False], 
+           2.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {3.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"340%\"", ShowStringCharacters -> False], 
+           3.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"380%\"", ShowStringCharacters -> False], 
+           3.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       4.6000000000000005`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"460%\"", ShowStringCharacters -> False], 
+           4.6000000000000005`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"480%\"", ShowStringCharacters -> False], 
+           4.800000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}}}, {
       Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}], 
-      Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}]}}, {{
-     All, All}, {{{3.4712928*^9, 
+      Charting`DateTicksFunction[
+      All, DateTicksFormat -> {Automatic}]}}, {{{{-5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-500%\"", ShowStringCharacters -> False], -5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-480%\"", ShowStringCharacters -> False], -4.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-460%\"", ShowStringCharacters -> False], -4.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-440%\"", ShowStringCharacters -> False], -4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-420%\"", ShowStringCharacters -> False], -4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-400%\"", ShowStringCharacters -> False], -4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-380%\"", ShowStringCharacters -> False], -3.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-360%\"", ShowStringCharacters -> False], -3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-340%\"", ShowStringCharacters -> False], -3.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-3.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-320%\"", ShowStringCharacters -> False], -3.1999999999999997`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-300%\"", ShowStringCharacters -> False], -3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-280%\"", ShowStringCharacters -> False], -2.8, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.5999999999999996`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-260%\"", ShowStringCharacters -> False], -2.5999999999999996`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-240%\"", ShowStringCharacters -> False], -2.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-220%\"", ShowStringCharacters -> False], -2.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.9999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-200%\"", ShowStringCharacters -> False], -1.9999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.7999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-180%\"", ShowStringCharacters -> False], -1.7999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.5999999999999999`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-160%\"", ShowStringCharacters -> False], -1.5999999999999999`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-1.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-140%\"", ShowStringCharacters -> False], -1.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-120%\"", ShowStringCharacters -> False], -1.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.9999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-100%\"", ShowStringCharacters -> False], -0.9999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.7999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-80%\"", ShowStringCharacters -> False], -0.7999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.5999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-60%\"", ShowStringCharacters -> False], -0.5999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.39999999999999974`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-40%\"", ShowStringCharacters -> False], -0.39999999999999974`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-20%\"", ShowStringCharacters -> False], -0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"0%\"", ShowStringCharacters -> False], 0, Editable -> 
+           False], PercentForm], TraditionalForm]}, {0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       0.6000000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"60%\"", ShowStringCharacters -> False], 
+           0.6000000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {0.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       1.2000000000000002`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"120%\"", ShowStringCharacters -> False], 
+           1.2000000000000002`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"140%\"", ShowStringCharacters -> False], 
+           1.4000000000000001`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"240%\"", ShowStringCharacters -> False], 
+           2.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"280%\"", ShowStringCharacters -> False], 
+           2.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {3.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"340%\"", ShowStringCharacters -> False], 
+           3.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"380%\"", ShowStringCharacters -> False], 
+           3.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       4.6000000000000005`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"460%\"", ShowStringCharacters -> False], 
+           4.6000000000000005`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"480%\"", ShowStringCharacters -> False], 
+           4.800000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}}, {{-5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-500%\"", ShowStringCharacters -> False], -5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-480%\"", ShowStringCharacters -> False], -4.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-460%\"", ShowStringCharacters -> False], -4.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-440%\"", ShowStringCharacters -> False], -4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-420%\"", ShowStringCharacters -> False], -4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-400%\"", ShowStringCharacters -> False], -4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-380%\"", ShowStringCharacters -> False], -3.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-360%\"", ShowStringCharacters -> False], -3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-340%\"", ShowStringCharacters -> False], -3.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-3.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-320%\"", ShowStringCharacters -> False], -3.1999999999999997`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-300%\"", ShowStringCharacters -> False], -3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-280%\"", ShowStringCharacters -> False], -2.8, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.5999999999999996`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-260%\"", ShowStringCharacters -> False], -2.5999999999999996`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-2.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-240%\"", ShowStringCharacters -> False], -2.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-2.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-220%\"", ShowStringCharacters -> False], -2.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.9999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-200%\"", ShowStringCharacters -> False], -1.9999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.7999999999999998`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-180%\"", ShowStringCharacters -> False], -1.7999999999999998`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.5999999999999999`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-160%\"", ShowStringCharacters -> False], -1.5999999999999999`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-1.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-140%\"", ShowStringCharacters -> False], -1.4, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-1.1999999999999997`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-120%\"", ShowStringCharacters -> False], -1.1999999999999997`, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.9999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-100%\"", ShowStringCharacters -> False], -0.9999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.7999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-80%\"", ShowStringCharacters -> False], -0.7999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.5999999999999998, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-60%\"", ShowStringCharacters -> False], -0.5999999999999998, 
+           AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {-0.39999999999999974`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox[
+           "\"-40%\"", ShowStringCharacters -> False], -0.39999999999999974`, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {-0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"-20%\"", ShowStringCharacters -> False], -0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"0%\"", ShowStringCharacters -> False], 0, Editable -> 
+           False], PercentForm], TraditionalForm]}, {0.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"20%\"", ShowStringCharacters -> False], 0.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {0.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"40%\"", ShowStringCharacters -> False], 0.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       0.6000000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"60%\"", ShowStringCharacters -> False], 
+           0.6000000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {0.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"80%\"", ShowStringCharacters -> False], 0.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       1.2000000000000002`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"120%\"", ShowStringCharacters -> False], 
+           1.2000000000000002`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.4000000000000001`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"140%\"", ShowStringCharacters -> False], 
+           1.4000000000000001`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {1.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"160%\"", ShowStringCharacters -> False], 1.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {1.8, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"180%\"", ShowStringCharacters -> False], 1.8, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"200%\"", ShowStringCharacters -> False], 2., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {2.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"220%\"", ShowStringCharacters -> False], 2.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"240%\"", ShowStringCharacters -> False], 
+           2.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {2.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"260%\"", ShowStringCharacters -> False], 2.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       2.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"280%\"", ShowStringCharacters -> False], 
+           2.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"300%\"", ShowStringCharacters -> False], 3., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {3.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"320%\"", ShowStringCharacters -> False], 3.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.4000000000000004`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"340%\"", ShowStringCharacters -> False], 
+           3.4000000000000004`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {3.6, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"360%\"", ShowStringCharacters -> False], 3.6, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       3.8000000000000003`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"380%\"", ShowStringCharacters -> False], 
+           3.8000000000000003`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"400%\"", ShowStringCharacters -> False], 4., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.2, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"420%\"", ShowStringCharacters -> False], 4.2, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {4.4, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"440%\"", ShowStringCharacters -> False], 4.4, 
+           AutoDelete -> True], PercentForm], TraditionalForm]}, {
+       4.6000000000000005`, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"460%\"", ShowStringCharacters -> False], 
+           4.6000000000000005`, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {4.800000000000001, 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"480%\"", ShowStringCharacters -> False], 
+           4.800000000000001, AutoDelete -> True], PercentForm], 
+         TraditionalForm]}, {5., 
+        FormBox[
+         TagBox[
+          InterpretationBox[
+           StyleBox["\"500%\"", ShowStringCharacters -> False], 5., 
+           AutoDelete -> True], PercentForm], TraditionalForm]}}}, {{{
+       3.4712928*^9, 
         FormBox[
          StyleBox["\"2010\"", 
           Directive[], {}, StripOnInput -> False], TraditionalForm], 
@@ -5169,7 +6446,9 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
       Thickness[Large]}}},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
+  ImageMargins->20,
   ImageSize->1000,
+  LabelStyle->Directive[14],
   Method->{
    "NoShowPlotTheme" -> Automatic, "AxisPadding" -> Scaled[0.02], 
     "DefaultBoundaryStyle" -> Automatic, 
@@ -5247,7 +6526,7 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
         StyleBox["\"Relative above/below the moving average\"", {20, 
           RGBColor[1, 0, 0]}, StripOnInput -> False]}, {
         StyleBox[
-        "\"(updated: Mon 7 Apr 2025 12:22:57)\"", {15}, StripOnInput -> 
+        "\"(updated: Mon 7 Apr 2025 20:53:13)\"", {15}, StripOnInput -> 
          False]}}, GridBoxAlignment -> {"Columns" -> {{Center}}}, 
       DefaultBaseStyle -> "Column", 
       GridBoxItemSize -> {
@@ -5261,7 +6540,8 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
      Scaled[0.02]}, {
      Scaled[0.05], 
      Scaled[0.05]}},
-  Ticks->{{}, Automatic}]], "Output",
+  Ticks->{{}, Automatic},
+  TicksStyle->{16}]], "Output",
  CellChangeTimes->{{3.951466366918721*^9, 3.9514663761365223`*^9}, 
    3.951466421070343*^9, {3.9514664611941433`*^9, 3.951466501143571*^9}, 
    3.951466546839946*^9, 3.9514666055325603`*^9, {3.9514667282190943`*^9, 
@@ -5272,14 +6552,1401 @@ m+vmp/IU/1cM5gRqWlffuXf7f4jlz7o=
    3.951937440898703*^9, 3.951939155008403*^9, 3.9519409695381393`*^9, 
    3.951941561739718*^9, 3.951941738711501*^9, 3.951943048104865*^9, 
    3.952086317430229*^9, 3.952266283926111*^9, 3.952421510949314*^9, 
-   3.9529499948287287`*^9, 3.953035380085023*^9},
+   3.9529499948287287`*^9, 3.953035380085023*^9, 3.953059045618247*^9, 
+   3.9530593932969112`*^9, 3.953059481360321*^9, 3.953062358944559*^9, 
+   3.9530623955116463`*^9, {3.953062879543086*^9, 3.953062891465829*^9}, 
+   3.953062993762805*^9, {3.953063051291518*^9, 3.9530630661674232`*^9}},
  CellLabel->
-  "Out[2460]=",ExpressionUUID->"ba452fa7-4de7-476c-8958-46af30b75a61"]
+  "Out[241]=",ExpressionUUID->"8442d85d-b0ca-4f4a-80f5-09f267b87377"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"#", "&"}], 
+  RowBox[{"Range", "[", 
+   RowBox[{
+    RowBox[{"-", "5"}], ",", "5", ",", "0.1"}], "]"}]}]], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.953062812823475*^9, 
+  3.953062816847521*^9}},ExpressionUUID->"0e3f4e52-6d97-4dfa-9a60-\
+9100ed1c5ee9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "5.`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.9`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.8`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.7`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.6`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.5`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.4`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.3`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.2`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.1`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "4.`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.9`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.8`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.6999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.6`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.5`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.4`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.3`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.1999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.1`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "3.`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.9`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.8`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.6999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.5999999999999996`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.5`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.4`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.3`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.1999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.0999999999999996`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.9999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.9`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.7999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.6999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.5999999999999999`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.4999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.4`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.2999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.1999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "1.0999999999999999`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.9999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.8999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.7999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.6999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.5999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.4999999999999998`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.39999999999999974`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.2999999999999997`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.19999999999999973`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", "0.09999999999999973`"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.7755575615628914`*^-16", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.10000000000000028`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.2000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.30000000000000027`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.4000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.5000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.6000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.7000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.8000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"0.9000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.0000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.1000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.2000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.3000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.4000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.5000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.6000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.7000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.8000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"1.9000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.0000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.1000000000000005`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.2`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.3000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.4000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.5000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.6000000000000005`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.7000000000000006`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.8000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"2.9000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.0000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.1000000000000005`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.2000000000000006`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.3000000000000003`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.4000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.5000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.6000000000000005`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.7000000000000006`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.8000000000000007`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"3.9000000000000004`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.000000000000001`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.1000000000000005`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.2`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.300000000000001`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.4`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.500000000000001`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.6000000000000005`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.7`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.800000000000001`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"4.9`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}], ",", 
+   RowBox[{"5.`", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"#1", ",", 
+        TagBox[
+         RowBox[{"Slot", "[", 
+          InterpretationBox[
+           StyleBox["\<\"100%\"\>",
+            ShowStringCharacters->False],
+           1,
+           Editable->False], "]"}],
+         PercentForm]}], "}"}], "&"}], ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.953062797104012*^9},
+ CellLabel->
+  "Out[230]=",ExpressionUUID->"14016fdf-377e-4217-8070-4eb0aa0e64a1"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{2056, 1257},
+WindowSize->{1234, 1257},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
 StyleDefinitions->"Default.nb",
@@ -5299,33 +7966,38 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 786, 11, 96, "Title",ExpressionUUID->"f5fa712f-8f02-48db-ad7d-991505d584c6"],
 Cell[CellGroupData[{
-Cell[1387, 37, 2471, 65, 19, "Input",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9",
+Cell[1387, 37, 2470, 65, 19, "Input",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9",
  CellOpen->False],
-Cell[3861, 104, 1851, 30, 56, "Output",ExpressionUUID->"a277d7e4-8023-4837-bc9c-2ba0863d3307"]
+Cell[3860, 104, 1996, 32, 42, "Output",ExpressionUUID->"d9d40ba9-0119-45d5-9fa7-5d4f3ad29d10"]
 }, Open  ]],
-Cell[5727, 137, 12636, 279, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
+Cell[5871, 139, 13199, 285, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
  CellOpen->False],
 Cell[CellGroupData[{
-Cell[18388, 420, 10115, 180, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
+Cell[19095, 428, 10840, 194, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
  CellOpen->False],
-Cell[28506, 602, 4193, 81, 841, "Output",ExpressionUUID->"cc9d048a-5f9b-4afd-9e0d-c2ca6c95cb0f"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[32736, 688, 187, 4, 19, "Input",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679",
- CellOpen->False],
-Cell[32926, 694, 519, 8, 47, "Output",ExpressionUUID->"0d1f44ca-f898-4206-91a9-1ab0fae5ca97"]
+Cell[29938, 624, 4720, 89, 826, "Output",ExpressionUUID->"a4b7316d-f012-472e-818f-2f83f385597c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33482, 707, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
-Cell[CellGroupData[{
-Cell[33775, 715, 10178, 214, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
+Cell[34695, 718, 186, 4, 19, "Input",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679",
  CellOpen->False],
-Cell[43956, 931, 8849, 155, 1480, "Output",ExpressionUUID->"62322088-bf1a-4c5b-9f73-d0aa65e0261a"]
+Cell[34884, 724, 660, 10, 33, "Output",ExpressionUUID->"f5973302-7ec3-4ba6-bb75-5b933ff1fb3a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52842, 1091, 3022, 73, 19, "Input",ExpressionUUID->"21b8e167-72c2-4543-bdae-f1a8e344051e",
+Cell[35581, 739, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
+Cell[CellGroupData[{
+Cell[35874, 747, 11800, 247, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
  CellOpen->False],
-Cell[55867, 1166, 240696, 4110, 672, "Output",ExpressionUUID->"ba452fa7-4de7-476c-8958-46af30b75a61"]
+Cell[47677, 996, 9663, 169, 1479, "Output",ExpressionUUID->"3281c54b-e4f3-4fec-a6f2-12762e0bc14a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57377, 1170, 3635, 95, 19, "Input",ExpressionUUID->"21b8e167-72c2-4543-bdae-f1a8e344051e",
+ CellOpen->False],
+Cell[61015, 1267, 287150, 5292, 695, "Output",ExpressionUUID->"8442d85d-b0ca-4f4a-80f5-09f267b87377"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[348202, 6564, 294, 9, 19, "Input",ExpressionUUID->"0e3f4e52-6d97-4dfa-9a60-9100ed1c5ee9",
+ CellOpen->False],
+Cell[348499, 6575, 38777, 1368, 446, "Output",ExpressionUUID->"14016fdf-377e-4217-8070-4eb0aa0e64a1"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
