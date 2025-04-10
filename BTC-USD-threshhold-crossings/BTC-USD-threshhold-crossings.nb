@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    188771,       3414]
-NotebookOptionsPosition[    187894,       3388]
-NotebookOutlinePosition[    188291,       3404]
-CellTagsIndexPosition[    188248,       3401]
+NotebookDataLength[    196795,       3627]
+NotebookOptionsPosition[    195918,       3601]
+NotebookOutlinePosition[    196315,       3617]
+CellTagsIndexPosition[    196272,       3614]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,7 +121,7 @@ Cell[BoxData[{
  CellChangeTimes->{{3.950377000317803*^9, 3.9503770042492647`*^9}, {
   3.951066975361248*^9, 3.9510669778667603`*^9}},
  CellLabel->
-  "In[477]:=",ExpressionUUID->"6d7d8b68-6003-4a88-8a85-d729b86513e8"],
+  "In[546]:=",ExpressionUUID->"6d7d8b68-6003-4a88-8a85-d729b86513e8"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -140,9 +140,10 @@ Cell[BoxData[
    3.950894374518878*^9, 3.951066918463525*^9, 3.951066982219858*^9, 
    3.9516501966215*^9, 3.951943768084206*^9, 3.952950687403167*^9, 
    3.953124629020061*^9, {3.953124943085932*^9, 3.953124972173368*^9}, 
-   3.953125079995578*^9, 3.953125593870619*^9, 3.953125636195547*^9},
+   3.953125079995578*^9, 3.953125593870619*^9, 3.953125636195547*^9, 
+   3.9532203826830673`*^9, 3.953284327667222*^9},
  CellLabel->
-  "Out[481]=",ExpressionUUID->"20a769d1-7bc0-4d35-b9c1-31eca8afb73e"]
+  "Out[550]=",ExpressionUUID->"1fe0959f-0a4f-4b87-bdad-07a2a0e87ed5"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -188,6 +189,9 @@ Cell[BoxData[{
   RowBox[{"plot", "=", 
    RowBox[{"DateListPlot", "[", "\[IndentingNewLine]", 
     RowBox[{"btcDataFull", "\[IndentingNewLine]", ",", 
+     RowBox[{"Background", "->", 
+      RowBox[{"settings", "[", "plotbackground", "]"}]}], 
+     "\[IndentingNewLine]", ",", 
      RowBox[{"PlotLabel", "->", 
       RowBox[{"Column", "[", 
        RowBox[{
@@ -196,20 +200,7 @@ Cell[BoxData[{
           RowBox[{"Style", "[", 
            RowBox[{"\"\<Bitcoin Price (USD)\>\"", ",", 
             RowBox[{"settings", "[", "titlestyle", "]"}]}], "]"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"\"\<Latest: $\>\"", "  ", "<>", " ", 
-               RowBox[{"ToString", "[", 
-                RowBox[{"NumberForm", "[", 
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{"btcDataFull", "//", "Last"}], "//", "Last"}], ",", 
-                  RowBox[{"DigitBlock", "->", "3"}]}], "]"}], "]"}]}], ",", 
-              RowBox[{"settings", "[", "subtitlestyle", "]"}]}], "]"}]}], 
-           "*)"}], "\[IndentingNewLine]", ",", 
+          "\[IndentingNewLine]", ",", 
           RowBox[{"Style", "[", 
            RowBox[{
             RowBox[{"\"\<Latest: \>\"", "  ", "<>", " ", 
@@ -230,18 +221,52 @@ Cell[BoxData[{
       RowBox[{"settings", "[", "labelstyle", "]"}]}], "\[IndentingNewLine]", ",", 
      RowBox[{"GridLines", "->", 
       RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{"Automatic", "\[IndentingNewLine]", ",", " ", 
-        RowBox[{"Join", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Join", "[", 
          RowBox[{
-          RowBox[{"Range", "[", 
-           RowBox[{"0", ",", "200000", ",", "1000"}], "]"}], 
-          "\[IndentingNewLine]", ",", 
+          RowBox[{"DateRange", "[", 
+           RowBox[{
+            RowBox[{"{", "2010", "}"}], ",", 
+            RowBox[{"{", "2030", "}"}], ",", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{"1", ",", "\"\<Months\>\""}], "]"}]}], "]"}], ",", 
           RowBox[{
            RowBox[{
             RowBox[{"{", 
              RowBox[{"#", ",", "Thick"}], "}"}], "&"}], "/@", 
+           RowBox[{"DateRange", "[", 
+            RowBox[{
+             RowBox[{"{", "2010", "}"}], ",", 
+             RowBox[{"{", "2030", "}"}], ",", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{"1", ",", "\"\<Years\>\""}], "]"}]}], "]"}]}]}], "]"}], 
+        "\[IndentingNewLine]", ",", " ", 
+        RowBox[{"Join", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"#", ",", 
+              RowBox[{"Thickness", "[", "Tiny", "]"}]}], "}"}], "&"}], "/@", 
            RowBox[{"Range", "[", 
-            RowBox[{"5000", ",", "200000", ",", "5000"}], "]"}]}]}], 
+            RowBox[{"0", ",", "200000", ",", "1000"}], "]"}]}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"#", ",", 
+              RowBox[{"Thickness", "[", "Small", "]"}]}], "}"}], "&"}], "/@", 
+           
+           RowBox[{"Range", "[", 
+            RowBox[{"5000", ",", "200000", ",", "10000"}], "]"}]}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"#", ",", 
+              RowBox[{"Thickness", "[", "Medium", "]"}]}], "}"}], "&"}], "/@", 
+           RowBox[{"Range", "[", 
+            RowBox[{"0", ",", "200000", ",", "10000"}], "]"}]}]}], 
          "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}]}], 
      "\[IndentingNewLine]", ",", 
      RowBox[{"ImageSize", "->", 
@@ -251,8 +276,9 @@ Cell[BoxData[{
       ",", 
      RowBox[{"FrameTicks", "->", 
       RowBox[{"{", 
-       RowBox[{"All", ",", "All"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}],
-   ";"}], "\n", 
+       RowBox[{"All", ",", "All"}], "}"}]}], "\[IndentingNewLine]", ",", 
+     RowBox[{"Frame", "->", "True"}]}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}], "\n", 
  RowBox[{
   RowBox[{"prices", " ", "=", " ", 
    RowBox[{
@@ -355,8 +381,9 @@ Cell[BoxData[{
   RowBox[{"output", " ", "=", 
    RowBox[{"Row", "[", 
     RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{"plot", ",", " ", "ftfinal"}], "\[IndentingNewLine]", "}"}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"plot", "\[IndentingNewLine]", ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], "\[IndentingNewLine]", ",", 
+      "ftfinal"}], "\[IndentingNewLine]", "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
   "graphfilename", " ", "=", " ", "\"\<BTC-USD-threshold-crossings.jpg\>\""}],
@@ -412,9 +439,16 @@ Cell[BoxData[{
    3.953124790903529*^9}, {3.95312492753018*^9, 3.953124966995818*^9}, {
    3.9531250072477093`*^9, 3.95312503027775*^9}, {3.9531254562735043`*^9, 
    3.953125456695615*^9}, {3.953125519587034*^9, 3.953125580591568*^9}, {
-   3.953125621403008*^9, 3.953125624543913*^9}},
+   3.953125621403008*^9, 3.953125624543913*^9}, {3.953220421536745*^9, 
+   3.953220445885253*^9}, {3.9532205533211203`*^9, 3.9532205913529987`*^9}, {
+   3.953220638425507*^9, 3.953220644861608*^9}, {3.953220695007264*^9, 
+   3.953220714853252*^9}, {3.953220755677681*^9, 3.953220757231798*^9}, {
+   3.953220832153729*^9, 3.9532208560729933`*^9}, {3.953220941711626*^9, 
+   3.953220987819962*^9}, {3.953221022961793*^9, 3.9532210770135*^9}, {
+   3.953284444065742*^9, 3.953284450474236*^9}, {3.953284484060264*^9, 
+   3.95328455213997*^9}},
  CellLabel->
-  "In[482]:=",ExpressionUUID->"01ce61f5-e0d0-4b00-8d8b-11dccd24211a"],
+  "In[593]:=",ExpressionUUID->"01ce61f5-e0d0-4b00-8d8b-11dccd24211a"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -427,7 +461,7 @@ Cell[BoxData[
            AbsoluteThickness[2], 
            LineBox[CompressedData["
 1:eJxUnHW0k1fTxYM7hEJxCc4FCsGtQEpxDS5Fgl0cgjsEp2hwh+AOoVCsSHCK
-BncIpVDgIsG18L3f3vt0rfSfrt+aI7Nn5swJeZ6bbG171u8Q22KxxEllsfz/
+BncIpVDgIsG18L3f3vt0rfSfrt+aI7Nn5swJeZ6bbG171u8Q22KxxE1lsfz/
 ///3n6/2z09++v//V72X1vG//wcHkF27sqT5f7YsJweyjE39/2w/LXt0dKr/
 Z9c7suPeYLDXVgnsSb0ZHKhB9s2fDw73JVuursD6tqWR7PyzkvEH7Hkdyf7M
 lcGhervAoapkR9Gi6f6frb3/Y+znWFQ5wh/3MbJtc1WwLxzJrvlVIvUcJtvG
@@ -1170,7 +1204,7 @@ eb7Nxv6ljmLf0+NTRYmjHmn5RPml/mC5nsRn/ih2O2NreEAcmYH9Jdvk+Wvs
 7anjy0ryvY/dAlPJN0WQ+tL2Id8y2B8yg3w7qNe94nke0vKpfyffXRqf84s4
 +g62Do8TO1/3wjeni/222P9tPvlNUXvdeX5vx26RtOLgTWyUbSyOFOutz+t8
 Up/xE7azFiC/idh904r8tqrr7yWfRH2or/QH8imM/XmtyacVNs9/Tz7j1Os+
-SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
+SnlnE3bKpRCHr2q8yXWZ//jx++r1ZXph/R8XbYZY
             "]]}, Annotation[#, "Charting`Private`Tag#1"]& ]}, {
         "WolframDynamicHighlight", <|
          "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>}], 
@@ -1189,7 +1223,7 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
                 AbsoluteThickness[2]], 
                Line[CompressedData["
 1:eJxUnHW0k1fTxYM7hEJxCc4FCsGtQEpxDS5Fgl0cgjsEp2hwh+AOoVCsSHCK
-BncIpVDgIsG18L3f3vt0rfSfrt+aI7Nn5swJeZ6bbG171u8Q22KxxEllsfz/
+BncIpVDgIsG18L3f3vt0rfSfrt+aI7Nn5swJeZ6bbG171u8Q22KxxE1lsfz/
 ///3n6/2z09++v//V72X1vG//wcHkF27sqT5f7YsJweyjE39/2w/LXt0dKr/
 Z9c7suPeYLDXVgnsSb0ZHKhB9s2fDw73JVuursD6tqWR7PyzkvEH7Hkdyf7M
 lcGhervAoapkR9Gi6f6frb3/Y+znWFQ5wh/3MbJtc1WwLxzJrvlVIvUcJtvG
@@ -1932,13 +1966,13 @@ eb7Nxv6ljmLf0+NTRYmjHmn5RPml/mC5nsRn/ih2O2NreEAcmYH9Jdvk+Wvs
 7anjy0ryvY/dAlPJN0WQ+tL2Id8y2B8yg3w7qNe94nke0vKpfyffXRqf84s4
 +g62Do8TO1/3wjeni/222P9tPvlNUXvdeX5vx26RtOLgTWyUbSyOFOutz+t8
 Up/xE7azFiC/idh904r8tqrr7yWfRH2or/QH8imM/XmtyacVNs9/Tz7j1Os+
-SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
+SnlnE3bKpRCHr2q8yXWZ//jx++r1ZXph/R8XbYZY
                 "]]}, "Charting`Private`Tag#1"]}}, <|
            "HighlightElements" -> <|
              "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>, 
             "LayoutOptions" -> <|
              "PanelPlotLayout" -> <||>, 
-              "PlotRange" -> {{3.5249472*^9, 3.9530592*^9}, {
+              "PlotRange" -> {{3.5249472*^9, 3.9531456*^9}, {
                 0, 107000.140625}}, "Frame" -> {{True, True}, {True, True}}, 
               "AxesOrigin" -> {3.5249472*^9, 0}, 
               "ImageSize" -> {1000, 1000/GoldenRatio}, 
@@ -1965,7 +1999,7 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
             "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>, 
            "LayoutOptions" -> <|
             "PanelPlotLayout" -> <||>, 
-             "PlotRange" -> {{3.5249472*^9, 3.9530592*^9}, {
+             "PlotRange" -> {{3.5249472*^9, 3.9531456*^9}, {
                0, 107000.140625}}, "Frame" -> {{True, True}, {True, True}}, 
              "AxesOrigin" -> {3.5249472*^9, 0}, 
              "ImageSize" -> {1000, 1000/GoldenRatio}, 
@@ -1999,7 +2033,7 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
             AbsoluteThickness[2]], 
            Line[CompressedData["
 1:eJxUnHW0k1fTxYM7hEJxCc4FCsGtQEpxDS5Fgl0cgjsEp2hwh+AOoVCsSHCK
-BncIpVDgIsG18L3f3vt0rfSfrt+aI7Nn5swJeZ6bbG171u8Q22KxxEllsfz/
+BncIpVDgIsG18L3f3vt0rfSfrt+aI7Nn5swJeZ6bbG171u8Q22KxxE1lsfz/
 ///3n6/2z09++v//V72X1vG//wcHkF27sqT5f7YsJweyjE39/2w/LXt0dKr/
 Z9c7suPeYLDXVgnsSb0ZHKhB9s2fDw73JVuursD6tqWR7PyzkvEH7Hkdyf7M
 lcGhervAoapkR9Gi6f6frb3/Y+znWFQ5wh/3MbJtc1WwLxzJrvlVIvUcJtvG
@@ -2742,13 +2776,13 @@ eb7Nxv6ljmLf0+NTRYmjHmn5RPml/mC5nsRn/ih2O2NreEAcmYH9Jdvk+Wvs
 7anjy0ryvY/dAlPJN0WQ+tL2Id8y2B8yg3w7qNe94nke0vKpfyffXRqf84s4
 +g62Do8TO1/3wjeni/222P9tPvlNUXvdeX5vx26RtOLgTWyUbSyOFOutz+t8
 Up/xE7azFiC/idh904r8tqrr7yWfRH2or/QH8imM/XmtyacVNs9/Tz7j1Os+
-SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
+SnlnE3bKpRCHr2q8yXWZ//jx++r1ZXph/R8XbYZY
             "]]}, "Charting`Private`Tag#1"]}}, <|
        "HighlightElements" -> <|
          "Label" -> {"XYLabel"}, "Ball" -> {"InterpolatedBall"}|>, 
         "LayoutOptions" -> <|
          "PanelPlotLayout" -> <||>, 
-          "PlotRange" -> {{3.5249472*^9, 3.9530592*^9}, {0, 107000.140625}}, 
+          "PlotRange" -> {{3.5249472*^9, 3.9531456*^9}, {0, 107000.140625}}, 
           "Frame" -> {{True, True}, {True, True}}, 
           "AxesOrigin" -> {3.5249472*^9, 0}, 
           "ImageSize" -> {1000, 1000/GoldenRatio}, "Axes" -> {False, False}, 
@@ -2771,8 +2805,9 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
           DateListPlot, "GroupHighlight" -> False|>|>, 
        "DynamicHighlight"]], {{}, {}}}, AspectRatio -> 
     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
-    AxesLabel -> {None, None}, AxesOrigin -> {3.5249472*^9, 0}, 
-    DisplayFunction -> Identity, Frame -> {{True, True}, {True, True}}, 
+    AxesLabel -> {None, None}, AxesOrigin -> {3.5249472*^9, 0}, Background -> 
+    RGBColor[0.9625, 0.9625, 0.9625], DisplayFunction -> Identity, 
+    Frame -> {{True, True}, {True, True}}, 
     FrameLabel -> {{None, None}, {None, None}}, FrameTicks -> 
     FrontEndValueCache[{{All, All}, {
         Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}], 
@@ -3011,148 +3046,320 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
           Directive[]}, {3.9762144*^9, 
           FormBox[
            TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], Automatic, 
-          Directive[]}}}}], GridLines -> 
-    FrontEndValueCache[{Charting`ScaledTickValues[
-        (Part[
-         Select[
-          Charting`DateTicksFunction[All, DateTicksFormat -> {Automatic}][
-           SlotSequence[1]], And[
-           FreeQ[#, 
-            Alternatives["", 
-             Spacer[{0, 0}]]], Head[#] === List, Length[#] > 0]& ], All, 1]& )[
-         SlotSequence[1]], {Identity, Identity}]& , {
-       0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 
-        12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 
-        22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 31000, 
-        32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 41000, 
-        42000, 43000, 44000, 45000, 46000, 47000, 48000, 49000, 50000, 51000, 
-        52000, 53000, 54000, 55000, 56000, 57000, 58000, 59000, 60000, 61000, 
-        62000, 63000, 64000, 65000, 66000, 67000, 68000, 69000, 70000, 71000, 
-        72000, 73000, 74000, 75000, 76000, 77000, 78000, 79000, 80000, 81000, 
-        82000, 83000, 84000, 85000, 86000, 87000, 88000, 89000, 90000, 91000, 
-        92000, 93000, 94000, 95000, 96000, 97000, 98000, 99000, 100000, 
-        101000, 102000, 103000, 104000, 105000, 106000, 107000, 108000, 
-        109000, 110000, 111000, 112000, 113000, 114000, 115000, 116000, 
-        117000, 118000, 119000, 120000, 121000, 122000, 123000, 124000, 
-        125000, 126000, 127000, 128000, 129000, 130000, 131000, 132000, 
-        133000, 134000, 135000, 136000, 137000, 138000, 139000, 140000, 
-        141000, 142000, 143000, 144000, 145000, 146000, 147000, 148000, 
-        149000, 150000, 151000, 152000, 153000, 154000, 155000, 156000, 
-        157000, 158000, 159000, 160000, 161000, 162000, 163000, 164000, 
-        165000, 166000, 167000, 168000, 169000, 170000, 171000, 172000, 
-        173000, 174000, 175000, 176000, 177000, 178000, 179000, 180000, 
-        181000, 182000, 183000, 184000, 185000, 186000, 187000, 188000, 
-        189000, 190000, 191000, 192000, 193000, 194000, 195000, 196000, 
-        197000, 198000, 199000, 200000, {5000, 
-         Thickness[Large]}, {10000, 
-         Thickness[Large]}, {15000, 
-         Thickness[Large]}, {20000, 
-         Thickness[Large]}, {25000, 
-         Thickness[Large]}, {30000, 
-         Thickness[Large]}, {35000, 
-         Thickness[Large]}, {40000, 
-         Thickness[Large]}, {45000, 
-         Thickness[Large]}, {50000, 
-         Thickness[Large]}, {55000, 
-         Thickness[Large]}, {60000, 
-         Thickness[Large]}, {65000, 
-         Thickness[Large]}, {70000, 
-         Thickness[Large]}, {75000, 
-         Thickness[Large]}, {80000, 
-         Thickness[Large]}, {85000, 
-         Thickness[Large]}, {90000, 
-         Thickness[Large]}, {95000, 
-         Thickness[Large]}, {100000, 
-         Thickness[Large]}, {105000, 
-         Thickness[Large]}, {110000, 
-         Thickness[Large]}, {115000, 
-         Thickness[Large]}, {120000, 
-         Thickness[Large]}, {125000, 
-         Thickness[Large]}, {130000, 
-         Thickness[Large]}, {135000, 
-         Thickness[Large]}, {140000, 
-         Thickness[Large]}, {145000, 
-         Thickness[Large]}, {150000, 
-         Thickness[Large]}, {155000, 
-         Thickness[Large]}, {160000, 
-         Thickness[Large]}, {165000, 
-         Thickness[Large]}, {170000, 
-         Thickness[Large]}, {175000, 
-         Thickness[Large]}, {180000, 
-         Thickness[Large]}, {185000, 
-         Thickness[Large]}, {190000, 
-         Thickness[Large]}, {195000, 
-         Thickness[Large]}, {200000, 
-         Thickness[Large]}}}, {{3.4712928*^9, 3.5343648*^9, 3.5975232*^9, 
-       3.6605952*^9, 3.7237536*^9, 3.7868256*^9, 3.849984*^9, 3.913056*^9, 
-       3.9762144*^9}, {
-       0., 1000., 2000., 3000., 4000., 5000., 6000., 7000., 8000., 9000., 
-        10000., 11000., 12000., 13000., 14000., 15000., 16000., 17000., 
-        18000., 19000., 20000., 21000., 22000., 23000., 24000., 25000., 
-        26000., 27000., 28000., 29000., 30000., 31000., 32000., 33000., 
-        34000., 35000., 36000., 37000., 38000., 39000., 40000., 41000., 
-        42000., 43000., 44000., 45000., 46000., 47000., 48000., 49000., 
-        50000., 51000., 52000., 53000., 54000., 55000., 56000., 57000., 
-        58000., 59000., 60000., 61000., 62000., 63000., 64000., 65000., 
-        66000., 67000., 68000., 69000., 70000., 71000., 72000., 73000., 
-        74000., 75000., 76000., 77000., 78000., 79000., 80000., 81000., 
-        82000., 83000., 84000., 85000., 86000., 87000., 88000., 89000., 
-        90000., 91000., 92000., 93000., 94000., 95000., 96000., 97000., 
-        98000., 99000., 100000., 101000., 102000., 103000., 104000., 105000., 
-        106000., 107000., 108000., 109000., 110000., 111000., 112000., 
-        113000., 114000., 115000., 116000., 117000., 118000., 119000., 
-        120000., 121000., 122000., 123000., 124000., 125000., 126000., 
-        127000., 128000., 129000., 130000., 131000., 132000., 133000., 
-        134000., 135000., 136000., 137000., 138000., 139000., 140000., 
-        141000., 142000., 143000., 144000., 145000., 146000., 147000., 
-        148000., 149000., 150000., 151000., 152000., 153000., 154000., 
-        155000., 156000., 157000., 158000., 159000., 160000., 161000., 
-        162000., 163000., 164000., 165000., 166000., 167000., 168000., 
-        169000., 170000., 171000., 172000., 173000., 174000., 175000., 
-        176000., 177000., 178000., 179000., 180000., 181000., 182000., 
-        183000., 184000., 185000., 186000., 187000., 188000., 189000., 
-        190000., 191000., 192000., 193000., 194000., 195000., 196000., 
-        197000., 198000., 199000., 200000., {5000., 
-         Thickness[Large]}, {10000., 
-         Thickness[Large]}, {15000., 
-         Thickness[Large]}, {20000., 
-         Thickness[Large]}, {25000., 
-         Thickness[Large]}, {30000., 
-         Thickness[Large]}, {35000., 
-         Thickness[Large]}, {40000., 
-         Thickness[Large]}, {45000., 
-         Thickness[Large]}, {50000., 
-         Thickness[Large]}, {55000., 
-         Thickness[Large]}, {60000., 
-         Thickness[Large]}, {65000., 
-         Thickness[Large]}, {70000., 
-         Thickness[Large]}, {75000., 
-         Thickness[Large]}, {80000., 
-         Thickness[Large]}, {85000., 
-         Thickness[Large]}, {90000., 
-         Thickness[Large]}, {95000., 
-         Thickness[Large]}, {100000., 
-         Thickness[Large]}, {105000., 
-         Thickness[Large]}, {110000., 
-         Thickness[Large]}, {115000., 
-         Thickness[Large]}, {120000., 
-         Thickness[Large]}, {125000., 
-         Thickness[Large]}, {130000., 
-         Thickness[Large]}, {135000., 
-         Thickness[Large]}, {140000., 
-         Thickness[Large]}, {145000., 
-         Thickness[Large]}, {150000., 
-         Thickness[Large]}, {155000., 
-         Thickness[Large]}, {160000., 
-         Thickness[Large]}, {165000., 
-         Thickness[Large]}, {170000., 
-         Thickness[Large]}, {175000., 
-         Thickness[Large]}, {180000., 
-         Thickness[Large]}, {185000., 
-         Thickness[Large]}, {190000., 
-         Thickness[Large]}, {195000., 
-         Thickness[Large]}, {200000., 
-         Thickness[Large]}}}], GridLinesStyle -> Directive[
+          Directive[]}}}}], 
+    GridLines -> {{
+      3.4712928*^9, 3.4739712*^9, 3.4763904*^9, 3.4790688*^9, 3.4816608*^9, 
+       3.4843392*^9, 3.4869312*^9, 3.4896096*^9, 3.492288*^9, 3.49488*^9, 
+       3.4975584*^9, 3.5001504*^9, 3.5028288*^9, 3.5055072*^9, 3.5079264*^9, 
+       3.5106048*^9, 3.5131968*^9, 3.5158752*^9, 3.5184672*^9, 3.5211456*^9, 
+       3.523824*^9, 3.526416*^9, 3.5290944*^9, 3.5316864*^9, 3.5343648*^9, 
+       3.5370432*^9, 3.5395488*^9, 3.5422272*^9, 3.5448192*^9, 3.5474976*^9, 
+       3.5500896*^9, 3.552768*^9, 3.5554464*^9, 3.5580384*^9, 3.5607168*^9, 
+       3.5633088*^9, 3.5659872*^9, 3.5686656*^9, 3.5710848*^9, 3.5737632*^9, 
+       3.5763552*^9, 3.5790336*^9, 3.5816256*^9, 3.584304*^9, 3.5869824*^9, 
+       3.5895744*^9, 3.5922528*^9, 3.5948448*^9, 3.5975232*^9, 3.6002016*^9, 
+       3.6026208*^9, 3.6052992*^9, 3.6078912*^9, 3.6105696*^9, 3.6131616*^9, 
+       3.61584*^9, 3.6185184*^9, 3.6211104*^9, 3.6237888*^9, 3.6263808*^9, 
+       3.6290592*^9, 3.6317376*^9, 3.6341568*^9, 3.6368352*^9, 3.6394272*^9, 
+       3.6421056*^9, 3.6446976*^9, 3.647376*^9, 3.6500544*^9, 3.6526464*^9, 
+       3.6553248*^9, 3.6579168*^9, 3.6605952*^9, 3.6632736*^9, 3.6657792*^9, 
+       3.6684576*^9, 3.6710496*^9, 3.673728*^9, 3.67632*^9, 3.6789984*^9, 
+       3.6816768*^9, 3.6842688*^9, 3.6869472*^9, 3.6895392*^9, 3.6922176*^9, 
+       3.694896*^9, 3.6973152*^9, 3.6999936*^9, 3.7025856*^9, 3.705264*^9, 
+       3.707856*^9, 3.7105344*^9, 3.7132128*^9, 3.7158048*^9, 3.7184832*^9, 
+       3.7210752*^9, 3.7237536*^9, 3.726432*^9, 3.7288512*^9, 3.7315296*^9, 
+       3.7341216*^9, 3.7368*^9, 3.739392*^9, 3.7420704*^9, 3.7447488*^9, 
+       3.7473408*^9, 3.7500192*^9, 3.7526112*^9, 3.7552896*^9, 3.757968*^9, 
+       3.7603872*^9, 3.7630656*^9, 3.7656576*^9, 3.768336*^9, 3.770928*^9, 
+       3.7736064*^9, 3.7762848*^9, 3.7788768*^9, 3.7815552*^9, 3.7841472*^9, 
+       3.7868256*^9, 3.789504*^9, 3.7920096*^9, 3.794688*^9, 3.79728*^9, 
+       3.7999584*^9, 3.8025504*^9, 3.8052288*^9, 3.8079072*^9, 3.8104992*^9, 
+       3.8131776*^9, 3.8157696*^9, 3.818448*^9, 3.8211264*^9, 3.8235456*^9, 
+       3.826224*^9, 3.828816*^9, 3.8314944*^9, 3.8340864*^9, 3.8367648*^9, 
+       3.8394432*^9, 3.8420352*^9, 3.8447136*^9, 3.8473056*^9, 3.849984*^9, 
+       3.8526624*^9, 3.8550816*^9, 3.85776*^9, 3.860352*^9, 3.8630304*^9, 
+       3.8656224*^9, 3.8683008*^9, 3.8709792*^9, 3.8735712*^9, 3.8762496*^9, 
+       3.8788416*^9, 3.88152*^9, 3.8841984*^9, 3.8866176*^9, 3.889296*^9, 
+       3.891888*^9, 3.8945664*^9, 3.8971584*^9, 3.8998368*^9, 3.9025152*^9, 
+       3.9051072*^9, 3.9077856*^9, 3.9103776*^9, 3.913056*^9, 3.9157344*^9, 
+       3.91824*^9, 3.9209184*^9, 3.9235104*^9, 3.9261888*^9, 3.9287808*^9, 
+       3.9314592*^9, 3.9341376*^9, 3.9367296*^9, 3.939408*^9, 3.942*^9, 
+       3.9446784*^9, 3.9473568*^9, 3.949776*^9, 3.9524544*^9, 3.9550464*^9, 
+       3.9577248*^9, 3.9603168*^9, 3.9629952*^9, 3.9656736*^9, 3.9682656*^9, 
+       3.970944*^9, 3.973536*^9, 3.9762144*^9, 3.9788928*^9, 3.981312*^9, 
+       3.9839904*^9, 3.9865824*^9, 3.9892608*^9, 3.9918528*^9, 3.9945312*^9, 
+       3.9972096*^9, 3.9998016*^9, 4.00248*^9, 4.005072*^9, 4.0077504*^9, 
+       4.0104288*^9, 4.012848*^9, 4.0155264*^9, 4.0181184*^9, 4.0207968*^9, 
+       4.0233888*^9, 4.0260672*^9, 4.0287456*^9, 4.0313376*^9, 4.034016*^9, 
+       4.036608*^9, 4.0392864*^9, 4.0419648*^9, 4.0444704*^9, 4.0471488*^9, 
+       4.0497408*^9, 4.0524192*^9, 4.0550112*^9, 4.0576896*^9, 4.060368*^9, 
+       4.06296*^9, 4.0656384*^9, 4.0682304*^9, 4.0709088*^9, 4.0735872*^9, 
+       4.0760064*^9, 4.0786848*^9, 4.0812768*^9, 4.0839552*^9, 4.0865472*^9, 
+       4.0892256*^9, 4.091904*^9, 4.094496*^9, 4.0971744*^9, 4.0997664*^9, 
+       4.1024448*^9, {3.4712928*^9, 
+        Thickness[Large]}, {3.5028288*^9, 
+        Thickness[Large]}, {3.5343648*^9, 
+        Thickness[Large]}, {3.5659872*^9, 
+        Thickness[Large]}, {3.5975232*^9, 
+        Thickness[Large]}, {3.6290592*^9, 
+        Thickness[Large]}, {3.6605952*^9, 
+        Thickness[Large]}, {3.6922176*^9, 
+        Thickness[Large]}, {3.7237536*^9, 
+        Thickness[Large]}, {3.7552896*^9, 
+        Thickness[Large]}, {3.7868256*^9, 
+        Thickness[Large]}, {3.818448*^9, 
+        Thickness[Large]}, {3.849984*^9, 
+        Thickness[Large]}, {3.88152*^9, 
+        Thickness[Large]}, {3.913056*^9, 
+        Thickness[Large]}, {3.9446784*^9, 
+        Thickness[Large]}, {3.9762144*^9, 
+        Thickness[Large]}, {4.0077504*^9, 
+        Thickness[Large]}, {4.0392864*^9, 
+        Thickness[Large]}, {4.0709088*^9, 
+        Thickness[Large]}, {4.1024448*^9, 
+        Thickness[Large]}}, {{0, 
+        Thickness[Tiny]}, {1000, 
+        Thickness[Tiny]}, {2000, 
+        Thickness[Tiny]}, {3000, 
+        Thickness[Tiny]}, {4000, 
+        Thickness[Tiny]}, {5000, 
+        Thickness[Tiny]}, {6000, 
+        Thickness[Tiny]}, {7000, 
+        Thickness[Tiny]}, {8000, 
+        Thickness[Tiny]}, {9000, 
+        Thickness[Tiny]}, {10000, 
+        Thickness[Tiny]}, {11000, 
+        Thickness[Tiny]}, {12000, 
+        Thickness[Tiny]}, {13000, 
+        Thickness[Tiny]}, {14000, 
+        Thickness[Tiny]}, {15000, 
+        Thickness[Tiny]}, {16000, 
+        Thickness[Tiny]}, {17000, 
+        Thickness[Tiny]}, {18000, 
+        Thickness[Tiny]}, {19000, 
+        Thickness[Tiny]}, {20000, 
+        Thickness[Tiny]}, {21000, 
+        Thickness[Tiny]}, {22000, 
+        Thickness[Tiny]}, {23000, 
+        Thickness[Tiny]}, {24000, 
+        Thickness[Tiny]}, {25000, 
+        Thickness[Tiny]}, {26000, 
+        Thickness[Tiny]}, {27000, 
+        Thickness[Tiny]}, {28000, 
+        Thickness[Tiny]}, {29000, 
+        Thickness[Tiny]}, {30000, 
+        Thickness[Tiny]}, {31000, 
+        Thickness[Tiny]}, {32000, 
+        Thickness[Tiny]}, {33000, 
+        Thickness[Tiny]}, {34000, 
+        Thickness[Tiny]}, {35000, 
+        Thickness[Tiny]}, {36000, 
+        Thickness[Tiny]}, {37000, 
+        Thickness[Tiny]}, {38000, 
+        Thickness[Tiny]}, {39000, 
+        Thickness[Tiny]}, {40000, 
+        Thickness[Tiny]}, {41000, 
+        Thickness[Tiny]}, {42000, 
+        Thickness[Tiny]}, {43000, 
+        Thickness[Tiny]}, {44000, 
+        Thickness[Tiny]}, {45000, 
+        Thickness[Tiny]}, {46000, 
+        Thickness[Tiny]}, {47000, 
+        Thickness[Tiny]}, {48000, 
+        Thickness[Tiny]}, {49000, 
+        Thickness[Tiny]}, {50000, 
+        Thickness[Tiny]}, {51000, 
+        Thickness[Tiny]}, {52000, 
+        Thickness[Tiny]}, {53000, 
+        Thickness[Tiny]}, {54000, 
+        Thickness[Tiny]}, {55000, 
+        Thickness[Tiny]}, {56000, 
+        Thickness[Tiny]}, {57000, 
+        Thickness[Tiny]}, {58000, 
+        Thickness[Tiny]}, {59000, 
+        Thickness[Tiny]}, {60000, 
+        Thickness[Tiny]}, {61000, 
+        Thickness[Tiny]}, {62000, 
+        Thickness[Tiny]}, {63000, 
+        Thickness[Tiny]}, {64000, 
+        Thickness[Tiny]}, {65000, 
+        Thickness[Tiny]}, {66000, 
+        Thickness[Tiny]}, {67000, 
+        Thickness[Tiny]}, {68000, 
+        Thickness[Tiny]}, {69000, 
+        Thickness[Tiny]}, {70000, 
+        Thickness[Tiny]}, {71000, 
+        Thickness[Tiny]}, {72000, 
+        Thickness[Tiny]}, {73000, 
+        Thickness[Tiny]}, {74000, 
+        Thickness[Tiny]}, {75000, 
+        Thickness[Tiny]}, {76000, 
+        Thickness[Tiny]}, {77000, 
+        Thickness[Tiny]}, {78000, 
+        Thickness[Tiny]}, {79000, 
+        Thickness[Tiny]}, {80000, 
+        Thickness[Tiny]}, {81000, 
+        Thickness[Tiny]}, {82000, 
+        Thickness[Tiny]}, {83000, 
+        Thickness[Tiny]}, {84000, 
+        Thickness[Tiny]}, {85000, 
+        Thickness[Tiny]}, {86000, 
+        Thickness[Tiny]}, {87000, 
+        Thickness[Tiny]}, {88000, 
+        Thickness[Tiny]}, {89000, 
+        Thickness[Tiny]}, {90000, 
+        Thickness[Tiny]}, {91000, 
+        Thickness[Tiny]}, {92000, 
+        Thickness[Tiny]}, {93000, 
+        Thickness[Tiny]}, {94000, 
+        Thickness[Tiny]}, {95000, 
+        Thickness[Tiny]}, {96000, 
+        Thickness[Tiny]}, {97000, 
+        Thickness[Tiny]}, {98000, 
+        Thickness[Tiny]}, {99000, 
+        Thickness[Tiny]}, {100000, 
+        Thickness[Tiny]}, {101000, 
+        Thickness[Tiny]}, {102000, 
+        Thickness[Tiny]}, {103000, 
+        Thickness[Tiny]}, {104000, 
+        Thickness[Tiny]}, {105000, 
+        Thickness[Tiny]}, {106000, 
+        Thickness[Tiny]}, {107000, 
+        Thickness[Tiny]}, {108000, 
+        Thickness[Tiny]}, {109000, 
+        Thickness[Tiny]}, {110000, 
+        Thickness[Tiny]}, {111000, 
+        Thickness[Tiny]}, {112000, 
+        Thickness[Tiny]}, {113000, 
+        Thickness[Tiny]}, {114000, 
+        Thickness[Tiny]}, {115000, 
+        Thickness[Tiny]}, {116000, 
+        Thickness[Tiny]}, {117000, 
+        Thickness[Tiny]}, {118000, 
+        Thickness[Tiny]}, {119000, 
+        Thickness[Tiny]}, {120000, 
+        Thickness[Tiny]}, {121000, 
+        Thickness[Tiny]}, {122000, 
+        Thickness[Tiny]}, {123000, 
+        Thickness[Tiny]}, {124000, 
+        Thickness[Tiny]}, {125000, 
+        Thickness[Tiny]}, {126000, 
+        Thickness[Tiny]}, {127000, 
+        Thickness[Tiny]}, {128000, 
+        Thickness[Tiny]}, {129000, 
+        Thickness[Tiny]}, {130000, 
+        Thickness[Tiny]}, {131000, 
+        Thickness[Tiny]}, {132000, 
+        Thickness[Tiny]}, {133000, 
+        Thickness[Tiny]}, {134000, 
+        Thickness[Tiny]}, {135000, 
+        Thickness[Tiny]}, {136000, 
+        Thickness[Tiny]}, {137000, 
+        Thickness[Tiny]}, {138000, 
+        Thickness[Tiny]}, {139000, 
+        Thickness[Tiny]}, {140000, 
+        Thickness[Tiny]}, {141000, 
+        Thickness[Tiny]}, {142000, 
+        Thickness[Tiny]}, {143000, 
+        Thickness[Tiny]}, {144000, 
+        Thickness[Tiny]}, {145000, 
+        Thickness[Tiny]}, {146000, 
+        Thickness[Tiny]}, {147000, 
+        Thickness[Tiny]}, {148000, 
+        Thickness[Tiny]}, {149000, 
+        Thickness[Tiny]}, {150000, 
+        Thickness[Tiny]}, {151000, 
+        Thickness[Tiny]}, {152000, 
+        Thickness[Tiny]}, {153000, 
+        Thickness[Tiny]}, {154000, 
+        Thickness[Tiny]}, {155000, 
+        Thickness[Tiny]}, {156000, 
+        Thickness[Tiny]}, {157000, 
+        Thickness[Tiny]}, {158000, 
+        Thickness[Tiny]}, {159000, 
+        Thickness[Tiny]}, {160000, 
+        Thickness[Tiny]}, {161000, 
+        Thickness[Tiny]}, {162000, 
+        Thickness[Tiny]}, {163000, 
+        Thickness[Tiny]}, {164000, 
+        Thickness[Tiny]}, {165000, 
+        Thickness[Tiny]}, {166000, 
+        Thickness[Tiny]}, {167000, 
+        Thickness[Tiny]}, {168000, 
+        Thickness[Tiny]}, {169000, 
+        Thickness[Tiny]}, {170000, 
+        Thickness[Tiny]}, {171000, 
+        Thickness[Tiny]}, {172000, 
+        Thickness[Tiny]}, {173000, 
+        Thickness[Tiny]}, {174000, 
+        Thickness[Tiny]}, {175000, 
+        Thickness[Tiny]}, {176000, 
+        Thickness[Tiny]}, {177000, 
+        Thickness[Tiny]}, {178000, 
+        Thickness[Tiny]}, {179000, 
+        Thickness[Tiny]}, {180000, 
+        Thickness[Tiny]}, {181000, 
+        Thickness[Tiny]}, {182000, 
+        Thickness[Tiny]}, {183000, 
+        Thickness[Tiny]}, {184000, 
+        Thickness[Tiny]}, {185000, 
+        Thickness[Tiny]}, {186000, 
+        Thickness[Tiny]}, {187000, 
+        Thickness[Tiny]}, {188000, 
+        Thickness[Tiny]}, {189000, 
+        Thickness[Tiny]}, {190000, 
+        Thickness[Tiny]}, {191000, 
+        Thickness[Tiny]}, {192000, 
+        Thickness[Tiny]}, {193000, 
+        Thickness[Tiny]}, {194000, 
+        Thickness[Tiny]}, {195000, 
+        Thickness[Tiny]}, {196000, 
+        Thickness[Tiny]}, {197000, 
+        Thickness[Tiny]}, {198000, 
+        Thickness[Tiny]}, {199000, 
+        Thickness[Tiny]}, {200000, 
+        Thickness[Tiny]}, {5000, 
+        Thickness[Small]}, {15000, 
+        Thickness[Small]}, {25000, 
+        Thickness[Small]}, {35000, 
+        Thickness[Small]}, {45000, 
+        Thickness[Small]}, {55000, 
+        Thickness[Small]}, {65000, 
+        Thickness[Small]}, {75000, 
+        Thickness[Small]}, {85000, 
+        Thickness[Small]}, {95000, 
+        Thickness[Small]}, {105000, 
+        Thickness[Small]}, {115000, 
+        Thickness[Small]}, {125000, 
+        Thickness[Small]}, {135000, 
+        Thickness[Small]}, {145000, 
+        Thickness[Small]}, {155000, 
+        Thickness[Small]}, {165000, 
+        Thickness[Small]}, {175000, 
+        Thickness[Small]}, {185000, 
+        Thickness[Small]}, {195000, 
+        Thickness[Small]}, {0, 
+        Thickness[Medium]}, {10000, 
+        Thickness[Medium]}, {20000, 
+        Thickness[Medium]}, {30000, 
+        Thickness[Medium]}, {40000, 
+        Thickness[Medium]}, {50000, 
+        Thickness[Medium]}, {60000, 
+        Thickness[Medium]}, {70000, 
+        Thickness[Medium]}, {80000, 
+        Thickness[Medium]}, {90000, 
+        Thickness[Medium]}, {100000, 
+        Thickness[Medium]}, {110000, 
+        Thickness[Medium]}, {120000, 
+        Thickness[Medium]}, {130000, 
+        Thickness[Medium]}, {140000, 
+        Thickness[Medium]}, {150000, 
+        Thickness[Medium]}, {160000, 
+        Thickness[Medium]}, {170000, 
+        Thickness[Medium]}, {180000, 
+        Thickness[Medium]}, {190000, 
+        Thickness[Medium]}, {200000, 
+        Thickness[Medium]}}}, GridLinesStyle -> Directive[
       GrayLevel[0.5, 0.4]], ImageMargins -> 20, ImageSize -> 1000, 
     LabelStyle -> {14}, 
     Method -> {
@@ -3230,22 +3437,23 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
        GridBox[{{
           StyleBox["\"Bitcoin Price (USD)\"", {20, 
             RGBColor[1, 0, 0]}, StripOnInput -> False]}, {
-          StyleBox["\"Latest: $77,301.5\"", {15}, StripOnInput -> False]}, {
+          StyleBox["\"Latest: $78,291.1\"", {15}, StripOnInput -> False]}, {
           StyleBox[
-           InterpretationBox["\"(updated: Tue 8 Apr 2025 14:27:16)\"", 
-            StringForm["(updated: ``)", "Tue 8 Apr 2025 14:27:16"], Editable -> 
+           InterpretationBox["\"(updated: Thu 10 Apr 2025 10:35:54)\"", 
+            StringForm["(updated: ``)", "Thu 10 Apr 2025 10:35:54"], Editable -> 
             False], 15, StripOnInput -> False]}}, 
         GridBoxAlignment -> {"Columns" -> {{Center}}}, DefaultBaseStyle -> 
         "Column", 
         GridBoxItemSize -> {
          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Column"], 
       TraditionalForm], 
-    PlotRange -> {{3.5249472*^9, 3.9530592*^9}, {0, 107000.140625}}, 
+    PlotRange -> {{3.5249472*^9, 3.9531456*^9}, {0, 107000.140625}}, 
     PlotRangeClipping -> True, PlotRangePadding -> {{
        Scaled[0.02], 
        Scaled[0.02]}, {
        Scaled[0.02], 
        Scaled[0.05]}}, Ticks -> {{}, Automatic}], 
+   TemplateBox[{20}, "Spacer1"], 
    TagBox[
     GridBox[{{
        TagBox[
@@ -3380,9 +3588,14 @@ SnlnE3bKpRCHr2q8yfXn1v8Bqn+Bjg==
    3.9519437691651697`*^9, {3.951943929629627*^9, 3.951943948281715*^9}, 
    3.951944046312153*^9, 3.952950688608204*^9, 3.953124630083497*^9, {
    3.9531249439964*^9, 3.953124973054871*^9}, 3.953125080960037*^9, 
-   3.953125595028583*^9, 3.953125637075233*^9},
+   3.953125595028583*^9, 3.953125637075233*^9, 3.9532203835318727`*^9, 
+   3.95322060020543*^9, 3.9532206473565474`*^9, 3.953220717103949*^9, 
+   3.953220758732767*^9, {3.953220838193647*^9, 3.953220857759388*^9}, 
+   3.9532209461062107`*^9, {3.953220989720314*^9, 3.9532210459682913`*^9}, 
+   3.9532210790667353`*^9, 3.953284328799794*^9, 3.953284454317862*^9, {
+   3.95328454117069*^9, 3.953284554591999*^9}},
  CellLabel->
-  "Out[495]=",ExpressionUUID->"631e8b46-e7a3-4894-bfdd-71a780e46887"]
+  "Out[606]=",ExpressionUUID->"38f30e9c-5aa0-4496-a0ed-ea13f2c51004"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -3408,12 +3621,12 @@ Cell[576, 22, 1719, 24, 96, "Title",ExpressionUUID->"e588d64a-366b-4809-b0d2-12c
 Cell[CellGroupData[{
 Cell[2320, 50, 2567, 73, 19, "Input",ExpressionUUID->"6d7d8b68-6003-4a88-8a85-d729b86513e8",
  CellOpen->False],
-Cell[4890, 125, 1105, 19, 42, "Output",ExpressionUUID->"20a769d1-7bc0-4d35-b9c1-31eca8afb73e"]
+Cell[4890, 125, 1155, 20, 42, "Output",ExpressionUUID->"1fe0959f-0a4f-4b87-bdad-07a2a0e87ed5"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6032, 149, 12388, 267, 19, "Input",ExpressionUUID->"01ce61f5-e0d0-4b00-8d8b-11dccd24211a",
+Cell[6082, 150, 13842, 300, 19, "Input",ExpressionUUID->"01ce61f5-e0d0-4b00-8d8b-11dccd24211a",
  CellOpen->False],
-Cell[18423, 418, 169443, 2966, 731, "Output",ExpressionUUID->"631e8b46-e7a3-4894-bfdd-71a780e46887"]
+Cell[19927, 452, 175963, 3145, 712, "Output",ExpressionUUID->"38f30e9c-5aa0-4496-a0ed-ea13f2c51004"]
 }, Open  ]]
 }, Open  ]]
 }
