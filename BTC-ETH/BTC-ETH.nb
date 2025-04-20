@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    173378,       3011]
-NotebookOptionsPosition[    172261,       2980]
-NotebookOutlinePosition[    172658,       2996]
-CellTagsIndexPosition[    172615,       2993]
+NotebookDataLength[    176284,       3067]
+NotebookOptionsPosition[    175013,       3037]
+NotebookOutlinePosition[    175410,       3053]
+CellTagsIndexPosition[    175367,       3050]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -95,10 +95,10 @@ Cell[BoxData[{
       RowBox[{"SelectionEvaluate", "[", 
        RowBox[{"OpenAllInputsCells", "[", "]"}], "]"}]}], "]"}]}], "}"}], 
   "]"}]}], "Input",
- CellOpen->False,
+ CellOpen->True,
  CellChangeTimes->{{3.953739875753336*^9, 3.953739876750622*^9}},
  CellLabel->
-  "In[785]:=",ExpressionUUID->"afae65b9-8d3e-48ed-84ad-1a0b0c48bde5"],
+  "In[803]:=",ExpressionUUID->"afae65b9-8d3e-48ed-84ad-1a0b0c48bde5"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -111,9 +111,9 @@ Cell[BoxData[
   "RowDefault"]], "Output",
  CellChangeTimes->{3.9537398778735523`*^9, 3.953740494930875*^9, 
   3.953741113616947*^9, 3.953741303597866*^9, 3.954100323209943*^9, 
-  3.954101203586461*^9, 3.954101586784596*^9},
+  3.954101203586461*^9, 3.954101586784596*^9, 3.954102893801865*^9},
  CellLabel->
-  "Out[789]=",ExpressionUUID->"3c8257c5-5132-4891-9034-b0232ab72a6e"]
+  "Out[807]=",ExpressionUUID->"96093571-bcae-452b-9c9a-707937815344"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -363,11 +363,21 @@ Cell[BoxData[{
        RowBox[{"Last", "[", "#", "]"}]}], "&"}], ",", 
      RowBox[{"{", 
       RowBox[{"eth", ",", "btc"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"ethplot", "=", 
-  RowBox[{"display", "[", 
-   RowBox[{"ethbtc", ",", "\"\<ETH/BTC price\>\""}], 
-   "]"}]}], "\[IndentingNewLine]"}], "Input",
- CellOpen->False,
+ RowBox[{
+  RowBox[{
+   RowBox[{"ethplot", "=", 
+    RowBox[{"display", "[", 
+     RowBox[{"ethbtc", ",", "\"\<ETH/BTC price\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filename", " ", "=", " ", "\"\<BTC-ETH.jpg\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Export", "[", 
+    RowBox[{"filename", ",", "ethplot"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", "ethplot", \
+"\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.95211190307731*^9, 3.9521120268216867`*^9}, 
    3.953739792600799*^9, {3.953739900578595*^9, 3.953739901371476*^9}, {
    3.953740401174101*^9, 3.953740405330514*^9}, {3.953740462872526*^9, 
@@ -379,14 +389,15 @@ Cell[BoxData[{
    3.954101116635066*^9, 3.95410114654643*^9}, 3.954101185717708*^9, {
    3.954101337899764*^9, 3.9541013399452953`*^9}, {3.95410138422221*^9, 
    3.9541014230772123`*^9}, {3.954101581279234*^9, 3.954101583144863*^9}, {
-   3.954101628623186*^9, 3.9541016382088614`*^9}},
+   3.954101628623186*^9, 3.9541016382088614`*^9}, {3.9541026167563*^9, 
+   3.954102626433322*^9}, {3.954102819762425*^9, 3.9541028864793577`*^9}},
  CellLabel->
-  "In[797]:=",ExpressionUUID->"c68e5943-aa2a-4b97-8ba1-630394e0e5c7"],
+  "In[808]:=",ExpressionUUID->"c68e5943-aa2a-4b97-8ba1-630394e0e5c7"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`x$$ = 60, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`x$$ = 144, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -394,7 +405,7 @@ Cell[BoxData[
        Style["Months: ", {14}]}, {162, 156, 150, 144, 138, 132, 126, 120, 114,
        108, 102, 96, 90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 18, 12, 
       9, 6, 3, 2, 1}, ControlType -> PopupMenu}}, Typeset`size$$ = {
-    1040., {235.07799153645834`, 240.80992513020834`}}, Typeset`update$$ = 0, 
+    1040., {247.33579767862955`, 253.06773127237955`}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -2944,7 +2955,7 @@ $CellContext`updatedstr$}, Center]]}]],
           Style["Months: ", {14}]}, {162, 156, 150, 144, 138, 132, 126, 120, 
          114, 108, 102, 96, 90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 
          18, 12, 9, 6, 3, 2, 1}}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{1089.1, {282.8175087483724, 288.5494423421224}},
+     ImageSizeCache->{1089.1, {295.0753148905436, 300.8072484842936}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2958,23 +2969,69 @@ $CellContext`updatedstr$}, Center]]}]],
  CellChangeTimes->{
   3.953741115182012*^9, 3.953741305099821*^9, 3.9541003257274637`*^9, 
    3.954101205733857*^9, 3.954101347709832*^9, {3.954101388364147*^9, 
-   3.9541014266540403`*^9}, 3.954101589098257*^9, 3.9541016417611437`*^9},
+   3.9541014266540403`*^9}, 3.954101589098257*^9, 3.9541016417611437`*^9, 
+   3.954102896797675*^9},
  CellLabel->
-  "Out[802]=",ExpressionUUID->"4ad46feb-24d7-4592-85a5-00b3bbd05157"]
-}, Open  ]],
+  "Out[816]=",ExpressionUUID->"765724a3-3c64-4c10-9368-4aedf86941d6"],
 
-Cell[CellGroupData[{
+Cell[BoxData[
+ TemplateBox[{
+  "DateDifference", "date", 
+   "\"Expression \\!\\(\\*RowBox[{\\\"Missing\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"KeyAbsent\\\\\\\"\\\", \\\",\\\", \\\"origindate\\\"}], \
+\\\"]\\\"}]\\) cannot be interpreted as a date specification.\"", 2, 900, 213,
+    18351988306934568657, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9541036593547173`*^9},
+ CellLabel->"",ExpressionUUID->"1dbe993b-1d4f-4a28-816c-07a4bf7be086"],
 
-Cell[BoxData["\[AliasDelimiter]"], "Input",
- CellOpen->False,
- CellChangeTimes->{3.9541013483523684`*^9},
- CellLabel->
-  "In[796]:=",ExpressionUUID->"1923dc32-9468-4c58-a9b8-1d67bb3ef3d1"],
+Cell[BoxData[
+ TemplateBox[{
+  "Range", "range", 
+   "\"Range specification in \\!\\(\\*RowBox[{\\\"Range\\\", \\\"[\\\", \
+RowBox[{\\\"12\\\", \\\",\\\", RowBox[{\\\"QuantityMagnitude\\\", \\\"[\\\", \
+RowBox[{\\\"IntegerPart\\\", \\\"[\\\", RowBox[{\\\"DateDifference\\\", \\\"[\
+\\\", RowBox[{RowBox[{\\\"Missing\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"KeyAbsent\\\\\\\"\\\", \\\",\\\", \\\"origindate\\\"}], \
+\\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2025\\\", \\\",\\\", \\\"4\\\", \
+\\\",\\\", \\\"19\\\", \\\",\\\", \\\"22\\\", \\\",\\\", \\\"7\\\", \
+\\\",\\\", \\\"39.346529`8.347481405112594\\\"}], \\\"}\\\"}], \\\",\\\", \
+\\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\\\"Month\\\\\\\"\\\"}], \
+\\\"]\\\"}], \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \\\"6\\\"}], \\\"]\\\"}]\\) \
+does not have appropriate bounds.\"", 2, 900, 214, 18351988306934568657, 
+   "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.954103659366994*^9},
+ CellLabel->"",ExpressionUUID->"29185079-cabe-429f-80a3-c3606255866f"],
 
-Cell[BoxData["\[AliasDelimiter]"], "Output",
- CellChangeTimes->{3.954101589552718*^9},
- CellLabel->
-  "Out[796]=",ExpressionUUID->"257ad988-c81a-4472-9eaf-23a8b8b6e13f"]
+Cell[BoxData[
+ TemplateBox[{
+  "Join", "heads", 
+   "\"Heads \\!\\(\\*RowBox[{\\\"List\\\"}]\\) and \\!\\(\\*RowBox[{\\\"Range\
+\\\"}]\\) at positions \\!\\(\\*RowBox[{\\\"1\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"2\\\"}]\\) are expected to be the same.\"", 2, 900, 215, 
+   18351988306934568657, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9541036593741293`*^9},
+ CellLabel->"",ExpressionUUID->"be047fa8-34c0-44ef-ab8a-db3db0b82439"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Join", "heads", 
+   "\"Heads \\!\\(\\*RowBox[{\\\"Range\\\"}]\\) and \\!\\(\\*RowBox[{\\\"List\
+\\\"}]\\) at positions \\!\\(\\*RowBox[{\\\"1\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"2\\\"}]\\) are expected to be the same.\"", 2, 900, 216, 
+   18351988306934568657, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.954103659379476*^9},
+ CellLabel->"",ExpressionUUID->"ddcbee49-e50b-4feb-aae1-3ef9a6404be1"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2998,19 +3055,18 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 202, 4, 96, "Title",ExpressionUUID->"ec59046e-4cb5-4c4b-a00f-0c53f36cfe23"],
 Cell[CellGroupData[{
-Cell[803, 30, 2484, 70, 19, "Input",ExpressionUUID->"afae65b9-8d3e-48ed-84ad-1a0b0c48bde5",
- CellOpen->False],
-Cell[3290, 102, 700, 13, 42, "Output",ExpressionUUID->"3c8257c5-5132-4891-9034-b0232ab72a6e"]
+Cell[803, 30, 2483, 70, 233, "Input",ExpressionUUID->"afae65b9-8d3e-48ed-84ad-1a0b0c48bde5",
+ CellOpen->True],
+Cell[3289, 102, 722, 13, 42, "Output",ExpressionUUID->"96093571-bcae-452b-9c9a-707937815344"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4027, 120, 12306, 263, 19, "Input",ExpressionUUID->"c68e5943-aa2a-4b97-8ba1-630394e0e5c7",
- CellOpen->False],
-Cell[16336, 385, 155500, 2577, 588, "Output",ExpressionUUID->"4ad46feb-24d7-4592-85a5-00b3bbd05157"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[171873, 2967, 188, 4, 19, "Input",ExpressionUUID->"1923dc32-9468-4c58-a9b8-1d67bb3ef3d1",
- CellOpen->False],
-Cell[172064, 2973, 169, 3, 52, "Output",ExpressionUUID->"257ad988-c81a-4472-9eaf-23a8b8b6e13f"]
+Cell[4048, 120, 12754, 274, 1704, "Input",ExpressionUUID->"c68e5943-aa2a-4b97-8ba1-630394e0e5c7",
+ CellOpen->True],
+Cell[16805, 396, 155527, 2578, 612, "Output",ExpressionUUID->"765724a3-3c64-4c10-9368-4aedf86941d6"],
+Cell[172335, 2976, 483, 10, 26, "Message",ExpressionUUID->"1dbe993b-1d4f-4a28-816c-07a4bf7be086"],
+Cell[172821, 2988, 1218, 21, 42, "Message",ExpressionUUID->"29185079-cabe-429f-80a3-c3606255866f"],
+Cell[174042, 3011, 471, 10, 26, "Message",ExpressionUUID->"be047fa8-34c0-44ef-ab8a-db3db0b82439"],
+Cell[174516, 3023, 469, 10, 26, "Message",ExpressionUUID->"ddcbee49-e50b-4feb-aae1-3ef9a6404be1"]
 }, Open  ]]
 }, Open  ]]
 }
