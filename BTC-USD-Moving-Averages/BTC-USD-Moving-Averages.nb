@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    114314,       2284]
-NotebookOptionsPosition[     66726,       1405]
-NotebookOutlinePosition[    113008,       2258]
-CellTagsIndexPosition[    112965,       2255]
+NotebookDataLength[    114064,       2270]
+NotebookOptionsPosition[     66510,       1393]
+NotebookOutlinePosition[    112792,       2246]
+CellTagsIndexPosition[    112749,       2243]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -62,7 +62,7 @@ Cell[BoxData[{
          RowBox[{"SetOptions", "[", 
           RowBox[{"#", ",", 
            RowBox[{"CellOpen", "->", "False"}]}], "]"}], "&"}], "/@", 
-        "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "cells"}], ";"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -84,7 +84,7 @@ Cell[BoxData[{
          RowBox[{"SetOptions", "[", 
           RowBox[{"#", ",", 
            RowBox[{"CellOpen", "->", "True"}]}], "]"}], "&"}], "/@", 
-        "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "cells"}], ";"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{"Row", "[", 
   RowBox[{"{", 
    RowBox[{
@@ -100,8 +100,7 @@ Cell[BoxData[{
  CellOpen->False,
  CellChangeTimes->{{3.9503706662894382`*^9, 3.950370670716475*^9}, {
    3.950716569289399*^9, 3.9507165917716703`*^9}, 3.95349089366973*^9},
- CellLabel->
-  "In[489]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
+ CellLabel->"In[31]:=",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -114,9 +113,8 @@ Cell[BoxData[
   "RowDefault"]], "Output",
  CellChangeTimes->{3.953741948197744*^9, 3.9541041212846622`*^9, 
   3.954104347835784*^9, 3.954104494575762*^9, 3.954273403745348*^9, 
-  3.9543347647291737`*^9},
- CellLabel->
-  "Out[492]=",ExpressionUUID->"3a948cb3-7b80-425a-b64c-9d5e7d30bfec"]
+  3.9543347647291737`*^9, 3.954445960871648*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"a50ac01f-fbb0-42a4-94c1-0aebd7fbe7dc"]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -415,10 +413,7 @@ Cell[BoxData[{
    3.953503426573949*^9}, {3.953503462908861*^9, 3.953503465240444*^9}, {
    3.953631638644034*^9, 3.9536316500246677`*^9}, {3.953732786486568*^9, 
    3.9537327906513968`*^9}, {3.953732976905493*^9, 3.953732977745701*^9}},
- CellLabel->
-  "In[493]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
-
-Cell[CellGroupData[{
+ CellLabel->"In[35]:=",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -791,151 +786,147 @@ Cell[BoxData[
    3.9537336432602577`*^9}, {3.9537336998980827`*^9, 3.953733701890291*^9}, {
    3.953733935065398*^9, 3.9537339396586237`*^9}, {3.954104325284519*^9, 
    3.954104343874659*^9}},
- CellLabel->
-  "In[520]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
+ CellLabel->"In[62]:=",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19"],
 
 Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
-      Hold[
-       Dynamic[$CellContext`selectlines]], Manipulate`Dump`ThisIsNotAControl, 
-      ControlType -> None}, {
-      Hold[
-       Dynamic[$CellContext`selectplottype]], 
-      Manipulate`Dump`ThisIsNotAControl, ControlType -> None}}, 
-    Typeset`size$$ = {1240., {670.2547251811599, 675.9866587749099}}, 
-    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
-        Typeset`keyframeList$$}, "Body" :> 
-      Module[{$CellContext`detail, $CellContext`filename, \
+ RowBox[{
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+       Hold[
+        Dynamic[$CellContext`selectlines]], Manipulate`Dump`ThisIsNotAControl,
+        ControlType -> None}, {
+       Hold[
+        Dynamic[$CellContext`selectplottype]], 
+       Manipulate`Dump`ThisIsNotAControl, ControlType -> None}}, 
+     Typeset`size$$ = {1240., {682.986912681158, 688.718846274908}}, 
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$, 
+         Typeset`keyframeActionsQ$$, Typeset`keyframeList$$}, "Body" :> 
+       Module[{$CellContext`detail, $CellContext`filename, \
 $CellContext`maplot, $CellContext`plotlabel, $CellContext`plottypefunc, \
 $CellContext`rmaplot}, $CellContext`plotlabel = Column[
-           Join[{
-             Style["Bitcoin Price (USD)", 
-              $CellContext`settings[$CellContext`titlestyle]], 
-             Style["Latest: $" <> ToString[
-                NumberForm[
-                 $CellContext`btcData["LastValue"], DigitBlock -> 3]], 
-              $CellContext`settings[$CellContext`subtitlestyle]]}, 
-            Map[Style[#, 
-              $CellContext`settings[$CellContext`subtitlestyle]]& , 
-             Part[$CellContext`plotlabels, 
-              Select[$CellContext`lines, # != 1& ]]]], 
-           Center]; $CellContext`plottypefunc := 
-         If[$CellContext`plottype == 1, DateListPlot, 
-           DateListLogPlot]; $CellContext`maplot = $CellContext`plottypefunc[
-           Part[$CellContext`plotlines, $CellContext`lines], 
-           Background -> $CellContext`settings[$CellContext`plotbackground], 
-           FrameTicks -> All, GridLines -> {
-             Join[
-              DateRange[{2010}, {2030}, 
-               Quantity[1, "Months"]], 
-              Map[{#, Thick}& , 
+            Join[{
+              Style["Bitcoin Price (USD)", 
+               $CellContext`settings[$CellContext`titlestyle]], 
+              Style["Latest: $" <> ToString[
+                 NumberForm[
+                  $CellContext`btcData["LastValue"], DigitBlock -> 3]], 
+               $CellContext`settings[$CellContext`subtitlestyle]]}, 
+             Map[Style[#, 
+               $CellContext`settings[$CellContext`subtitlestyle]]& , 
+              Part[$CellContext`plotlabels, 
+               Select[$CellContext`lines, # != 1& ]]]], 
+            Center]; $CellContext`plottypefunc := 
+          If[$CellContext`plottype == 1, DateListPlot, 
+            DateListLogPlot]; $CellContext`maplot = $CellContext`plottypefunc[
+           
+            Part[$CellContext`plotlines, $CellContext`lines], 
+            Background -> $CellContext`settings[$CellContext`plotbackground], 
+            FrameTicks -> All, GridLines -> {
+              Join[
                DateRange[{2010}, {2030}, 
-                Quantity[1, "Years"]]]], 
-             Range[0, 200000, 10000]}, 
-           ImageSize -> $CellContext`settings[$CellContext`imagesize], 
-           ImageMargins -> $CellContext`settings[$CellContext`imagemargins], 
-           LabelStyle -> $CellContext`settings[$CellContext`labelstyle], 
-           PlotRange -> Full, 
-           TicksStyle -> $CellContext`settings[$CellContext`ticksstyle], 
-           PlotLabel -> 
-           Column[{$CellContext`plotlabel, $CellContext`updatedstr}, Center], 
-           PlotLegends -> Placed[
-             SwatchLegend[
-              Part[$CellContext`plotlegends, $CellContext`lines], 
-              LegendFunction -> (
-               Framed[#, 
-                Background -> \
+                Quantity[1, "Months"]], 
+               Map[{#, Thick}& , 
+                DateRange[{2010}, {2030}, 
+                 Quantity[1, "Years"]]]], 
+              Range[0, 200000, 10000]}, 
+            ImageSize -> $CellContext`settings[$CellContext`imagesize], 
+            ImageMargins -> $CellContext`settings[$CellContext`imagemargins], 
+            LabelStyle -> $CellContext`settings[$CellContext`labelstyle], 
+            PlotRange -> Full, 
+            TicksStyle -> $CellContext`settings[$CellContext`ticksstyle], 
+            PlotLabel -> 
+            Column[{$CellContext`plotlabel, $CellContext`updatedstr}, Center],
+             PlotLegends -> Placed[
+              SwatchLegend[
+               Part[$CellContext`plotlegends, $CellContext`lines], 
+               LegendFunction -> (
+                Framed[#, 
+                 Background -> \
 $CellContext`settings[$CellContext`plotbackground]]& )], {
-             Left, Top}]]; $CellContext`rmaplot = DateListPlot[
-           ReplaceAll[
-            Prepend[
-             Table[
-              TimeSeriesThread[(Part[#, 1] - Part[#, 2])/Part[#, 2]& , {
-                Part[$CellContext`plotlines, 1], 
-                Part[$CellContext`plotlines, $CellContext`t]}, 
-               ResamplingMethod -> {
-                "Interpolation", InterpolationOrder -> 1}], {$CellContext`t, 
-               Select[$CellContext`lines, # > 1& ]}], {}], {} -> {{{}, 
-               Null}}], 
-           AspectRatio -> $CellContext`settings[$CellContext`aspectratio], 
-           Background -> $CellContext`settings[$CellContext`plotbackground], 
-           FrameTicks -> All, GridLines -> {
-             Join[
-              DateRange[{2010}, {2030}, 
-               Quantity[1, "Months"]], 
-              Map[{#, Thick}& , 
+              Left, Top}]]; $CellContext`rmaplot = DateListPlot[
+            ReplaceAll[
+             Prepend[
+              Table[
+               TimeSeriesThread[(Part[#, 1] - Part[#, 2])/Part[#, 2]& , {
+                 Part[$CellContext`plotlines, 1], 
+                 Part[$CellContext`plotlines, $CellContext`t]}, 
+                ResamplingMethod -> {
+                 "Interpolation", InterpolationOrder -> 1}], {$CellContext`t, 
+                
+                Select[$CellContext`lines, # > 1& ]}], {}], {} -> {{{}, 
+                Null}}], 
+            AspectRatio -> $CellContext`settings[$CellContext`aspectratio], 
+            Background -> $CellContext`settings[$CellContext`plotbackground], 
+            FrameTicks -> All, GridLines -> {
+              Join[
                DateRange[{2010}, {2030}, 
-                Quantity[1, "Years"]]]], Automatic}, 
-           ImageMargins -> $CellContext`settings[$CellContext`imagemargins], 
-           ImageSize -> $CellContext`settings[$CellContext`imagesize], Joined -> 
-           False, LabelStyle -> \
-$CellContext`settings[$CellContext`labelstyle], PlotLabel -> Column[{
-              Style["Relative above/below the moving average", 
-               $CellContext`settings[$CellContext`titlestyle]], \
+                Quantity[1, "Months"]], 
+               Map[{#, Thick}& , 
+                DateRange[{2010}, {2030}, 
+                 Quantity[1, "Years"]]]], Automatic}, 
+            ImageMargins -> $CellContext`settings[$CellContext`imagemargins], 
+            ImageSize -> $CellContext`settings[$CellContext`imagesize], 
+            Joined -> False, 
+            LabelStyle -> $CellContext`settings[$CellContext`labelstyle], 
+            PlotLabel -> Column[{
+               Style["Relative above/below the moving average", 
+                $CellContext`settings[$CellContext`titlestyle]], \
 $CellContext`updatedstr}, Center], 
-           TicksStyle -> $CellContext`settings[$CellContext`ticksstyle]]; If[
-          
-          And[$CellContext`plottype == 1, Length[$CellContext`lines] == 2, 
-           First[$CellContext`lines] == 1], $CellContext`detail = 
-           StringReplace[
-             Last[
-              Part[$CellContext`plotlegends, $CellContext`lines]], " " -> 
-             "-"]; $CellContext`filename = 
-           "BTC-USD-" <> $CellContext`detail <> ".jpg"; 
-          Export[$CellContext`filename, $CellContext`maplot]; Null]; 
-        Column[{$CellContext`maplot, 
-           Spacer[20], $CellContext`rmaplot}, Center]], "Specifications" :> {
-        Dynamic[$CellContext`selectlines], 
-        Dynamic[$CellContext`selectplottype]}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{1289.1, {727.2925334086989, 733.0244670024489}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.9537419490698967`*^9, 3.9537419950373697`*^9, {3.954104122688532*^9, 
-   3.954104184835692*^9}, {3.954104242863716*^9, 3.954104258657486*^9}, {
-   3.954104348863351*^9, 3.954104354811285*^9}, {3.954104386307683*^9, 
-   3.95410438761965*^9}, {3.9541044180371532`*^9, 3.954104445184928*^9}, {
-   3.9541044954539948`*^9, 3.954104502571154*^9}, {3.954273404692152*^9, 
-   3.954273492536977*^9}, {3.9543347658751087`*^9, 3.954334818100309*^9}},
- CellLabel->
-  "Out[520]=",ExpressionUUID->"fc74dcaf-593b-41f0-967f-033c492cca0c"]
-}, Open  ]],
+            TicksStyle -> $CellContext`settings[$CellContext`ticksstyle]]; 
+         If[
+           
+           And[$CellContext`plottype == 1, Length[$CellContext`lines] == 2, 
+            First[$CellContext`lines] == 1], $CellContext`detail = 
+            StringReplace[
+              Last[
+               Part[$CellContext`plotlegends, $CellContext`lines]], " " -> 
+              "-"]; $CellContext`filename = 
+            "BTC-USD-" <> $CellContext`detail <> ".jpg"; 
+           Export[$CellContext`filename, $CellContext`maplot]; Null]; 
+         Column[{$CellContext`maplot, 
+            Spacer[20], $CellContext`rmaplot}, Center]], 
+       "Specifications" :> {
+         Dynamic[$CellContext`selectlines], 
+         Dynamic[$CellContext`selectplottype]}, "Options" :> {}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{1289.1, {740.024720908697, 745.756654502447}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]], "\[AliasDelimiter]"}]], "Input",
+ CellChangeTimes->{{3.954446295208331*^9, 
+  3.954446295213455*^9}},ExpressionUUID->"3d0d16e8-f449-4692-95f7-\
+32bfef970d73"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData["\[AliasDelimiter]"], "Input",
  CellOpen->False,
  CellChangeTimes->{3.951403174003639*^9},
- CellLabel->
-  "In[521]:=",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679"],
+ CellLabel->"In[63]:=",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679"],
 
 Cell[BoxData["\[AliasDelimiter]"], "Output",
  CellChangeTimes->{3.953741949502068*^9, 3.954104123681882*^9, 
   3.9541043496579103`*^9, 3.954104496239417*^9, 3.954273405552548*^9, 
-  3.9543347661486883`*^9},
- CellLabel->
-  "Out[521]=",ExpressionUUID->"8095d2c9-cc87-49d5-b0b4-00c8bad11550"]
+  3.9543347661486883`*^9, 3.95444596385822*^9},
+ CellLabel->"Out[63]=",ExpressionUUID->"6af84b11-015d-4a9f-a3fa-41bb87637f5b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1264,8 +1255,7 @@ Cell[BoxData[
    3.953491868485325*^9}, {3.953491907882359*^9, 3.953491908229457*^9}, {
    3.9535031304139643`*^9, 3.95350313302843*^9}, {3.953631732708932*^9, 
    3.9536318664491673`*^9}},
- CellLabel->
-  "In[522]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
+ CellLabel->"In[64]:=",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5"],
 
 Cell[BoxData[
  TagBox[
@@ -1391,15 +1381,13 @@ $CellContext`updatedstr}, Center]]}]],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.9537419495229273`*^9, 3.954104123734047*^9, 
   3.954104349728692*^9, 3.954104496312517*^9, 3.954273405604438*^9, 
-  3.954334766190153*^9},
- CellLabel->
-  "Out[522]=",ExpressionUUID->"52d6da0e-cc80-4e80-9e8a-ee424737ed1c"]
+  3.954334766190153*^9, 3.954445963899394*^9},
+ CellLabel->"Out[64]=",ExpressionUUID->"3d1fb9e1-4825-45ec-bc5d-13e0b98836d1"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{3.95410448191695*^9},
- CellLabel->
-  "In[523]:=",ExpressionUUID->"ab680d14-8931-4d17-8bee-49391e866b62"]
+ CellLabel->"In[65]:=",ExpressionUUID->"ab680d14-8931-4d17-8bee-49391e866b62"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2242,7 +2230,7 @@ dockedCellLintCounts]], DynamicModuleValues :> {}]},
    CellFrame -> {{0, 0}, {1, 1}}, CellFrameMargins -> {{0, 0}, {0, 0}}, 
    CellFrameColor -> GrayLevel[0.85], Background -> GrayLevel[0.97], CellTags -> 
    "CodeAnalysisDockedCell"]},
-FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+FrontEndVersion->"14.2 for Mac OS X x86 (64-bit) (December 26, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"c4d59863-72bc-4e6e-9ba2-6774c3e58737"
 ]
@@ -2260,30 +2248,28 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 786, 11, 96, "Title",ExpressionUUID->"f5fa712f-8f02-48db-ad7d-991505d584c6"],
 Cell[CellGroupData[{
-Cell[1387, 37, 2412, 66, 19, "Input",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9",
+Cell[1387, 37, 2408, 65, 19, "Input",ExpressionUUID->"9a9e9e9d-ec59-4e5e-9d58-ff1c581459b9",
  CellOpen->False],
-Cell[3802, 105, 680, 13, 42, "Output",ExpressionUUID->"3a948cb3-7b80-425a-b64c-9d5e7d30bfec"]
+Cell[3798, 104, 698, 12, 42, "Output",ExpressionUUID->"a50ac01f-fbb0-42a4-94c1-0aebd7fbe7dc"]
 }, Open  ]],
-Cell[4497, 121, 14385, 297, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
+Cell[4511, 119, 14381, 296, 19, "Input",ExpressionUUID->"22d7def2-8ef0-471c-a798-9bc673ed95b7",
  CellOpen->False],
+Cell[18895, 417, 19232, 371, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
+ CellOpen->False],
+Cell[38130, 790, 6191, 125, 1498, "Input",ExpressionUUID->"3d0d16e8-f449-4692-95f7-32bfef970d73"],
 Cell[CellGroupData[{
-Cell[18907, 422, 19236, 372, 19, "Input",ExpressionUUID->"02b4a66c-d52d-466d-99b8-567eb1e34c19",
+Cell[44346, 919, 182, 3, 19, "Input",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679",
  CellOpen->False],
-Cell[38146, 796, 6402, 125, 1477, "Output",ExpressionUUID->"fc74dcaf-593b-41f0-967f-033c492cca0c"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[44585, 926, 186, 4, 19, "Input",ExpressionUUID->"60f0faab-c40c-4a3e-a5f7-c80d919e4679",
- CellOpen->False],
-Cell[44774, 932, 289, 5, 33, "Output",ExpressionUUID->"8095d2c9-cc87-49d5-b0b4-00c8bad11550"]
+Cell[44531, 924, 306, 4, 33, "Output",ExpressionUUID->"6af84b11-015d-4a9f-a3fa-41bb87637f5b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45100, 942, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
+Cell[44874, 933, 268, 4, 66, "Section",ExpressionUUID->"4de07029-d8b0-40fb-ac97-1a91d36f1eb6"],
 Cell[CellGroupData[{
-Cell[45393, 950, 15056, 317, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
+Cell[45167, 941, 15052, 316, 19, "Input",ExpressionUUID->"cf261ae5-a1d3-465a-9c65-0206705e1cc5",
  CellOpen->False],
-Cell[60452, 1269, 6081, 126, 1170, "Output",ExpressionUUID->"52d6da0e-cc80-4e80-9e8a-ee424737ed1c"]
+Cell[60222, 1259, 6099, 125, 1170, "Output",ExpressionUUID->"3d1fb9e1-4825-45ec-bc5d-13e0b98836d1"]
 }, Open  ]],
-Cell[66548, 1398, 150, 3, 55, "Input",ExpressionUUID->"ab680d14-8931-4d17-8bee-49391e866b62"]
+Cell[66336, 1387, 146, 2, 55, "Input",ExpressionUUID->"ab680d14-8931-4d17-8bee-49391e866b62"]
 }, Open  ]]
 }, Open  ]]
 }
