@@ -11,6 +11,7 @@ are still in development and not yet listed in this README.
 * `BTC-USD-Drawdowns.nb`
 * `BTC-ROI.nb`
 * `BTC-DCA.nb`
+* `BTC-XAU.nb`
 * `BTC-ETH.nb`
 
 ## `BTC-USD-Movements.nb`
@@ -115,6 +116,13 @@ Examination of the performance of daily dollar cost averaging from any
 given start date to today.
 
 ![BTC-DCA dollar cost averaging](BTC-DCA/BTC-DCA-Performance.jpg)
+
+## `BTC-XAU.nb`
+
+Bitcoin price in ounces of gold.
+
+![BTC-DCA dollar cost averaging](BTC-XAU/BTC-price-to-Gold-price.jpg)
+
 
 ## `BTC-ETH.nb`
 
