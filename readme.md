@@ -129,14 +129,14 @@ Bitcoin price history in different currencies.
 
 ### USD
 
-![BTC-USD](Bitcoin-Price-USD.jpg)
-![BTC-USD](Bitcoin-Price-USD-Inflation-Adjusted.jpg)
+![BTC-USD](BTC-Currencies/Bitcoin-Price-USD.jpg)
+![BTC-USD](BTC-Currencies/Bitcoin-Price-USD-Inflation-Adjusted.jpg)
 
 ### CAD
 
-![BTC-CAD](Bitcoin-Price-CAD.jpg)
-![BTC-CAD](Bitcoin-Price-CAD-Inflation-Adjusted.jpg)
-![BTC-CAD](Sats-per-CAD.jpg)
+![BTC-CAD](BTC-Currencies/Bitcoin-Price-CAD.jpg)
+![BTC-CAD](BTC-Currencies/Bitcoin-Price-CAD-Inflation-Adjusted.jpg)
+![BTC-CAD](BTC-Currencies/Sats-per-CAD.jpg)
 
 ### Euro
 
