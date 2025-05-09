@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     82074,       1712]
-NotebookOptionsPosition[     79124,       1648]
-NotebookOutlinePosition[     79521,       1664]
-CellTagsIndexPosition[     79478,       1661]
+NotebookDataLength[     82473,       1730]
+NotebookOptionsPosition[     79370,       1657]
+NotebookOutlinePosition[     79767,       1673]
+CellTagsIndexPosition[     79724,       1670]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -62,7 +62,7 @@ Cell[BoxData[{
          RowBox[{"SetOptions", "[", 
           RowBox[{"#", ",", 
            RowBox[{"CellOpen", "->", "False"}]}], "]"}], "&"}], "/@", 
-        "cells"}], ";"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+        "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -84,7 +84,7 @@ Cell[BoxData[{
          RowBox[{"SetOptions", "[", 
           RowBox[{"#", ",", 
            RowBox[{"CellOpen", "->", "True"}]}], "]"}], "&"}], "/@", 
-        "cells"}], ";"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+        "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
  RowBox[{"Row", "[", 
   RowBox[{"{", 
    RowBox[{
@@ -97,6 +97,7 @@ Cell[BoxData[{
       RowBox[{"SelectionEvaluate", "[", 
        RowBox[{"OpenAllInputsCells", "[", "]"}], "]"}]}], "]"}]}], "}"}], 
   "]"}]}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.950370807245356*^9, 3.950370809984456*^9}, {
   3.955791990480537*^9, 3.955791991393594*^9}, {3.9557920262196712`*^9, 
   3.9557920268595123`*^9}},
@@ -484,6 +485,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"origindate", "=", "\"\<Sep. 14, 2011\>\""}], ";"}], 
    "\[IndentingNewLine]"}]}]], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.926104252000985*^9, 3.926104281231701*^9}, {
    3.926104311812336*^9, 3.9261044510384693`*^9}, {3.926104553946717*^9, 
    3.926104561030199*^9}, {3.926104601427572*^9, 3.926104610490177*^9}, 
@@ -544,6 +546,7 @@ Cell[BoxData[{
    RowBox[{"<|", " ", 
     RowBox[{"export", "->", "True"}], "|>"}]}], 
   "]"}], "\[IndentingNewLine]"}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.926103374105619*^9, 3.926103386833906*^9}, {
    3.926104461614537*^9, 3.926104527161784*^9}, {3.926104571178192*^9, 
    3.926104572886874*^9}, {3.926104617556431*^9, 3.926104647993339*^9}, {
@@ -592,8 +595,8 @@ $CellContext`tsxunnormalized$ =
              Today}]& , $CellContext`tslist$2396302]; $CellContext`tsx$ = If[
            $CellContext`settings$2396302[$CellContext`normalize], 
            
-           Map[# 100/#[
-            "FirstValue"]& , $CellContext`tsxunnormalized$], \
+           Map[# (100/#[
+             "FirstValue"])& , $CellContext`tsxunnormalized$], \
 $CellContext`tsxunnormalized$]; Column[{
            Column[
             MapIndexed[Row[{
@@ -748,6 +751,7 @@ Cell[BoxData[{
   RowBox[{"btcusdIA", ",", "\"\<Bitcoin Price (USD) Inflation Adjusted\>\"", ",", 
    RowBox[{"<|", " ", 
     RowBox[{"export", "->", "True"}], "|>"}]}], "]"}]}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.926519861585518*^9, 3.9265198982484007`*^9}, {
    3.926520293049109*^9, 3.926520302444699*^9}, {3.926520333681926*^9, 
    3.92652043447112*^9}, {3.955792077289353*^9, 3.955792079024817*^9}, 
@@ -789,8 +793,8 @@ $CellContext`tsxunnormalized$ =
              Today}]& , $CellContext`tslist$2417386]; $CellContext`tsx$ = If[
            $CellContext`settings$2417386[$CellContext`normalize], 
            
-           Map[# 100/#[
-            "FirstValue"]& , $CellContext`tsxunnormalized$], \
+           Map[# (100/#[
+             "FirstValue"])& , $CellContext`tsxunnormalized$], \
 $CellContext`tsxunnormalized$]; Column[{
            Column[
             MapIndexed[Row[{
@@ -920,6 +924,7 @@ Cell[BoxData[{
   RowBox[{"btccad", ",", "\"\<Bitcoin Price (CAD)\>\"", ",", 
    RowBox[{"<|", " ", 
     RowBox[{"export", "->", "True"}], "|>"}]}], "]"}]}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.926107768130735*^9, 3.926107796590295*^9}, 
    3.926108300360471*^9, {3.9261083429117613`*^9, 3.926108400035005*^9}, {
    3.926108515406447*^9, 3.926108522354126*^9}, {3.926109731563699*^9, 
@@ -964,8 +969,8 @@ $CellContext`tsxunnormalized$ =
              Today}]& , $CellContext`tslist$2427662]; $CellContext`tsx$ = If[
            $CellContext`settings$2427662[$CellContext`normalize], 
            
-           Map[# 100/#[
-            "FirstValue"]& , $CellContext`tsxunnormalized$], \
+           Map[# (100/#[
+             "FirstValue"])& , $CellContext`tsxunnormalized$], \
 $CellContext`tsxunnormalized$]; Column[{
            Column[
             MapIndexed[Row[{
@@ -1121,6 +1126,7 @@ Cell[BoxData[{
   RowBox[{"btccadIA", ",", "\"\<Bitcoin Price (CAD) Inflation Adjusted\>\"", ",", 
    RowBox[{"<|", " ", 
     RowBox[{"export", "->", "True"}], "|>"}]}], "]"}]}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.926520780785887*^9, 3.926520822649734*^9}, 
    3.955792092487928*^9, 3.955792737850206*^9},
  CellLabel->
@@ -1160,8 +1166,8 @@ $CellContext`tsxunnormalized$ =
              Today}]& , $CellContext`tslist$2445956]; $CellContext`tsx$ = If[
            $CellContext`settings$2445956[$CellContext`normalize], 
            
-           Map[# 100/#[
-            "FirstValue"]& , $CellContext`tsxunnormalized$], \
+           Map[# (100/#[
+             "FirstValue"])& , $CellContext`tsxunnormalized$], \
 $CellContext`tsxunnormalized$]; Column[{
            Column[
             MapIndexed[Row[{
@@ -1291,11 +1297,12 @@ Cell[BoxData[{
     RowBox[{"FinancialData", "[", 
      RowBox[{"\"\<BTC/CAD\>\"", ",", "origindate"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"FinPlot", "[", 
-  RowBox[{"satscad", ",", " ", "\"\<Sats / CAD\>\"", ",", 
+  RowBox[{"satscad", ",", " ", "\"\<Sats per CAD\>\"", ",", 
    RowBox[{"<|", " ", 
     RowBox[{
      RowBox[{"export", "->", "True"}], ",", 
-     RowBox[{"monthsinitial", "->", "48"}]}], "|>"}]}], "]"}]}], "Input",
+     RowBox[{"monthsinitial", "->", "60"}]}], "|>"}]}], "]"}]}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.92610744806186*^9, 3.926107465082916*^9}, {
    3.926107500631665*^9, 3.926107517425219*^9}, {3.926107573261693*^9, 
    3.926107583631946*^9}, 3.926107625800937*^9, {3.926107677652286*^9, 
@@ -1310,25 +1317,25 @@ Cell[BoxData[{
    3.940883761398735*^9}, 3.940883872374342*^9, 3.9408839851812563`*^9, 
    3.955792098533078*^9, 3.955792234998728*^9, {3.955792451617083*^9, 
    3.9557925126094017`*^9}, 3.955792742018714*^9, {3.955792788968028*^9, 
-   3.955792794471437*^9}},
+   3.955792794471437*^9}, {3.955793054150296*^9, 3.955793086953738*^9}},
  CellLabel->
-  "In[1754]:=",ExpressionUUID->"e0d97735-4446-4897-bab3-067ff62a1ab7"],
+  "In[1759]:=",ExpressionUUID->"e0d97735-4446-4897-bab3-067ff62a1ab7"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`x$$ = 48, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`x$$ = 60, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`x$$], 48, "Months: "}, {162, 156, 150, 144, 138, 132,
+       Hold[$CellContext`x$$], 60, "Months: "}, {162, 156, 150, 144, 138, 132,
        126, 120, 114, 108, 102, 96, 90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 
       30, 24, 18, 12, 9, 6, 3, 2, 1}, ControlType -> PopupMenu}}, 
-    Typeset`size$$ = {1040., {234.98563216145843`, 240.71756575520843`}}, 
+    Typeset`size$$ = {1040., {235.20516341145824`, 240.93709700520824`}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`x$$ = 48}, 
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 60}, 
       "ControllerVariables" :> {}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
@@ -1341,12 +1348,12 @@ $CellContext`filename$, $CellContext`plot$, $CellContext`updatedstr$}, \
 $CellContext`updatedstr$ = Style[
            StringTemplate["(updated: ``)"][
             DateString[]], 
-           $CellContext`settings$2455242[$CellContext`subtitlestyle]]; \
+           $CellContext`settings$2483011[$CellContext`subtitlestyle]]; \
 $CellContext`tsxunnormalized$ = 
          Map[TimeSeriesWindow[#, {
             Today - Quantity[$CellContext`x$$, "Months"], 
-             Today}]& , $CellContext`tslist$2455242]; $CellContext`tsx$ = If[
-           $CellContext`settings$2455242[$CellContext`normalize], 
+             Today}]& , $CellContext`tslist$2483011]; $CellContext`tsx$ = If[
+           $CellContext`settings$2483011[$CellContext`normalize], 
            
            Map[# 100/#[
             "FirstValue"]& , $CellContext`tsxunnormalized$], \
@@ -1368,10 +1375,10 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                  Spacer[20]], 
                 Join[
-                 $CellContext`settings$2455242[$CellContext`summarystyle], {
+                 $CellContext`settings$2483011[$CellContext`summarystyle], {
                   Part[
                    ColorData[
-                    $CellContext`settings$2455242[$CellContext`colorscheme], 
+                    $CellContext`settings$2483011[$CellContext`colorscheme], 
                     "ColorList"], 
                    First[#2]]}]], 
                Spacer[60], 
@@ -1385,50 +1392,50 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                  Spacer[20]], 
                 Join[
-                 $CellContext`settings$2455242[$CellContext`rangestyle], {
+                 $CellContext`settings$2483011[$CellContext`rangestyle], {
                   Part[
                    ColorData[
-                    $CellContext`settings$2455242[$CellContext`colorscheme], 
+                    $CellContext`settings$2483011[$CellContext`colorscheme], 
                     "ColorList"], 
                    First[#2]]}]]}]& , $CellContext`tsx$]], 
-           $CellContext`settings$2455242[$CellContext`plotfunction][$\
+           $CellContext`settings$2483011[$CellContext`plotfunction][$\
 CellContext`tsx$, 
             AspectRatio -> \
-$CellContext`settings$2455242[$CellContext`aspectratio], 
+$CellContext`settings$2483011[$CellContext`aspectratio], 
             Background -> \
-$CellContext`settings$2455242[$CellContext`background], 
+$CellContext`settings$2483011[$CellContext`background], 
             ImageMargins -> \
-$CellContext`settings$2455242[$CellContext`imagemargins], 
+$CellContext`settings$2483011[$CellContext`imagemargins], 
             ImageSize -> \
-$CellContext`settings$2455242[$CellContext`imagesize], 
-            Filling -> $CellContext`settings$2455242[$CellContext`filling], 
+$CellContext`settings$2483011[$CellContext`imagesize], 
+            Filling -> $CellContext`settings$2483011[$CellContext`filling], 
             FillingStyle -> \
-$CellContext`settings$2455242[$CellContext`fillingstyle], 
+$CellContext`settings$2483011[$CellContext`fillingstyle], 
             FrameTicksStyle -> \
-$CellContext`settings$2455242[$CellContext`ticksstyle], FrameTicks -> All, 
+$CellContext`settings$2483011[$CellContext`ticksstyle], FrameTicks -> All, 
             GridLines -> {
-              $CellContext`settings$2455242[$CellContext`gridlinesx], 
-              $CellContext`settings$2455242[$CellContext`gridlinesy]}, 
-            Joined -> $CellContext`settings$2455242[$CellContext`joined], 
+              $CellContext`settings$2483011[$CellContext`gridlinesx], 
+              $CellContext`settings$2483011[$CellContext`gridlinesy]}, 
+            Joined -> $CellContext`settings$2483011[$CellContext`joined], 
             LabelStyle -> \
-$CellContext`settings$2455242[$CellContext`labelstyle], PlotLabel -> Column[{
-               Style["Sats / CAD", 
-                $CellContext`settings$2455242[$CellContext`titlestyle]], 
+$CellContext`settings$2483011[$CellContext`labelstyle], PlotLabel -> Column[{
+               Style["Sats per CAD", 
+                $CellContext`settings$2483011[$CellContext`titlestyle]], 
                Style[ToString[$CellContext`x$$] <> " months", 
-                $CellContext`settings$2455242[$CellContext`titlestyle]], \
+                $CellContext`settings$2483011[$CellContext`titlestyle]], \
 $CellContext`updatedstr$}, Center], 
             PlotRange -> \
-$CellContext`settings$2455242[$CellContext`plotrange], PlotStyle -> 
+$CellContext`settings$2483011[$CellContext`plotrange], PlotStyle -> 
             ColorData[
-              $CellContext`settings$2455242[$CellContext`colorscheme]]]}, 
+              $CellContext`settings$2483011[$CellContext`colorscheme]]]}, 
           Background -> \
-$CellContext`settings$2455242[$CellContext`background]]], 
-      "Specifications" :> {{{$CellContext`x$$, 48, "Months: "}, {162, 156, 
+$CellContext`settings$2483011[$CellContext`background]]], 
+      "Specifications" :> {{{$CellContext`x$$, 60, "Months: "}, {162, 156, 
          150, 144, 138, 132, 126, 120, 114, 108, 102, 96, 90, 84, 78, 72, 66, 
          60, 54, 48, 42, 36, 30, 24, 18, 12, 9, 6, 3, 2, 1}}}, 
       "Options" :> {LabelStyle -> {14}, FrameMargins -> None}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{1069.1, {272.7251493733725, 278.4570829671225}},
+     ImageSizeCache->{1069.1, {272.94468062337234`, 278.67661421712234`}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1458,12 +1465,13 @@ $CellContext`settings$2455242[$CellContext`background]]],
    3.947282669689887*^9, 3.947974618655428*^9, 3.950370822890273*^9, 
    3.955791757688611*^9, 3.9557918694101257`*^9, 3.9557921751354933`*^9, 
    3.955792236153563*^9, {3.955792506890085*^9, 3.955792513929665*^9}, 
-   3.955792689898882*^9, 3.955792814176873*^9},
+   3.955792689898882*^9, 3.955792814176873*^9, 3.9557930891379013`*^9},
  CellLabel->
-  "Out[1755]=",ExpressionUUID->"4d066f41-8e9c-4537-8737-8770044b0117"]
+  "Out[1760]=",ExpressionUUID->"8e3738ca-c248-4200-924b-338d3ea0e6bf"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
+ CellOpen->True,
  CellChangeTimes->{3.9557922730716257`*^9},
  CellLabel->
   "In[1756]:=",ExpressionUUID->"c1637d05-c5d2-48a3-b70a-d4d922265390"]
@@ -1487,6 +1495,7 @@ Cell[BoxData[{
   RowBox[{"btcxau", ",", "\"\<Bitcoin Price (Gold oz)\>\"", ",", 
    RowBox[{"<|", " ", 
     RowBox[{"export", "->", "True"}], "|>"}]}], "]"}]}], "Input",
+ CellOpen->True,
  CellChangeTimes->{{3.939380785897128*^9, 3.939380822740115*^9}, {
    3.939380987588695*^9, 3.939380989724217*^9}, 3.939917900539098*^9, 
    3.939918011345806*^9, {3.939918069280509*^9, 3.9399180802493896`*^9}, {
@@ -1530,8 +1539,8 @@ $CellContext`tsxunnormalized$ =
              Today}]& , $CellContext`tslist$2456840]; $CellContext`tsx$ = If[
            $CellContext`settings$2456840[$CellContext`normalize], 
            
-           Map[# 100/#[
-            "FirstValue"]& , $CellContext`tsxunnormalized$], \
+           Map[# (100/#[
+             "FirstValue"])& , $CellContext`tsxunnormalized$], \
 $CellContext`tsxunnormalized$]; Column[{
            Column[
             MapIndexed[Row[{
@@ -1666,51 +1675,60 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 468, 7, 96, "Title",ExpressionUUID->"e80cee27-40fb-4de8-aadd-ab763ef324d7"],
 Cell[CellGroupData[{
-Cell[1069, 33, 2554, 70, 213, "Input",ExpressionUUID->"7d67e9d9-b753-4086-abb3-5fb84edb3fc1"],
-Cell[3626, 105, 610, 12, 56, "Output",ExpressionUUID->"ccb5c5d5-9fab-4a6d-b25d-706f2cf8b364"]
+Cell[1069, 33, 2571, 71, 213, "Input",ExpressionUUID->"7d67e9d9-b753-4086-abb3-5fb84edb3fc1",
+ CellOpen->True],
+Cell[3643, 106, 610, 12, 56, "Output",ExpressionUUID->"ccb5c5d5-9fab-4a6d-b25d-706f2cf8b364"]
 }, Open  ]],
-Cell[4251, 120, 21227, 405, 3091, "Input",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712"],
+Cell[4268, 121, 21244, 406, 3091, "Input",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712",
+ CellOpen->True],
 Cell[CellGroupData[{
-Cell[25503, 529, 152, 3, 66, "Section",ExpressionUUID->"0542f863-e777-4e1e-b6c5-429840ec160d"],
+Cell[25537, 531, 152, 3, 66, "Section",ExpressionUUID->"0542f863-e777-4e1e-b6c5-429840ec160d"],
 Cell[CellGroupData[{
-Cell[25680, 536, 1236, 22, 70, "Input",ExpressionUUID->"1107f4ca-743c-42c1-bbb1-fbf3a591af5c"],
-Cell[26919, 560, 7860, 151, 572, "Output",ExpressionUUID->"a228f62b-322c-407b-bfab-dc9a9bcc42f7"]
+Cell[25714, 538, 1253, 23, 70, "Input",ExpressionUUID->"1107f4ca-743c-42c1-bbb1-fbf3a591af5c",
+ CellOpen->True],
+Cell[26970, 563, 7863, 151, 572, "Output",ExpressionUUID->"a228f62b-322c-407b-bfab-dc9a9bcc42f7"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34828, 717, 321, 5, 66, "Section",ExpressionUUID->"1e792d95-7254-4fec-999a-9909927532ed"],
+Cell[34882, 720, 321, 5, 66, "Section",ExpressionUUID->"1e792d95-7254-4fec-999a-9909927532ed"],
 Cell[CellGroupData[{
-Cell[35174, 726, 1156, 29, 49, "Input",ExpressionUUID->"2a2aa9b7-a248-4299-8d4c-ea911343a7e2"],
-Cell[36333, 757, 7154, 142, 572, "Output",ExpressionUUID->"04d83ecf-5553-44b5-9cd9-8a6d8509d636"]
+Cell[35228, 729, 1173, 30, 49, "Input",ExpressionUUID->"2a2aa9b7-a248-4299-8d4c-ea911343a7e2",
+ CellOpen->True],
+Cell[36404, 761, 7157, 142, 572, "Output",ExpressionUUID->"04d83ecf-5553-44b5-9cd9-8a6d8509d636"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43536, 905, 251, 4, 66, "Section",ExpressionUUID->"5d7b6cad-46e7-419b-9ba1-d68ea6785a97"],
+Cell[43610, 909, 251, 4, 66, "Section",ExpressionUUID->"5d7b6cad-46e7-419b-9ba1-d68ea6785a97"],
 Cell[CellGroupData[{
-Cell[43812, 913, 851, 16, 49, "Input",ExpressionUUID->"286306f5-67eb-4a61-8281-8a83009337da"],
-Cell[44666, 931, 7784, 152, 572, "Output",ExpressionUUID->"36aae18a-42dd-4f84-90be-8533d12d80ec"]
+Cell[43886, 917, 868, 17, 49, "Input",ExpressionUUID->"286306f5-67eb-4a61-8281-8a83009337da",
+ CellOpen->True],
+Cell[44757, 936, 7787, 152, 572, "Output",ExpressionUUID->"36aae18a-42dd-4f84-90be-8533d12d80ec"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52499, 1089, 369, 6, 66, "Section",ExpressionUUID->"98a98d3b-b1f5-48f3-ae49-1cadb1258fd1"],
+Cell[52593, 1094, 369, 6, 66, "Section",ExpressionUUID->"98a98d3b-b1f5-48f3-ae49-1cadb1258fd1"],
 Cell[CellGroupData[{
-Cell[52893, 1099, 1035, 27, 49, "Input",ExpressionUUID->"ca76bf07-f5c9-4ede-9c79-02516220e8b8"],
-Cell[53931, 1128, 7271, 143, 572, "Output",ExpressionUUID->"eecfb9f8-c68d-468e-a0da-e09ce0d95f18"]
+Cell[52987, 1104, 1052, 28, 49, "Input",ExpressionUUID->"ca76bf07-f5c9-4ede-9c79-02516220e8b8",
+ CellOpen->True],
+Cell[54042, 1134, 7274, 143, 572, "Output",ExpressionUUID->"eecfb9f8-c68d-468e-a0da-e09ce0d95f18"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61251, 1277, 300, 5, 66, "Section",ExpressionUUID->"3ecc7aab-b270-4aa7-ac6a-25ed1b1b61ce"],
+Cell[61365, 1283, 300, 5, 66, "Section",ExpressionUUID->"3ecc7aab-b270-4aa7-ac6a-25ed1b1b61ce"],
 Cell[CellGroupData[{
-Cell[61576, 1286, 1582, 28, 49, "Input",ExpressionUUID->"e0d97735-4446-4897-bab3-067ff62a1ab7"],
-Cell[63161, 1316, 7426, 146, 581, "Output",ExpressionUUID->"4d066f41-8e9c-4537-8737-8770044b0117"]
+Cell[61690, 1292, 1647, 29, 49, "Input",ExpressionUUID->"e0d97735-4446-4897-bab3-067ff62a1ab7",
+ CellOpen->True],
+Cell[63340, 1323, 7456, 146, 582, "Output",ExpressionUUID->"8e3738ca-c248-4200-924b-338d3ea0e6bf"]
 }, Open  ]],
-Cell[70602, 1465, 154, 3, 29, "Input",ExpressionUUID->"c1637d05-c5d2-48a3-b70a-d4d922265390"]
+Cell[70811, 1472, 171, 4, 29, "Input",ExpressionUUID->"c1637d05-c5d2-48a3-b70a-d4d922265390",
+ CellOpen->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70793, 1473, 153, 3, 66, "Section",ExpressionUUID->"d3ca140c-f5c7-4bc3-b618-bf9d4f4519c2"],
+Cell[71019, 1481, 153, 3, 66, "Section",ExpressionUUID->"d3ca140c-f5c7-4bc3-b618-bf9d4f4519c2"],
 Cell[CellGroupData[{
-Cell[70971, 1480, 760, 15, 49, "Input",ExpressionUUID->"408a9de3-20b0-4fb4-96e0-793927101df5"],
-Cell[71734, 1497, 7350, 146, 613, "Output",ExpressionUUID->"1a5690f3-a046-4964-8095-06289b9afe84"]
+Cell[71197, 1488, 777, 16, 49, "Input",ExpressionUUID->"408a9de3-20b0-4fb4-96e0-793927101df5",
+ CellOpen->True],
+Cell[71977, 1506, 7353, 146, 594, "Output",ExpressionUUID->"1a5690f3-a046-4964-8095-06289b9afe84"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
