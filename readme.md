@@ -123,6 +123,26 @@ Bitcoin price in ounces of gold.
 
 ![BTC-DCA dollar cost averaging](BTC-XAU/BTC-price-to-Gold-price.jpg)
 
+## BTC-Currencies
+
+Bitcoin price history in different currencies.
+
+### USD
+
+![BTC-USD](Bitcoin-Price-USD.jpg)
+![BTC-USD](Bitcoin-Price-USD-Inflation-Adjusted.jpg)
+
+### CAD
+
+![BTC-CAD](Bitcoin-Price-CAD.jpg)
+![BTC-CAD](Bitcoin-Price-CAD-Inflation-Adjusted.jpg)
+![BTC-CAD](Sats-per-CAD.jpg)
+
+### Euro
+
+![BTC-EUR](Bitcoin-Price-Euro.jpg)
+![BTC-EUR](Bitcoin-Price-EUR-Inflation-Adjusted.jpg)
+![BTC-EUR](Sats-per-EUR.jpg)
 
 ## `BTC-ETH.nb`
 

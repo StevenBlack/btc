@@ -1,6 +1,6 @@
 # BTC-Currencies
 
-Bitcoun price history in different currencies.
+Bitcoin price history in different currencies.
 
 ## USD
 ![](Bitcoin-Price-USD.jpg)
