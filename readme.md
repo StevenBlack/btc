@@ -149,3 +149,4 @@ Bitcoin price history in different currencies.
 ETH price to BTC price history.
 
 ![BTC-ETH](BTC-ETH/BTC-ETH.jpg)
+![ETH](BTC-ETH/ETH.jpg)
