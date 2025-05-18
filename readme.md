@@ -2,8 +2,8 @@
 
 This repository contains Mathematica notebooks that examine Bitcoin price movements, and other BTC-related data.
 
-There are three notebooks currently stored here, along with a few others that
-are still in development and not yet listed in this README.
+Here are the notebooks currently stored here, along with a few others that are still in development and not yet 
+listed in this README.
 
 * `BTC-USD-Movements.nb`
 * `BTC-USD-Moving-Averages.nb`
