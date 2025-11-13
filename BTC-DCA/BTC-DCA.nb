@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    295072,       5370]
-NotebookOptionsPosition[    293565,       5331]
-NotebookOutlinePosition[    293977,       5348]
-CellTagsIndexPosition[    293934,       5345]
+NotebookDataLength[    339312,       6383]
+NotebookOptionsPosition[    337110,       6332]
+NotebookOutlinePosition[    337522,       6349]
+CellTagsIndexPosition[    337479,       6346]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5326,6 +5326,1007 @@ $CellContext`updatedstr}, Center]]],
   3.9620174141133432`*^9, 3.9718265281522427`*^9},
  CellLabel->
   "Out[210]=",ExpressionUUID->"42ea9165-34b4-4d4c-ba52-fea28092cde7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"#", "[", "date", "]"}], ",", 
+      RowBox[{"#", "[", "\"\<dcaperf\>\"", "]"}]}], "}"}], "&"}], "/@", 
+   "dca"}]}]], "Input",
+ CellChangeTimes->{{3.971826773572402*^9, 3.971826774145582*^9}},
+ CellLabel->
+  "In[212]:=",ExpressionUUID->"06ee37e5-7a66-4c57-9357-55b1a429860f"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"{", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 14 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "14", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1702.0296669218772`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Thu 15 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "15", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1699.0463644838824`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Fri 16 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "16", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1695.797763843315`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 17 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "17", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1692.2683994811293`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 18 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "18", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1688.5145312303857`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Mon 19 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "19", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1684.775972319158`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Tue 20 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "20", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1681.0773254409978`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 21 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "21", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1677.3607615137332`"}], "}"}], ",", 
+         TemplateBox[{"5057"}, "OutputSizeLimit`Skeleton"], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 2 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "2", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.966617229140625`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Mon 3 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "3", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.9744614663392858`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Tue 4 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "4", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.9809489958463541`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 5 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "5", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.9782207800156251`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Thu 6 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "6", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.9808626599023438`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Fri 7 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "7", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.9787042613020833`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 8 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "8", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.9774955580859375`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 9 Nov 2025 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2025", ",", "11", ",", "9", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "0.969725323125`"}], "}"}]}], "}"}], 
+     Short[#, 8]& ], "line" -> 212, "sessionID" -> 25275283633510738717, 
+   "byteCount" -> 2151328, "size" -> 8, "stored" -> False, "expr" -> 
+   Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{3.971826734073476*^9, 3.9718267758661013`*^9},
+ CellLabel->
+  "Out[212]=",ExpressionUUID->"60196eb8-3ad8-4c12-aeaa-470b70187fed"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{"t", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "<", 
+     RowBox[{"Now", " ", "-", " ", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{"8", ",", "\"\<Years\>\""}], "]"}]}]}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9718267780988417`*^9, 3.971826887014112*^9}, {
+  3.971827044021611*^9, 3.971827045374362*^9}},
+ CellLabel->
+  "In[215]:=",ExpressionUUID->"37a5e0ed-eb50-4317-be9d-712051a236e5"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"{", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 14 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "14", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1702.0296669218772`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Thu 15 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "15", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1699.0463644838824`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Fri 16 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "16", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1695.797763843315`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 17 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "17", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1692.2683994811293`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 18 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "18", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1688.5145312303857`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Mon 19 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "19", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1684.775972319158`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Tue 20 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "20", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1681.0773254409978`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 21 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "21", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1677.3607615137332`"}], "}"}], ",", 
+         TemplateBox[{"2217"}, "OutputSizeLimit`Skeleton"], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 4 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "4", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.896700126533285`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 5 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "5", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.894211702702406`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Mon 6 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "6", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.8918405681886865`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Tue 7 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "7", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.889476142445272`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 8 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "8", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.886822267475168`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Thu 9 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "9", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.884283138292983`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Fri 10 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "10", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.881966416221438`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 11 Nov 2017 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2017", ",", "11", ",", "11", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "6.879419049616909`"}], "}"}]}], "}"}], 
+     Short[#, 8]& ], "line" -> 215, "sessionID" -> 25275283633510738717, 
+   "byteCount" -> 947360, "size" -> 8, "stored" -> False, "expr" -> 
+   Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{
+  3.971826834868034*^9, {3.9718268704405746`*^9, 3.9718268933551283`*^9}},
+ CellLabel->
+  "Out[215]=",ExpressionUUID->"3eaf95fb-a5f6-401a-862a-62a596554806"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{"t", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ">", "12"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9718270553432083`*^9, 3.9718270712420683`*^9}},
+ CellLabel->
+  "In[216]:=",ExpressionUUID->"18992ac0-fe70-481e-83ea-ed0d2cd9231f"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"{", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 14 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "14", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1702.0296669218772`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Thu 15 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "15", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1699.0463644838824`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Fri 16 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "16", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1695.797763843315`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 17 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "17", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1692.2683994811293`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 18 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "18", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1688.5145312303857`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Mon 19 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "19", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1684.775972319158`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Tue 20 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "20", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1681.0773254409978`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 21 Sep 2011 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2011", ",", "9", ",", "21", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "1677.3607615137332`"}], "}"}], ",", 
+         TemplateBox[{"1899"}, "OutputSizeLimit`Skeleton"], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 21 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "21", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.23993426362916`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Thu 22 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "22", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.204088971233213`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Fri 23 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "23", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.169542582710696`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sat 24 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "24", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.13653052617138`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Sun 25 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "25", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.10560536571706`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Mon 26 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "26", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.073799955788344`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Tue 27 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "27", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.041889172769382`"}], "}"}], ",", 
+         RowBox[{"{", 
+           RowBox[{
+             TemplateBox[{
+               RowBox[{"\"Wed 28 Dec 2016 00:00:00\"", 
+                 StyleBox[
+                  RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "5"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], "TimeZoneLabel"]}], 
+               RowBox[{"DateObject", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2016", ",", "12", ",", "28", ",", "0", ",", "0", ",", 
+                    "0"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                   ",", 
+                   RowBox[{"-", "5.`"}]}], "]"}]}, "DateObject", Editable -> 
+              False], ",", "12.01019661488797`"}], "}"}]}], "}"}], 
+     Short[#, 8]& ], "line" -> 216, "sessionID" -> 25275283633510738717, 
+   "byteCount" -> 812512, "size" -> 8, "stored" -> False, "expr" -> 
+   Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{3.9718270742700167`*^9},
+ CellLabel->
+  "Out[216]=",ExpressionUUID->"0435c8b1-1767-432d-9362-96f4db5df860"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -5370,6 +6371,18 @@ Cell[CellGroupData[{
 Cell[283790, 5127, 5541, 124, 744, "Input",ExpressionUUID->"4a10343b-f817-40d0-b373-dbc42239bb3a",
  CellOpen->True],
 Cell[289334, 5253, 4203, 74, 566, "Output",ExpressionUUID->"42ea9165-34b4-4d4c-ba52-fea28092cde7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[293574, 5332, 379, 11, 29, "Input",ExpressionUUID->"06ee37e5-7a66-4c57-9357-55b1a429860f"],
+Cell[293956, 5345, 14060, 315, 152, "Output",ExpressionUUID->"60196eb8-3ad8-4c12-aeaa-470b70187fed"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[308053, 5665, 504, 14, 29, "Input",ExpressionUUID->"37a5e0ed-eb50-4317-be9d-712051a236e5"],
+Cell[308560, 5681, 14090, 316, 152, "Output",ExpressionUUID->"3eaf95fb-a5f6-401a-862a-62a596554806"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[322687, 6002, 338, 9, 29, "Input",ExpressionUUID->"18992ac0-fe70-481e-83ea-ed0d2cd9231f"],
+Cell[323028, 6013, 14054, 315, 152, "Output",ExpressionUUID->"0435c8b1-1767-432d-9362-96f4db5df860"]
 }, Open  ]]
 }, Open  ]]
 }
