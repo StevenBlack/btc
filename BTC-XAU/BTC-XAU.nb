@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     57520,       1183]
-NotebookOptionsPosition[     56540,       1153]
-NotebookOutlinePosition[     56934,       1169]
-CellTagsIndexPosition[     56891,       1166]
+NotebookDataLength[     57617,       1184]
+NotebookOptionsPosition[     56637,       1154]
+NotebookOutlinePosition[     57031,       1170]
+CellTagsIndexPosition[     56988,       1167]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -65,7 +65,7 @@ Cell[BoxData[{
          RowBox[{"SetOptions", "[", 
           RowBox[{"#", ",", 
            RowBox[{"CellOpen", "->", "False"}]}], "]"}], "&"}], "/@", 
-        "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "cells"}], ";"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -88,7 +88,7 @@ Cell[BoxData[{
          RowBox[{"SetOptions", "[", 
           RowBox[{"#", ",", 
            RowBox[{"CellOpen", "->", "True"}]}], "]"}], "&"}], "/@", 
-        "cells"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+        "cells"}], ";"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{"Row", "[", 
   RowBox[{"{", 
    RowBox[{
@@ -128,7 +128,7 @@ Cell[BoxData[{
    3.926888343654386*^9, 3.9268883638594227`*^9}, {3.952446728614685*^9, 
    3.9524467347124243`*^9}, {3.952446844018119*^9, 3.952446861600758*^9}},
  CellLabel->
-  "In[215]:=",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712"],
+  "In[447]:=",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -148,9 +148,10 @@ Cell[BoxData[
    3.98009012830833*^9, 3.9800901338955307`*^9}, {3.981196750820063*^9, 
    3.981196754086063*^9}, {3.981532704859535*^9, 3.981532709418785*^9}, {
    3.9817352091798058`*^9, 3.981735216108419*^9}, 3.9822701241480093`*^9, {
-   3.983027920454937*^9, 3.9830279296947937`*^9}},
+   3.983027920454937*^9, 3.9830279296947937`*^9}, {3.983858331984283*^9, 
+   3.983858335067873*^9}},
  CellLabel->
-  "Out[219]=",ExpressionUUID->"59eec258-ac34-4c4a-96c1-ab4e82635d47"]
+  "Out[451]=",ExpressionUUID->"74ace84c-914e-412b-af4d-45571dda04dd"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -741,7 +742,7 @@ Cell[BoxData[{
    3.978601404396427*^9, 3.978601409604177*^9}, {3.978601748888359*^9, 
    3.978601753068531*^9}, {3.978601793423614*^9, 3.978601835229622*^9}},
  CellLabel->
-  "In[220]:=",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053"],
+  "In[452]:=",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -773,13 +774,13 @@ $CellContext`filename$, $CellContext`plot$, $CellContext`updatedstr$}, \
 $CellContext`updatedstr$ = Style[
                StringTemplate["(updated: ``)"][
                 DateString[]], 
-               $CellContext`settings$305268[$CellContext`subtitlestyle]]; \
+               $CellContext`settings$541972[$CellContext`subtitlestyle]]; \
 $CellContext`tsxunnormalized$ = 
              Map[TimeSeriesWindow[#, {
                 Today - Quantity[$CellContext`x$$, "Months"], 
-                 Today}]& , $CellContext`tslist$305268]; $CellContext`tsx$ = 
+                 Today}]& , $CellContext`tslist$541972]; $CellContext`tsx$ = 
              If[
-               $CellContext`settings$305268[$CellContext`normalize], 
+               $CellContext`settings$541972[$CellContext`normalize], 
                
                Map[# 100/#[
                 "FirstValue"]& , $CellContext`tsxunnormalized$], \
@@ -801,11 +802,11 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                     Spacer[20]], 
                     Join[
-                    $CellContext`settings$305268[$CellContext`summarystyle], {
+                    $CellContext`settings$541972[$CellContext`summarystyle], {
                     
                     Part[
                     ColorData[
-                    $CellContext`settings$305268[$CellContext`colorscheme], 
+                    $CellContext`settings$541972[$CellContext`colorscheme], 
                     "ColorList"], 
                     First[#2]]}]], 
                    Spacer[60], 
@@ -819,44 +820,44 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                     Spacer[20]], 
                     Join[
-                    $CellContext`settings$305268[$CellContext`rangestyle], {
+                    $CellContext`settings$541972[$CellContext`rangestyle], {
                     Part[
                     ColorData[
-                    $CellContext`settings$305268[$CellContext`colorscheme], 
+                    $CellContext`settings$541972[$CellContext`colorscheme], 
                     "ColorList"], 
                     First[#2]]}]]}]& , $CellContext`tsx$]], 
-               $CellContext`settings$305268[$CellContext`plotfunction][$\
+               $CellContext`settings$541972[$CellContext`plotfunction][$\
 CellContext`tsx$, 
                 AspectRatio -> \
-$CellContext`settings$305268[$CellContext`aspectratio], 
+$CellContext`settings$541972[$CellContext`aspectratio], 
                 Background -> \
-$CellContext`settings$305268[$CellContext`background], 
+$CellContext`settings$541972[$CellContext`background], 
                 ImageMargins -> \
-$CellContext`settings$305268[$CellContext`imagemargins], 
+$CellContext`settings$541972[$CellContext`imagemargins], 
                 ImageSize -> \
-$CellContext`settings$305268[$CellContext`imagesize], 
-                Filling -> $CellContext`settings$305268[$CellContext`filling],
+$CellContext`settings$541972[$CellContext`imagesize], 
+                Filling -> $CellContext`settings$541972[$CellContext`filling],
                  
                 FillingStyle -> \
-$CellContext`settings$305268[$CellContext`fillingstyle], 
+$CellContext`settings$541972[$CellContext`fillingstyle], 
                 FrameTicksStyle -> \
-$CellContext`settings$305268[$CellContext`ticksstyle], FrameTicks -> All, 
+$CellContext`settings$541972[$CellContext`ticksstyle], FrameTicks -> All, 
                 GridLines -> {
-                  $CellContext`settings$305268[$CellContext`gridlinesx], 
-                  $CellContext`settings$305268[$CellContext`gridlinesy]}, 
-                Joined -> $CellContext`settings$305268[$CellContext`joined], 
+                  $CellContext`settings$541972[$CellContext`gridlinesx], 
+                  $CellContext`settings$541972[$CellContext`gridlinesy]}, 
+                Joined -> $CellContext`settings$541972[$CellContext`joined], 
                 LabelStyle -> \
-$CellContext`settings$305268[$CellContext`labelstyle], PlotLabel -> Column[{
+$CellContext`settings$541972[$CellContext`labelstyle], PlotLabel -> Column[{
                    Style["BTC price (USD)", 
-                    $CellContext`settings$305268[$CellContext`titlestyle]], 
+                    $CellContext`settings$541972[$CellContext`titlestyle]], 
                    Style[ToString[$CellContext`x$$] <> " months", 
-                    $CellContext`settings$305268[$CellContext`titlestyle]], \
+                    $CellContext`settings$541972[$CellContext`titlestyle]], \
 $CellContext`updatedstr$}, Center], 
                 PlotRange -> \
-$CellContext`settings$305268[$CellContext`plotrange], PlotStyle -> ColorData[
-                  $CellContext`settings$305268[$CellContext`colorscheme]]]}, 
+$CellContext`settings$541972[$CellContext`plotrange], PlotStyle -> ColorData[
+                  $CellContext`settings$541972[$CellContext`colorscheme]]]}, 
               Background -> \
-$CellContext`settings$305268[$CellContext`background]]], 
+$CellContext`settings$541972[$CellContext`background]]], 
           "Specifications" :> {{{$CellContext`x$$, 144, "Months: "}, {174, 
              168, 162, 156, 150, 144, 138, 132, 126, 120, 114, 108, 102, 96, 
              90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 18, 12, 9, 6, 3, 
@@ -902,13 +903,13 @@ $CellContext`filename$, $CellContext`plot$, $CellContext`updatedstr$}, \
 $CellContext`updatedstr$ = Style[
                StringTemplate["(updated: ``)"][
                 DateString[]], 
-               $CellContext`settings$305467[$CellContext`subtitlestyle]]; \
+               $CellContext`settings$542169[$CellContext`subtitlestyle]]; \
 $CellContext`tsxunnormalized$ = 
              Map[TimeSeriesWindow[#, {
                 Today - Quantity[$CellContext`x$$, "Months"], 
-                 Today}]& , $CellContext`tslist$305467]; $CellContext`tsx$ = 
+                 Today}]& , $CellContext`tslist$542169]; $CellContext`tsx$ = 
              If[
-               $CellContext`settings$305467[$CellContext`normalize], 
+               $CellContext`settings$542169[$CellContext`normalize], 
                
                Map[# 100/#[
                 "FirstValue"]& , $CellContext`tsxunnormalized$], \
@@ -930,11 +931,11 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                     Spacer[20]], 
                     Join[
-                    $CellContext`settings$305467[$CellContext`summarystyle], {
+                    $CellContext`settings$542169[$CellContext`summarystyle], {
                     
                     Part[
                     ColorData[
-                    $CellContext`settings$305467[$CellContext`colorscheme], 
+                    $CellContext`settings$542169[$CellContext`colorscheme], 
                     "ColorList"], 
                     First[#2]]}]], 
                    Spacer[60], 
@@ -948,43 +949,43 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                     Spacer[20]], 
                     Join[
-                    $CellContext`settings$305467[$CellContext`rangestyle], {
+                    $CellContext`settings$542169[$CellContext`rangestyle], {
                     Part[
                     ColorData[
-                    $CellContext`settings$305467[$CellContext`colorscheme], 
+                    $CellContext`settings$542169[$CellContext`colorscheme], 
                     "ColorList"], 
                     First[#2]]}]]}]& , $CellContext`tsx$]], 
-               $CellContext`settings$305467[$CellContext`plotfunction][$\
+               $CellContext`settings$542169[$CellContext`plotfunction][$\
 CellContext`tsx$, 
                 AspectRatio -> \
-$CellContext`settings$305467[$CellContext`aspectratio], 
+$CellContext`settings$542169[$CellContext`aspectratio], 
                 Background -> \
-$CellContext`settings$305467[$CellContext`background], 
+$CellContext`settings$542169[$CellContext`background], 
                 ImageMargins -> \
-$CellContext`settings$305467[$CellContext`imagemargins], 
+$CellContext`settings$542169[$CellContext`imagemargins], 
                 ImageSize -> \
-$CellContext`settings$305467[$CellContext`imagesize], 
-                Filling -> $CellContext`settings$305467[$CellContext`filling],
+$CellContext`settings$542169[$CellContext`imagesize], 
+                Filling -> $CellContext`settings$542169[$CellContext`filling],
                  FillingStyle -> \
-$CellContext`settings$305467[$CellContext`fillingstyle], 
+$CellContext`settings$542169[$CellContext`fillingstyle], 
                 FrameTicksStyle -> \
-$CellContext`settings$305467[$CellContext`ticksstyle], FrameTicks -> All, 
+$CellContext`settings$542169[$CellContext`ticksstyle], FrameTicks -> All, 
                 GridLines -> {
-                  $CellContext`settings$305467[$CellContext`gridlinesx], 
-                  $CellContext`settings$305467[$CellContext`gridlinesy]}, 
-                Joined -> $CellContext`settings$305467[$CellContext`joined], 
+                  $CellContext`settings$542169[$CellContext`gridlinesx], 
+                  $CellContext`settings$542169[$CellContext`gridlinesy]}, 
+                Joined -> $CellContext`settings$542169[$CellContext`joined], 
                 LabelStyle -> \
-$CellContext`settings$305467[$CellContext`labelstyle], PlotLabel -> Column[{
+$CellContext`settings$542169[$CellContext`labelstyle], PlotLabel -> Column[{
                    Style["Gold price (USD)", 
-                    $CellContext`settings$305467[$CellContext`titlestyle]], 
+                    $CellContext`settings$542169[$CellContext`titlestyle]], 
                    Style[ToString[$CellContext`x$$] <> " months", 
-                    $CellContext`settings$305467[$CellContext`titlestyle]], \
+                    $CellContext`settings$542169[$CellContext`titlestyle]], \
 $CellContext`updatedstr$}, Center], 
                 PlotRange -> \
-$CellContext`settings$305467[$CellContext`plotrange], PlotStyle -> ColorData[
-                  $CellContext`settings$305467[$CellContext`colorscheme]]]}, 
+$CellContext`settings$542169[$CellContext`plotrange], PlotStyle -> ColorData[
+                  $CellContext`settings$542169[$CellContext`colorscheme]]]}, 
               Background -> \
-$CellContext`settings$305467[$CellContext`background]]], 
+$CellContext`settings$542169[$CellContext`background]]], 
           "Specifications" :> {{{$CellContext`x$$, 144, "Months: "}, {174, 
              168, 162, 156, 150, 144, 138, 132, 126, 120, 114, 108, 102, 96, 
              90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 18, 12, 9, 6, 3, 
@@ -1012,7 +1013,7 @@ $CellContext`settings$305467[$CellContext`background]]],
            144, 138, 132, 126, 120, 114, 108, 102, 96, 90, 84, 78, 72, 66, 60,
            54, 48, 42, 36, 30, 24, 18, 12, 9, 6, 3, 2, 1}, ControlType -> 
           PopupMenu}}, Typeset`size$$ = {
-        1040., {241.20741861979164`, 246.93935221354164`}}, Typeset`update$$ =
+        1040., {241.20741861979167`, 246.93935221354167`}}, Typeset`update$$ =
          0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
         Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
         DynamicBox[Manipulate`ManipulateBoxes[
@@ -1029,13 +1030,13 @@ $CellContext`filename$, $CellContext`plot$, $CellContext`updatedstr$}, \
 $CellContext`updatedstr$ = Style[
                StringTemplate["(updated: ``)"][
                 DateString[]], 
-               $CellContext`settings$306456[$CellContext`subtitlestyle]]; \
+               $CellContext`settings$543165[$CellContext`subtitlestyle]]; \
 $CellContext`tsxunnormalized$ = 
              Map[TimeSeriesWindow[#, {
                 Today - Quantity[$CellContext`x$$, "Months"], 
-                 Today}]& , $CellContext`tslist$306456]; $CellContext`tsx$ = 
+                 Today}]& , $CellContext`tslist$543165]; $CellContext`tsx$ = 
              If[
-               $CellContext`settings$306456[$CellContext`normalize], 
+               $CellContext`settings$543165[$CellContext`normalize], 
                
                Map[# 100/#[
                 "FirstValue"]& , $CellContext`tsxunnormalized$], \
@@ -1057,11 +1058,11 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                     Spacer[20]], 
                     Join[
-                    $CellContext`settings$306456[$CellContext`summarystyle], {
+                    $CellContext`settings$543165[$CellContext`summarystyle], {
                     
                     Part[
                     ColorData[
-                    $CellContext`settings$306456[$CellContext`colorscheme], 
+                    $CellContext`settings$543165[$CellContext`colorscheme], 
                     "ColorList"], 
                     First[#2]]}]], 
                    Spacer[60], 
@@ -1075,43 +1076,43 @@ $CellContext`tsxunnormalized$]; Column[{
                     Max[#]]]}, 
                     Spacer[20]], 
                     Join[
-                    $CellContext`settings$306456[$CellContext`rangestyle], {
+                    $CellContext`settings$543165[$CellContext`rangestyle], {
                     Part[
                     ColorData[
-                    $CellContext`settings$306456[$CellContext`colorscheme], 
+                    $CellContext`settings$543165[$CellContext`colorscheme], 
                     "ColorList"], 
                     First[#2]]}]]}]& , $CellContext`tsx$]], 
-               $CellContext`settings$306456[$CellContext`plotfunction][$\
+               $CellContext`settings$543165[$CellContext`plotfunction][$\
 CellContext`tsx$, 
                 AspectRatio -> \
-$CellContext`settings$306456[$CellContext`aspectratio], 
+$CellContext`settings$543165[$CellContext`aspectratio], 
                 Background -> \
-$CellContext`settings$306456[$CellContext`background], 
+$CellContext`settings$543165[$CellContext`background], 
                 ImageMargins -> \
-$CellContext`settings$306456[$CellContext`imagemargins], 
+$CellContext`settings$543165[$CellContext`imagemargins], 
                 ImageSize -> \
-$CellContext`settings$306456[$CellContext`imagesize], 
-                Filling -> $CellContext`settings$306456[$CellContext`filling],
+$CellContext`settings$543165[$CellContext`imagesize], 
+                Filling -> $CellContext`settings$543165[$CellContext`filling],
                  FillingStyle -> \
-$CellContext`settings$306456[$CellContext`fillingstyle], 
+$CellContext`settings$543165[$CellContext`fillingstyle], 
                 FrameTicksStyle -> \
-$CellContext`settings$306456[$CellContext`ticksstyle], FrameTicks -> All, 
+$CellContext`settings$543165[$CellContext`ticksstyle], FrameTicks -> All, 
                 GridLines -> {
-                  $CellContext`settings$306456[$CellContext`gridlinesx], 
-                  $CellContext`settings$306456[$CellContext`gridlinesy]}, 
-                Joined -> $CellContext`settings$306456[$CellContext`joined], 
+                  $CellContext`settings$543165[$CellContext`gridlinesx], 
+                  $CellContext`settings$543165[$CellContext`gridlinesy]}, 
+                Joined -> $CellContext`settings$543165[$CellContext`joined], 
                 LabelStyle -> \
-$CellContext`settings$306456[$CellContext`labelstyle], PlotLabel -> Column[{
+$CellContext`settings$543165[$CellContext`labelstyle], PlotLabel -> Column[{
                    Style["BTC price to Gold price", 
-                    $CellContext`settings$306456[$CellContext`titlestyle]], 
+                    $CellContext`settings$543165[$CellContext`titlestyle]], 
                    Style[ToString[$CellContext`x$$] <> " months", 
-                    $CellContext`settings$306456[$CellContext`titlestyle]], \
+                    $CellContext`settings$543165[$CellContext`titlestyle]], \
 $CellContext`updatedstr$}, Center], 
                 PlotRange -> \
-$CellContext`settings$306456[$CellContext`plotrange], PlotStyle -> ColorData[
-                  $CellContext`settings$306456[$CellContext`colorscheme]]]}, 
+$CellContext`settings$543165[$CellContext`plotrange], PlotStyle -> ColorData[
+                  $CellContext`settings$543165[$CellContext`colorscheme]]]}, 
               Background -> \
-$CellContext`settings$306456[$CellContext`background]]], 
+$CellContext`settings$543165[$CellContext`background]]], 
           "Specifications" :> {{{$CellContext`x$$, 144, "Months: "}, {174, 
              168, 162, 156, 150, 144, 138, 132, 126, 120, 114, 108, 102, 96, 
              90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 18, 12, 9, 6, 3, 
@@ -1145,9 +1146,9 @@ $CellContext`settings$306456[$CellContext`background]]],
    3.9800901358121758`*^9}, {3.9811967529262953`*^9, 3.981196755960672*^9}, {
    3.981532707715149*^9, 3.981532711330235*^9}, {3.981735211361206*^9, 
    3.981735217682376*^9}, 3.98227012605525*^9, {3.9830279220812063`*^9, 
-   3.983027931240843*^9}},
+   3.983027931240843*^9}, {3.98385833401514*^9, 3.9838583367883883`*^9}},
  CellLabel->
-  "Out[227]=",ExpressionUUID->"59e8954e-89cc-4a96-9526-6056f7d04b43"]
+  "Out[459]=",ExpressionUUID->"9d65a0b1-f40f-4c77-ad1a-be7eb3975b7e"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -1175,14 +1176,14 @@ Cell[CellGroupData[{
 Cell[1249, 36, 4191, 94, 19, "Input",ExpressionUUID->"14006091-21fb-46e0-9a46-e1fcba7cf712",
  CellOpen->False,
  InitializationCell->True],
-Cell[5443, 132, 1132, 20, 44, "Output",ExpressionUUID->"59eec258-ac34-4c4a-96c1-ab4e82635d47",
+Cell[5443, 132, 1182, 21, 44, "Output",ExpressionUUID->"74ace84c-914e-412b-af4d-45571dda04dd",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6612, 157, 29735, 586, 19, "Input",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053",
+Cell[6662, 158, 29735, 586, 19, "Input",ExpressionUUID->"33df2f7b-054e-4fe7-8633-eec369172053",
  CellOpen->False,
  InitializationCell->True],
-Cell[36350, 745, 20162, 404, 1703, "Output",ExpressionUUID->"59e8954e-89cc-4a96-9526-6056f7d04b43"]
+Cell[36400, 746, 20209, 404, 1703, "Output",ExpressionUUID->"9d65a0b1-f40f-4c77-ad1a-be7eb3975b7e"]
 }, Open  ]]
 }, Open  ]]
 }
